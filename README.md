@@ -1,6 +1,6 @@
 # BrainStation
-This repository is a collection of the exercises and projects I have done on [BrainStation Web Development Bootcamp](https://brainstation.io/course/online/remote-web-development-bootcamp). 
+This repository is a collection of the exercises and projects I have done on [BrainStation Web Development Bootcamp](https://brainstation.io/course/online/remote-web-development-bootcamp).
 
 | Exercises and Projects  |  Tags | Code | Live |
 |:-------------|---|---|---|
-| Coffee Shop | HTML, CSS | [Code]()|[Live]() |
+| Coffee Shop | HTML, CSS | [Code](https://github.com/aramatsolrac/BrainStation/tree/main/coffee_shop)|[Live](https://aramatsolrac.github.io/BrainStation/coffee_shop/) |
