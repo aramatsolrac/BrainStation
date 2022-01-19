@@ -1,4 +1,17 @@
+:root {
+    --open-sans: 'Open Sans';
+    --nitro-blue: #5BACC3;
+    --nitro-pink: #FFF0ED;
+    --graphite: #393939;
+    --light-gray: #f7f7f7;
+    --white: #fff;
+}
+
+html {
+    font-size: 16px;
+}
+
 body {
-    font-family: 'Open Sans';
+    font-family: var(--open-sans);
     font-weight: 400;
 }
