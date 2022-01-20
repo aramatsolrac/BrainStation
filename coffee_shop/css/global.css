@@ -71,7 +71,7 @@ h3 {
 
 .nav-menu__pages li {
     text-transform: uppercase;
-    padding: .6rem;
+    padding: .4rem;
 }
 
 .nav-menu__pages a {
@@ -149,12 +149,12 @@ h3 {
         max-width: 2.5rem;
     }
     .nav-menu__pages li {
-        padding: .4rem;
+        padding: .5rem;
     }
     .nav-menu__pages ul {
         padding-left: .3rem;
     }
     .nav-menu__pages a {
-        font-size: .9rem;
+        font-size: .7rem;
     }
 }
