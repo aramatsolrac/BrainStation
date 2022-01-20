@@ -1,0 +1,140 @@
+@import url('../css/global.css');
+.nav-nitro {
+    background-color: var(--nitro-pink);
+}
+
+.nav-nitro {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.nav-nitro__about {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 60%;
+    padding: 1rem;
+}
+
+.nav-nitro__about * {
+    margin: .7rem;
+}
+
+.nav-nitro__about p {
+    width: 40%;
+}
+
+.nav-nitro__img {
+    padding: 1.5rem;
+}
+
+.nav-nitro__img img {
+    min-height: 5.625rem;
+    max-height: 21.875rem;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--light-gray);
+    padding: 2rem;
+}
+
+.products h2 {
+    text-align: center;
+}
+
+.products__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.products__list__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.5rem;
+    padding: .5rem;
+    width: 23%;
+    border-radius: .5rem;
+    background-color: var(--white);
+    box-shadow: var(--black-shadow);
+}
+
+.products__list__item * {
+    padding: 1rem;
+}
+
+.products__list__item img {
+    min-height: 15rem;
+    max-height: 34.375rem;
+}
+
+.products__list__item h3 {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.products__list__item p {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--nitro-blue);
+}
+
+.products button {
+    align-self: center;
+}
+
+.discount {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 7rem 5rem;
+}
+
+.discount p {
+    padding: 2rem;
+    background-color: var(--graphite);
+    color: var(--white);
+    max-width: 90%;
+    min-width: fit-content;
+    text-align: center;
+    font-size: 30px;
+}
+
+.discount span {
+    font-weight: 700;
+    text-shadow: 0.0938rem 0.0938rem var(--nitro-blue);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--nitro-pink);
+    padding: 3rem 0;
+}
+
+.footer span {
+    font-weight: 700;
+}
+
+.footer h3 {
+    padding: .6rem 0;
+}
+
+.footer__social {
+    display: flex;
+    flex-direction: column;
+}
+
+.social__pages {
+    display: flex;
+    flex-direction: row;
+}
+
+.social__pages img {
+    margin: .5rem .5rem .5rem 0;
+}
