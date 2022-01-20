@@ -50,6 +50,10 @@
     padding: 0 1rem;
 }
 
+.menu__options a:hover {
+    color: var(--nitro-blue);
+}
+
 .menu__options ul,
 .menu__options a {
     color: var(--white);
@@ -102,4 +106,13 @@ main section:nth-child(2) {
     color: var(--nitro-blue);
     font-weight: 400;
     padding: .5rem 0 1.8rem 0;
+}
+
+
+/* mobile responsive design */
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .menu__options a {
+        padding: 0 .5rem;
+    }
 }

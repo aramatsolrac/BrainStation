@@ -1,6 +1,7 @@
 :root {
     --open-sans: 'Open Sans';
     --nitro-blue: rgb(91, 172, 195);
+    --nitro-blue-darker: rgb(70, 138, 156);
     --nitro-pink: rgb(255, 240, 237);
     --graphite: rgb(57, 57, 57);
     --light-gray: rgb(247, 247, 247);
@@ -8,10 +9,6 @@
     --brown: rgb(107, 46, 30);
     --light-brown: rgb(123, 60, 47);
     --black-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-html {
-    font-size: 16px;
 }
 
 body {
@@ -57,6 +54,7 @@ h3 {
     align-items: center;
     text-transform: lowercase;
     color: var(--graphite);
+    border-radius: .1rem;
 }
 
 .nav-menu__pages {
@@ -73,11 +71,14 @@ h3 {
 
 .nav-menu__pages li {
     text-transform: uppercase;
-    padding: 1rem;
+    padding: .6rem;
 }
 
 .nav-menu__pages a {
     color: var(--graphite);
+    border-radius: .1rem;
+    font-size: 1.25rem;
+    padding: .1rem;
 }
 
 .nav-menu__pages li:last-child a {
@@ -95,4 +96,65 @@ h3 {
 
 .button>a {
     color: var(--white);
+}
+
+
+/* hover, focus and active states */
+
+.nav-menu__pages a:focus,
+.nav-menu__logo a:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.0625rem var(--nitro-blue);
+}
+
+.nav-menu__pages a:hover,
+.nav-menu__logo a:hover {
+    color: var(--nitro-blue);
+}
+
+.nav-menu__pages a:active {
+    background-color: var(--nitro-blue);
+    color: var(--white)
+}
+
+.nav-menu__pages li:last-child a:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.0625rem var(--nitro-blue);
+}
+
+.nav-menu__pages li:last-child a:hover {
+    color: var(--graphite);
+}
+
+.nav-menu__pages li:last-child a:active {
+    background-color: var(--nitro-blue);
+    color: var(--white)
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--nitro-blue);
+}
+
+.button:hover {
+    background-color: var(--nitro-blue-darker);
+}
+
+
+/* mobile responsive design */
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+    .logo {
+        min-width: 1rem;
+        max-width: 2.5rem;
+    }
+    .nav-menu__pages li {
+        padding: .4rem;
+    }
+    .nav-menu__pages ul {
+        padding-left: .3rem;
+    }
+    .nav-menu__pages a {
+        font-size: .9rem;
+    }
 }
