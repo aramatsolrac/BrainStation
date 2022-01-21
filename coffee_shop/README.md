@@ -23,15 +23,15 @@
 
 ### Technologies
 
-- Semantic HTML5 markup
-- CSS custom properties
+- HTML5
+- CSS
 - BEM
 - FlexBox
 
 ### Installing
 
 - Download the Repository
-- Open `index.html` on a web browser (*Best support on Google Chrome*)
+- Open `index.html` on a web browser
 
 
 ### Live
