@@ -25,6 +25,7 @@
 
 - Semantic HTML5 markup
 - CSS custom properties
+- BEM
 - FlexBox
 
 ### Installing
