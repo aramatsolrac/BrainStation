@@ -1,12 +1,9 @@
 @import url('../css/global.css');
 .nav-nitro {
-    background-color: var(--nitro-pink);
-}
-
-.nav-nitro {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    background-color: var(--nitro-pink);
 }
 
 .nav-nitro__about {
@@ -123,11 +120,6 @@
 
 .footer h3 {
     padding: .6rem 0;
-}
-
-.footer__social {
-    display: flex;
-    flex-direction: column;
 }
 
 .social__pages {

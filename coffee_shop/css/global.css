@@ -11,6 +11,10 @@
     --black-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--open-sans);
     font-weight: 400;
@@ -99,36 +103,20 @@ h3 {
 }
 
 
-/* hover, focus and active states */
+/* hover and focus states */
 
-.nav-menu__pages a:focus,
-.nav-menu__logo a:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.0625rem var(--nitro-blue);
+.nav-menu__pages a:hover {
+    color: var(--nitro-blue);
+    text-decoration: underline;
 }
 
-.nav-menu__pages a:hover,
 .nav-menu__logo a:hover {
     color: var(--nitro-blue);
 }
 
-.nav-menu__pages a:active {
-    background-color: var(--nitro-blue);
-    color: var(--white)
-}
-
-.nav-menu__pages li:last-child a:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.0625rem var(--nitro-blue);
-}
-
 .nav-menu__pages li:last-child a:hover {
     color: var(--graphite);
-}
-
-.nav-menu__pages li:last-child a:active {
-    background-color: var(--nitro-blue);
-    color: var(--white)
+    text-decoration: underline;
 }
 
 .button:focus {
