@@ -24,7 +24,6 @@ This repository is a collection of the exercises and projects I have done on [Br
 - [Installing](#installing)
 - [Live](#live)
 - [Screenshots](#screenshots)
-- [Author](#author)
 
 ## Overview
 
