@@ -4,10 +4,10 @@
 
 - [The Exercise](#the-exercise)
 - [Features](#features)
-- [Technologies](#built-with)
+- [Technologies](#technologies)
 - [Installing](#installing)
 - [Live](#live)
-- [Screenshot](#screenshot)
+- [Screenshots](#screenshot)
 - [Author](#author)
 
 ## Overview
@@ -66,10 +66,5 @@
 ![](./assets/screenshots/menu/menu_mobile.png)
 
 </details>
-
-### Author
-
-- Linkedin - [Tamara Carlos](https://www.linkedin.com/in/tamaracarlos/)
-- Twitter - [@aramatsolrac](https://twitter.com/aramatsolrac)
 
 
