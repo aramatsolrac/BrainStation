@@ -7,8 +7,7 @@
 - [Technologies](#technologies)
 - [Installing](#installing)
 - [Live](#live)
-- [Screenshots](#screenshot)
-- [Author](#author)
+- [Screenshots](#screenshots)
 
 ## Overview
 
@@ -66,5 +65,3 @@
 ![](./assets/screenshots/menu/menu_mobile.png)
 
 </details>
-
-
