@@ -49,7 +49,7 @@
     justify-content: space-evenly;
 }
 
-.products__list__item {
+.products__item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,21 +61,21 @@
     box-shadow: var(--black-shadow);
 }
 
-.products__list__item * {
+.products__item * {
     padding: 1rem;
 }
 
-.products__list__item img {
+.products__item img {
     min-height: 15rem;
     max-height: 34.375rem;
 }
 
-.products__list__item h3 {
+.products__item h3 {
     font-weight: 300;
     font-size: 1.5rem;
 }
 
-.products__list__item p {
+.products__item p {
     font-weight: 500;
     font-size: 1.5rem;
     color: var(--nitro-blue);
