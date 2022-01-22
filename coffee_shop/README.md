@@ -65,9 +65,3 @@
 ![](./assets/screenshots/menu/menu_mobile.png)
 
 </details>
-
-
-
-
-
-
