@@ -1,4 +1,7 @@
 @import url('../css/global.css');
+
+/* drinks menu */
+
 .menu {
     display: flex;
     flex-direction: column;
@@ -65,6 +68,9 @@
     border: 0.0938rem solid var(--nitro-blue);
     height: 1.4375rem;
 }
+
+
+/* drinks description */
 
 main section:nth-child(odd) {
     background-color: var(--nitro-pink);

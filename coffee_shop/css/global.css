@@ -40,6 +40,9 @@ h3 {
     font-weight: 300;
 }
 
+
+/* main menu */
+
 .nav-menu {
     display: flex;
     flex-direction: row;
@@ -67,7 +70,6 @@ h3 {
 .nav-menu__pages {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
     align-items: center;
 }
 
@@ -91,6 +93,9 @@ h3 {
 .nav-menu__pages li:last-child a {
     color: var(--nitro-blue);
 }
+
+
+/* buttons */
 
 .button {
     width: 9em;
