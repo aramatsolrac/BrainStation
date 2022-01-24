@@ -6,6 +6,9 @@
     background-color: var(--nitro-pink);
 }
 
+
+/* nitro coffee section */
+
 .nav-nitro__about {
     display: flex;
     flex-direction: column;
@@ -31,6 +34,9 @@
     max-height: 21.875rem;
 }
 
+
+/* products section */
+
 .products {
     display: flex;
     flex-direction: column;
@@ -42,7 +48,6 @@
 .products h2 {
     text-align: center;
     margin: 1.5rem;
-    /* font-size: 3.5rem; */
 }
 
 .products__list {
@@ -103,27 +108,74 @@
     margin: 1.5rem;
 }
 
+
+/* we're different/history section  */
+
+.nitro-history {
+    margin: 8rem;
+}
+
+.nitro-history__card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nitro-history__details * {
+    margin: .8rem 0;
+}
+
+.nitro-history__details {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 40%;
+}
+
+.nitro-history__images {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.nitro-history__banner {
+    width: 40%;
+    padding: 1.25rem;
+    background-image: url("../assets/images/coldbrewbackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* discount section */
+
 .discount {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 7rem 5rem;
+    margin: 8rem 3rem;
 }
 
 .discount p {
     padding: 2rem;
     background-color: var(--graphite);
     color: var(--white);
-    max-width: 90%;
-    min-width: fit-content;
+    width: 80%;
     text-align: center;
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 .discount span {
     font-weight: 700;
     text-shadow: 0.0938rem 0.0938rem var(--nitro-blue);
 }
+
+
+/* footer */
 
 .footer {
     display: flex;
@@ -182,6 +234,19 @@
         width: 100%;
         margin: 1rem 0;
     }
+    .nitro-history {
+        margin: 3rem 1rem;
+    }
+    .nitro-history__card {
+        flex-direction: column;
+    }
+    .nitro-history__details {
+        width: 80%;
+        margin: 3rem 0;
+    }
+    .nitro-history__banner {
+        width: 90%;
+    }
     .footer {
         flex-direction: column;
         padding: 1.6rem;
@@ -198,5 +263,11 @@
     .products__item {
         width: 100%;
         margin: 1.5rem 0;
+    }
+    .nitro-history {
+        margin: 3rem;
+    }
+    .nitro-history__banner {
+        width: 50%;
     }
 }
