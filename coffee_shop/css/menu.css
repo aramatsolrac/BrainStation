@@ -34,7 +34,7 @@
     min-height: 10rem;
 }
 
-.banner_border {
+.menu_border {
     align-self: center;
     border: 5px solid var(--nitro-blue);
     position: relative;
