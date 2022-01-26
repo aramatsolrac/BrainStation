@@ -22,14 +22,26 @@
 
 .menu__title h1 {
     align-self: center;
-    color: var(--brown);
-    text-shadow: 0.125rem 0.125rem 0.125rem var(--light-brown);
+    color: var(--white);
+    background-color: var(--graphite);
     text-transform: uppercase;
     text-align: center;
     font-weight: 300;
     font-size: 3rem;
-    min-height: 6rem;
-    max-height: 10rem;
+    padding: 2.5rem;
+    margin-right: 15rem;
+    min-width: 16rem;
+    min-height: 10rem;
+}
+
+.banner_border {
+    align-self: center;
+    border: 5px solid var(--nitro-blue);
+    position: relative;
+    left: 240px;
+    bottom: 15px;
+    min-width: 16rem;
+    min-height: 10rem;
 }
 
 .menu__options {
