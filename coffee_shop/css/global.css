@@ -98,16 +98,36 @@ h3 {
 /* buttons */
 
 .button {
-    width: 9em;
-    height: 2.5rem;
+    width: 9rem;
+    height: 2.8rem;
     text-transform: uppercase;
     background-color: var(--nitro-blue);
     border: none;
-    border-radius: .2rem;
 }
 
 .button>a {
     color: var(--white);
+}
+
+.button-border {
+    border: 0.125rem solid var(--graphite);
+    padding: 1.25rem;
+    min-width: 1.25rem;
+    max-width: 9rem;
+    position: relative;
+    right: 0.25rem;
+}
+
+.shop-now {
+    top: 3.875rem;
+}
+
+.learn-more {
+    top: 4.125rem;
+}
+
+.view-all {
+    top: 2.5rem;
 }
 
 

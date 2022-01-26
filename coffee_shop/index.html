@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/logos/coffee-beans-logo-and-footer.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/logos/coffee-beans-logo.svg">
     <title>Coffee Shop - Home</title>
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
     <link rel="stylesheet" href="./css/landing.css">
@@ -17,7 +17,7 @@
         <nav class="nav-menu">
             <div class="nav-menu__logo">
                 <h1>
-                    <a href="index.html"><img class="logo" src="./assets/logos/coffee-beans-logo-and-footer.svg" alt="coffee bean logo"> Nitro
+                    <a href="index.html"><img class="logo" src="./assets/logos/coffee-beans-logo.svg" alt="coffee bean logo"> Nitro
                     </a>
                 </h1>
             </div>
@@ -35,6 +35,7 @@
                 <h2>Nitro Coffee</h2>
                 <p>Coffee is a brewed drink prepared from roasted coffee beans, the seed of berries from certain Coffee species.
                 </p>
+                <div class="button-border shop-now"></div>
                 <button class="button"><a href="./pages/menu.html">Shop Now</a></button>
             </div>
             <div class="nav-nitro__img">
@@ -90,7 +91,10 @@
                     </div>
                 </div>
             </div>
-            <button class="button"><a href="./pages/menu.html">View All</a></button>
+            <div class="products__button">
+                <div class="button-border view-all"></div>
+                <button class="button"><a href="./pages/menu.html">View All</a></button>
+            </div>
         </section>
         <!-- we're different/history section  -->
         <section class="nitro-history">
@@ -103,10 +107,12 @@
                         <img src="./assets/images/coffee-beans.svg" alt="coffee beans" class="logo">
                         <img src="./assets/images/coffee-cup.svg" alt="coffee plants" class="logo">
                     </div>
+                    <div class="button-border learn-more"></div>
                     <button class="button"><a href="./pages/menu.html">Learn More</a></button>
                 </div>
+
                 <div class="nitro-history__banner">
-                    <img src="./assets/images/tiltedcan.png" alt="" class="products__img">
+                    <div class="banner_border"><img src="./assets/images/tiltedcan.png" alt="black can of coffee" class="banner_img "></div>
                 </div>
             </div>
         </section>
@@ -118,6 +124,7 @@
 
     <!-- footer -->
     <footer class="footer ">
+        <div class="coffee-banner left"></div>
         <div>
             <h3>Address</h3>
             <p>503 Broadway Penthouse</p>
@@ -130,12 +137,13 @@
         </div>
         <div>
             <h3>Social</h3>
-            <div class="social__pages ">
+            <div class="footer__social-pages ">
                 <a href="https://facebook.com " target="_blank "><img class="logo " src="./assets/logos/Facebook-Icon.svg " alt="facebook "></a>
                 <a href="https://yelp.com " target="_blank "><img class="logo " src="./assets/logos/Yelp-Icon.svg " alt="yelp "></a>
                 <a href="https://instagram.com " target="_blank "><img class="logo " src="./assets/logos/Instagram-Icon.svg " alt="instagram "></a>
             </div>
         </div>
+        <div class="coffee-banner right"></div>
     </footer>
 </body>
 
