@@ -103,9 +103,9 @@
     color: var(--nitro-blue);
 }
 
-.products__button {
+.products a {
     align-self: center;
-    /* margin: 1.5rem; */
+    margin: 1.5rem;
 }
 
 
@@ -130,8 +130,8 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    max-width: 500px;
-    min-width: 400px;
+    max-width: 31.25rem;
+    min-width: 25rem;
 }
 
 .nitro-history__images {
@@ -141,27 +141,26 @@
 }
 
 .nitro-history__banner {
-    min-width: 400px;
-    max-width: 400px;
+    min-width: 25rem;
+    max-width: 25rem;
     background-image: url("../assets/images/coldbrewbackground.png");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--graphite);
 }
 
 .banner_border {
     display: flex;
-    border: 5px solid var(--nitro-blue);
+    border: 0.3125rem solid var(--nitro-blue);
     padding: 1.25rem;
-    min-width: 400px;
-    max-width: 600px;
-    height: 380px;
+    min-width: 25rem;
+    max-width: 37.5rem;
+    height: 23.75rem;
     position: relative;
-    right: 10px;
-    bottom: 10px;
+    right: 0.625rem;
+    bottom: 0.625rem;
 }
 
 .banner_img {
@@ -169,7 +168,7 @@
     align-self: center;
     align-items: center;
     justify-content: center;
-    margin-left: 25%;
+    margin-left: 28%;
 }
 
 
@@ -226,7 +225,7 @@
 
 .footer__social-pages a:focus {
     outline: none;
-    box-shadow: 0 0 0 2px var(--nitro-blue-darker);
+    box-shadow: 0 0 0 0.125rem var(--nitro-blue-darker);
 }
 
 .footer__social-pages a:hover {
@@ -235,7 +234,7 @@
 
 .coffee-banner {
     display: flex;
-    width: 100px;
+    width: 6.25rem;
     background-image: url(../assets/logos/coffee-beans-footer.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -243,14 +242,14 @@
 
 .left {
     position: relative;
-    right: 80px;
-    bottom: 10px;
+    right: 5rem;
+    bottom: 0.625rem;
 }
 
 .right {
     position: relative;
-    left: 80px;
-    top: 20px;
+    left: 3.75rem;
+    top: 1.25rem;
 }
 
 
