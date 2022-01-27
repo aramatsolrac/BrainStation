@@ -80,7 +80,7 @@ h3 {
 
 .nav-menu__pages li {
     text-transform: uppercase;
-    /* padding: 1rem; */
+    padding: 1rem;
 }
 
 .nav-menu__pages a {
