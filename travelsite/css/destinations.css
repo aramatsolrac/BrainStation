@@ -1,1 +1,64 @@
 @import url('../css/global.css');
+.itinerary {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.itinerary--hawaii {
+    background-image: url('../assets/images/hawaii.jpg');
+}
+
+.itinerary--iceland {
+    background-image: url('../assets/images/iceland.jpg');
+}
+
+.itinerary--greece {
+    background-image: url('../assets/images/greece.jpg');
+}
+
+.itinerary h1 {
+    margin: 3rem 0;
+}
+
+.itinerary__cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
+    background-color: (--white);
+    margin: 1rem 0 5rem 0;
+}
+
+.itinerary__options {
+    background-color: var(--white);
+    width: 25%;
+    height: 25rem;
+    border-radius: 0.3125rem;
+    box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+.itinerary__options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.itinerary__options h3 {
+    border-bottom: .2rem solid var(--black);
+    width: 90%;
+    padding-top: .5rem;
+}
+
+.itinerary__options li {
+    margin: 1rem;
+    padding: 1rem 5rem;
+    background-color: var(--rose);
+}
