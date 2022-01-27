@@ -1,0 +1,31 @@
+.menu {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+}
+
+.hero-content * {
+    position: relative;
+    top: 170px;
+}
+
+.photo-1,
+.photo-2,
+.photo-3,
+.photo-4,
+.photo-5,
+.photo-6,
+.modal {
+    display: inline-block;
+}
+
+.gallery,
+.modal-container {
+    position: relative;
+    text-align: center;
+}
+
+.modal__close-button {
+    position: relative;
+    left: 240px;
+}

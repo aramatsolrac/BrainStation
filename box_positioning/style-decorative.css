@@ -1,0 +1,165 @@
+.container {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.menu {
+    width: 100%;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rebeccapurple;
+    color: white;
+}
+
+.nav-list__item {
+    display: inline-block;
+}
+
+.nav-list__item--title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: orange;
+    margin: 0 10px;
+}
+
+.nav-link:hover {
+    color: darkorange;
+}
+
+.hero {
+    background: linear-gradient(rgb(225, 110, 77), rgb(255, 106, 106));
+    height: 350px;
+    width: 100%;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content__title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.hero-content__text {
+    color: white;
+    margin: 20px 0;
+}
+
+.gallery {
+    margin-top: 50px;
+}
+
+.photo-1 {
+    background: url('https://picsum.photos/id/1002/300');
+}
+
+.photo-2 {
+    background: url('https://picsum.photos/id/1018/300');
+}
+
+.photo-3 {
+    background: url('https://picsum.photos/id/1015/300');
+}
+
+.photo-4 {
+    background: url('https://picsum.photos/id/1020/300');
+}
+
+.photo-5 {
+    background: url('https://picsum.photos/id/102/300');
+}
+
+.photo-6 {
+    background: url('https://picsum.photos/id/1021/300');
+}
+
+.gallery__item {
+    padding: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+}
+
+.description {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.description__para {
+    line-height: 1.5;
+    font-size: 16px;
+    margin: 30px 0;
+}
+
+.modal {
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 6px;
+    padding: 20px;
+    max-width: 500px;
+    background: white;
+}
+
+.modal__ok-button {
+    background: #0060df;
+    padding: 10px;
+    border: 1px solid #004299;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 #004299;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.modal__ok-button:hover {
+    background: #0250bb;
+    border-color: #01367f;
+    box-shadow: 0 5px 0 #01367f;
+}
+
+.modal__ok-button:active {
+    margin-top: 4px;
+    box-shadow: 0 1px 0 #004299;
+}
+
+.modal__title {
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.modal__close-button {
+    color: #de0000;
+    cursor: pointer;
+}
+
+.modal__close-button:hover {
+    color: #900;
+}
+
+.modal__text {
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: justify;
+}
