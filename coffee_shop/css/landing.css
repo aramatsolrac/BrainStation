@@ -112,7 +112,10 @@
 /* we're different/history section  */
 
 .nitro-history {
-    margin: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
 }
 
 .nitro-history__card {
@@ -179,8 +182,8 @@
 .discount {
     display: flex;
     justify-content: center;
-    align-content: center;
-    margin: 8rem 3rem;
+    align-items: center;
+    padding: 8rem;
 }
 
 .discount p {
