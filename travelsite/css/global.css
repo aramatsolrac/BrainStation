@@ -107,6 +107,7 @@ h3 {
 
 .footer h3 {
     color: var(--blue);
+    padding: .5em 0 0 0;
 }
 
 .footer p:first-of-type {
@@ -134,4 +135,41 @@ h3 {
 
 .footer__social a {
     padding: 2rem 2rem 0 0;
+}
+
+
+/* mobile responsive design */
+
+@media screen and (min-width: 0px) and (max-width: 700px) {
+    .nav-menu {
+        padding: 0 1rem;
+    }
+    .nav-menu__logo h1 {
+        font-size: 1rem;
+    }
+    .nav-menu__pages li {
+        padding: .5rem;
+    }
+    .nav-menu__pages a {
+        font-size: .7rem;
+    }
+    .footer,
+    .footer__hours {
+        flex-direction: column;
+    }
+    .footer {
+        align-items: flex-start;
+    }
+    .footer__social a {
+        padding: 1rem 1rem 0 0;
+    }
+}
+
+
+/* tablet */
+
+@media screen and (min-width: 601px) and (max-width: 1072px) {
+    .nav-menu {
+        padding: 0 4rem;
+    }
 }

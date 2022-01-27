@@ -43,9 +43,6 @@
     height: 25rem;
     border-radius: 0.3125rem;
     box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
-}
-
-.itinerary__options {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -61,4 +58,40 @@
     margin: 1rem;
     padding: 1rem 5rem;
     background-color: var(--rose);
+}
+
+
+/* responsive design */
+
+
+/* mobile */
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .itinerary h1 {
+        font-size: 3.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+    }
+    .itinerary__cards {
+        flex-direction: column;
+    }
+    .itinerary__options {
+        width: 100%;
+        margin: 1rem;
+    }
+    .itinerary__options li {
+        padding: 1rem 3rem;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1180px) {
+    .itinerary__options {
+        width: 100%;
+        margin: 1rem;
+    }
+    .itinerary__options li {
+        padding: 1rem 3rem;
+    }
 }

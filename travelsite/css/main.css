@@ -79,3 +79,75 @@
     font-weight: bold;
     font-size: 1.5rem;
 }
+
+
+/* responsive design */
+
+
+/* mobile */
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .nav-hero {
+        padding: 1rem;
+        height: 43rem;
+        justify-content: flex-start;
+    }
+    .nav-hero__img {
+        display: none;
+    }
+    .nav-hero__about h2 {
+        font-size: 2rem;
+    }
+    .nav-hero__about a {
+        width: 55%;
+        font-size: .8rem;
+    }
+    .recommendations {
+        margin: 2rem 1rem;
+        align-items: left;
+        justify-content: center;
+    }
+    .recommendations__cards {
+        flex-direction: column;
+        margin: 2rem 0;
+    }
+    .recommendations__pic img {
+        height: 23rem;
+    }
+    .recommendations__pic a:last-child {
+        font-size: 1rem;
+        left: 10rem;
+        bottom: 2.5rem;
+    }
+}
+
+
+/* tablet */
+
+@media screen and (min-width: 601px) and (max-width: 1072px) {
+    .nav-hero {
+        padding: 3rem;
+        height: 50rem;
+    }
+    .nav-hero__about a {
+        width: 40%;
+        font-size: .8rem;
+    }
+    .recommendations {
+        margin: 2rem;
+        align-items: left;
+        justify-content: center;
+    }
+    .recommendations__cards {
+        margin: 1rem 2rem 0 0;
+        width: 100%;
+    }
+    .recommendations__pic img {
+        height: 23rem;
+    }
+    .recommendations__pic a:last-child {
+        font-size: 1rem;
+        left: 10rem;
+        bottom: 2.5rem;
+    }
+}
