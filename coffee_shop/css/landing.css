@@ -131,7 +131,8 @@
     justify-content: space-between;
     flex-direction: column;
     max-width: 31.25rem;
-    min-width: 25rem;
+    min-width: 20rem;
+    margin: 1rem;
 }
 
 .nitro-history__images {
@@ -149,6 +150,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 2rem;
 }
 
 .banner_border {
@@ -284,8 +286,9 @@
         width: 80%;
         margin: 3rem 0;
     }
-    .nitro-history__banner {
-        width: 90%;
+    .nitro-history__banner,
+    .banner_border {
+        display: none;
     }
     .footer {
         flex-direction: column;
@@ -307,7 +310,8 @@
     .nitro-history {
         margin: 3rem;
     }
-    .nitro-history__banner {
-        width: 50%;
+    .nitro-history__banner,
+    .banner_border {
+        min-width: 20rem;
     }
 }

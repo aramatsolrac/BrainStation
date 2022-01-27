@@ -130,6 +130,19 @@ main section:nth-child(2) {
 /* mobile responsive design */
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
+    .menu__title h1 {
+        margin-right: 9rem;
+        min-width: 9rem;
+        min-height: 1rem;
+        font-size: 1.5rem;
+        padding: 2rem;
+    }
+    .menu_border {
+        left: 135px;
+        bottom: 10px;
+        min-width: 9rem;
+        min-height: 6rem;
+    }
     .menu__options a {
         padding: 0 .5rem;
     }
