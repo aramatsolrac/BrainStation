@@ -80,7 +80,7 @@ h3 {
 
 .nav-menu__pages li {
     text-transform: uppercase;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 .nav-menu__pages a {
@@ -101,24 +101,36 @@ h3 {
     background: var(--nitro-blue);
     color: var(--white);
     font-family: sans-serif;
-    padding: 0.9375rem 1.25rem 0.875rem;
+    padding: .5rem;
     position: relative;
     text-transform: uppercase;
     text-align: center;
+    height: 3.2rem;
 }
 
 .dislodged-border,
-.dislodged-border::before {
+.dislodged-border:before {
     width: 10rem;
 }
 
-.dislodged-border::before {
+.dislodged-border:before {
     border: 0.125rem solid var(--graphite);
     content: "";
     height: 100%;
     position: absolute;
     bottom: 0.4063rem;
     right: 0.3125rem;
+}
+
+.dislodged-border:hover {
+    background-color: var(--nitro-blue-darker);
+    border: 0.125rem solid var(--graphite);
+    padding-top: .8rem;
+    transition: all 0.3s ease;
+}
+
+.dislodged-border:hover:before {
+    display: none;
 }
 
 
@@ -136,15 +148,6 @@ h3 {
 .nav-menu__pages li:last-child a:hover {
     color: var(--graphite);
     text-decoration: underline;
-}
-
-.button:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.125rem var(--nitro-blue);
-}
-
-.button:hover {
-    background-color: var(--nitro-blue-darker);
 }
 
 

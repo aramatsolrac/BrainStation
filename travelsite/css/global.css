@@ -1,0 +1,129 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000;
+    --blue: #335576;
+    --rose: #FEFAF5;
+    --orange: #DB7A4E;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--blue);
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+
+/* navigation bar */
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 5rem;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+.nav-menu__pages ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-menu__pages li {
+    padding: 1rem;
+}
+
+.nav-menu__pages a {
+    color: inherit;
+}
+
+.nav-menu__pages li:hover>a,
+.nav-menu__pages li:active>a,
+.current-page {
+    border-bottom: 5px solid var(--orange);
+    padding-bottom: 7px;
+    list-style-type: underline;
+}
+
+
+/* footer */
+
+.icon:not(.facebook) {
+    width: 2rem;
+}
+
+.facebook {
+    width: 1rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--rose);
+    padding: 2rem;
+}
+
+.footer h3 {
+    color: var(--blue);
+}
+
+.footer p:first-of-type {
+    color: var(--orange);
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.footer__contact,
+.footer__hours,
+.footer__social {
+    padding: 1rem 0;
+    color: var(--blue);
+}
+
+.footer__hours,
+.footer__social {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__contact * {
+    padding: .5rem 1.5rem 0 0;
+}
+
+.footer__hours * {
+    padding: .5rem 1.5rem 0 0;
+}
+
+.footer__social a {
+    padding: 2rem 2rem 0 0;
+}

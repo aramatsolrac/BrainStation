@@ -1,0 +1,88 @@
+@import url('../css/global.css');
+
+/* hero  */
+
+.nav-hero {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: var(--rose);
+    height: 40rem;
+    padding: 3rem;
+}
+
+.nav-hero__about {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 60%;
+    padding: 1rem;
+    color: var(--blue);
+    text-align: left;
+}
+
+.nav-hero__about * {
+    margin: .7rem;
+}
+
+.nav-hero__about a {
+    background-color: var(--orange);
+    width: 25%;
+    padding: .5rem;
+    text-align: center;
+    border-radius: 2rem;
+    color: var(--white);
+}
+
+.nav-hero__img {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.nav-hero__img img {
+    min-height: 8rem;
+    max-height: 21.875rem;
+}
+
+
+/* recommendations */
+
+.recommendations {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    color: var(--blue);
+    margin: 5rem;
+}
+
+.recommendations__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2rem;
+}
+
+.recommendations__cards img {
+    width: 100%;
+    height: 28rem;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* .recommendations__pic {
+    position: relative;
+} */
+
+.recommendations__pic p {
+    position: relative;
+    left: 180px;
+    bottom: 45px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.5rem;
+}

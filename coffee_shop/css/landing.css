@@ -200,9 +200,9 @@
 
 .footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: var(--nitro-pink);
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
 
 .footer span {
@@ -242,14 +242,13 @@
 
 .left {
     position: relative;
-    right: 5rem;
-    bottom: 0.625rem;
+    bottom: 2.5rem;
 }
 
 .right {
     position: relative;
-    left: 3.75rem;
-    top: 1.25rem;
+    left: .1rem;
+    top: 2.5rem;
 }
 
 
