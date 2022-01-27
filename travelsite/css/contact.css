@@ -1,0 +1,87 @@
+@import url('../css/global.css');
+.information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 5rem;
+    min-height: 90vh;
+    background-color: var(--lightorange);
+    color: var(--blue);
+}
+
+.information__form fieldset {
+    border-radius: .5rem;
+    padding: 3rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+}
+
+.information__form fieldset * {
+    margin: .2rem;
+}
+
+.information__form h1 {
+    color: var(--blue);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+
+input[type='text'],
+[type='email'],
+select,
+textarea {
+    background-color: inherit;
+    color: var(--blue);
+    border: none;
+    border-bottom: solid 0.125rem var(--blue);
+    margin: 0 0 2rem 0;
+    padding: 0 0 0.875rem 0;
+    width: 100%;
+}
+
+input[type='text']::placeholder,
+[type='email']::placeholder,
+select::placeholder,
+textarea::placeholder {
+    color: var(--blue);
+}
+
+input[type='text']:focus,
+[type='email']:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+select {
+    background: url('../assets/icons/down-arrow.svg') no-repeat right;
+    appearance: none;
+}
+
+input[type="submit"] {
+    background: none;
+    border-radius: .5rem;
+    border: solid 0.126rem var(--blue);
+    color: var(--blue);
+    padding: .6rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    color: var(--white);
+    background-color: var(--blue);
+    opacity: .8;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .information {
+        padding: 1rem;
+        min-height: 100vh;
+    }
+    .information__form fieldset {
+        padding: 2rem 2rem 2rem 1rem;
+    }
+}
