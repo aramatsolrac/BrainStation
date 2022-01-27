@@ -3,15 +3,19 @@
     --black: #000;
     --black-opacity: rgba(0, 0, 0, 0.2);
     --blue: #335576;
+    --lightblue: #B5DDDE;
     --rose: #FEFAF5;
     --orange: #DB7A4E;
+    --lightorange: #fce8e0;
+    --font: Verdana, Geneva, Tahoma, sans-serif;
+    --box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
 }
 
 * {
     box-sizing: border-box;
 }
 
-body {
+html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -31,7 +35,6 @@ a:visited {
 
 h1 {
     font-size: 4rem;
-    color: var(--white);
 }
 
 h2 {
@@ -62,6 +65,11 @@ h3 {
 
 .nav-menu__logo h1 {
     font-size: 1.5rem;
+    color: var(--blue);
+}
+
+.nav-menu__logo a:hover {
+    color: var(--orange);
 }
 
 .nav-menu__pages ul {
@@ -79,7 +87,7 @@ h3 {
 
 .nav-menu__pages li:hover>a,
 .nav-menu__pages li:active>a,
-.current-page {
+.nav-menu__pages--active {
     border-bottom: 0.3125rem solid var(--orange);
     padding-bottom: 0.4375rem;
     list-style-type: underline;
@@ -134,7 +142,13 @@ h3 {
 }
 
 .footer__social a {
-    padding: 2rem 2rem 0 0;
+    margin: 2rem 2rem 0 0;
+    padding: .2rem;
+    border-radius: .2rem;
+}
+
+.footer a:hover {
+    background-color: var(--orange);
 }
 
 
@@ -161,7 +175,7 @@ h3 {
         align-items: flex-start;
     }
     .footer__social a {
-        padding: 1rem 1rem 0 0;
+        margin: 1rem 1rem 0 0;
     }
 }
 

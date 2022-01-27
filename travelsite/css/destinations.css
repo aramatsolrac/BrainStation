@@ -25,6 +25,7 @@
 
 .itinerary h1 {
     margin: 3rem 0;
+    color: var(--white);
 }
 
 .itinerary__cards {
@@ -42,7 +43,7 @@
     width: 25%;
     height: 25rem;
     border-radius: 0.3125rem;
-    box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -87,6 +88,9 @@
 }
 
 @media screen and (min-width: 601px) and (max-width: 1180px) {
+    .itinerary {
+        height: 90vh;
+    }
     .itinerary__options {
         width: 100%;
         margin: 1rem;
