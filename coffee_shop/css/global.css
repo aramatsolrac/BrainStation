@@ -61,6 +61,11 @@ h3 {
     background-color: var(--white);
 }
 
+.logo {
+    min-width: 2rem;
+    max-width: 4rem;
+}
+
 
 /* main menu */
 
@@ -72,11 +77,6 @@ h3 {
     padding: 1rem;
     width: 100%;
     background-color: var(--nitro-pink);
-}
-
-.logo {
-    min-width: 2rem;
-    max-width: 4rem;
 }
 
 .nav-menu__logo a {
@@ -118,7 +118,7 @@ h3 {
 
 /* buttons */
 
-.dislodged-border {
+.button__dislodged-border {
     background: var(--nitro-blue);
     color: var(--white);
     font-family: sans-serif;
@@ -129,12 +129,12 @@ h3 {
     height: 3.2rem;
 }
 
-.dislodged-border,
-.dislodged-border:before {
+.button__dislodged-border,
+.button__dislodged-border:before {
     width: 10rem;
 }
 
-.dislodged-border:before {
+.button__dislodged-border:before {
     border: 0.125rem solid var(--graphite);
     content: "";
     height: 100%;
@@ -143,14 +143,14 @@ h3 {
     right: 0.3125rem;
 }
 
-.dislodged-border:hover {
+.button__dislodged-border:hover {
     background-color: var(--nitro-blue-darker);
     border: 0.125rem solid var(--graphite);
     padding-top: .8rem;
     transition: all 0.3s ease;
 }
 
-.dislodged-border:hover:before {
+.button__dislodged-border:hover:before {
     display: none;
 }
 
@@ -180,7 +180,8 @@ h3 {
         max-width: 2.5rem;
     }
     .nav-menu__pages li {
-        padding: .5rem;
+        padding: 1rem .5rem 0rem .5rem;
+        margin: 0;
     }
     .nav-menu__pages ul {
         padding-left: .3rem;

@@ -116,14 +116,6 @@ h3 {
 
 /* footer */
 
-.icon:not(.facebook) {
-    width: 2rem;
-}
-
-.facebook {
-    width: 1rem;
-}
-
 .footer {
     display: flex;
     align-items: center;
@@ -131,6 +123,10 @@ h3 {
     background-color: var(--rose);
     padding: 2rem;
     font-size: .7rem;
+}
+
+.footer a:hover {
+    background-color: var(--orange);
 }
 
 .footer h3 {
@@ -156,19 +152,28 @@ h3 {
     flex-direction: row;
 }
 
-.footer__contact *,
+.footer__contact p:first-child {
+    padding: 1rem 1.5rem 0 0;
+}
+
+.footer__contact p:last-child,
 .footer__hours * {
     padding: .5rem 1.5rem 0 0;
 }
 
 .footer__social a {
-    margin: 2rem 2rem 0 0;
+    margin: 1rem 2rem 0 0;
     padding: .2rem;
     border-radius: .2rem;
 }
 
-.footer a:hover {
-    background-color: var(--orange);
+.icon--instagram,
+.icon--twitter {
+    width: 2rem;
+}
+
+.icon--facebook {
+    width: 1rem;
 }
 
 

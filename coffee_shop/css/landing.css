@@ -115,7 +115,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4rem;
+    padding: 4rem 0;
 }
 
 .nitro-history__card {
@@ -156,7 +156,7 @@
     margin-left: 2rem;
 }
 
-.banner_border {
+.nitro-history__banner--border {
     display: flex;
     border: 0.3125rem solid var(--nitro-blue);
     padding: 1.25rem;
@@ -168,7 +168,7 @@
     bottom: 0.625rem;
 }
 
-.banner_img {
+.nitro-history__banner--img {
     display: flex;
     align-self: center;
     align-items: center;
@@ -237,7 +237,7 @@
     background-color: var(--nitro-blue);
 }
 
-.coffee-banner {
+.footer__coffee-banner {
     display: flex;
     width: 6.25rem;
     background-image: url(../assets/logos/coffee-beans-footer.svg);
@@ -245,12 +245,12 @@
     background-size: cover;
 }
 
-.left {
+.footer__coffee-banner--left {
     position: relative;
     bottom: 2.5rem;
 }
 
-.right {
+.footer__coffee-banner--right {
     position: relative;
     left: .1rem;
     top: 2.5rem;
@@ -263,6 +263,9 @@
 /* mobile */
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
+    .products h2 {
+        font-size: 2.5rem;
+    }
     .nav-nitro__about {
         width: fit-content;
     }
@@ -280,7 +283,7 @@
         margin: 1rem 0;
     }
     .nitro-history {
-        margin: 3rem 1rem;
+        margin: 0;
     }
     .nitro-history__card {
         flex-direction: column;
@@ -290,8 +293,11 @@
         margin: 3rem 0;
     }
     .nitro-history__banner,
-    .banner_border {
+    .nitro-history__banner--border {
         display: none;
+    }
+    .discount {
+        padding: 0 1rem 4rem 1rem;
     }
     .footer {
         flex-direction: column;
@@ -314,7 +320,7 @@
         margin: 3rem;
     }
     .nitro-history__banner,
-    .banner_border {
+    .nitro-history__banner--border {
         min-width: 20rem;
     }
 }
