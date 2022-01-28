@@ -77,10 +77,12 @@ input[type="submit"]:hover {
     opacity: .8;
 }
 
+
+/* responsive design */
+
 @media screen and (min-width: 0px) and (max-width: 600px) {
     .information {
         padding: 1rem;
-        min-height: 70vh;
     }
     .information__form fieldset {
         padding: 2rem 2rem 2rem 1rem;

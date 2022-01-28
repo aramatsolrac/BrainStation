@@ -46,6 +46,23 @@ h3 {
     font-size: 1.5rem;
 }
 
+.wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-width--rose {
+    background-color: var(--rose);
+}
+
+.full-width--white {
+    background-color: var(--white);
+}
+
 
 /* navigation bar */
 
@@ -54,13 +71,16 @@ h3 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    /* width: 100%; */
     padding: 0 5rem;
     position: fixed;
     z-index: 10;
     top: 0;
+    right: 0;
+    left: 0;
     background-color: var(--white);
     color: var(--blue);
+    box-shadow: var(--box-shadow);
 }
 
 .nav-menu__logo h1 {
@@ -185,5 +205,14 @@ h3 {
 @media screen and (min-width: 601px) and (max-width: 1072px) {
     .nav-menu {
         padding: 0 4rem;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .nav-menu {
+        justify-content: center;
+    }
+    .nav-menu h1 {
+        padding-right: 39rem;
     }
 }
