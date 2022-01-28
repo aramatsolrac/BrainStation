@@ -71,7 +71,7 @@ h3 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* width: 100%; */
+    width: 100%;
     padding: 0 5rem;
     position: fixed;
     z-index: 10;
@@ -125,10 +125,6 @@ h3 {
     font-size: .7rem;
 }
 
-.footer a:hover {
-    background-color: var(--orange);
-}
-
 .footer h3 {
     color: var(--blue);
     padding: .5em 0 0 0;
@@ -162,18 +158,21 @@ h3 {
 }
 
 .footer__social a {
-    margin: 1rem 2rem 0 0;
+    margin: 1.6rem 2rem 0 0;
     padding: .2rem;
     border-radius: .2rem;
 }
 
-.icon--instagram,
-.icon--twitter {
+.footer__social a:nth-of-type(odd) {
     width: 2rem;
 }
 
-.icon--facebook {
-    width: 1rem;
+.footer__social a:nth-of-type(2) {
+    width: 1.2rem;
+}
+
+.footer__social a:hover {
+    background-color: var(--orange);
 }
 
 
