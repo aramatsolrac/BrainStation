@@ -21,7 +21,7 @@
     margin: .7rem;
 }
 
-.nav-nitro__about p {
+.nav-nitro__detail {
     width: 40%;
 }
 
@@ -45,7 +45,7 @@
     padding: 2rem;
 }
 
-.products h2 {
+.products__title {
     text-align: center;
     margin: 1.5rem;
 }
@@ -86,12 +86,12 @@
     padding: 0 .2rem;
 }
 
-.products__description h3 {
+.products__subtitle {
     font-weight: 300;
     font-size: 1.6rem;
 }
 
-.products__description p {
+.products__qtd {
     font-weight: 400;
     font-size: 1rem;
     color: var(--gray);
@@ -103,7 +103,7 @@
     color: var(--nitro-blue);
 }
 
-.products a {
+.products__link {
     align-self: center;
     margin: 1.5rem;
 }
@@ -153,7 +153,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 2rem;
+    margin: 0 1rem 0 2rem;
 }
 
 .nitro-history__banner--border {
@@ -186,7 +186,7 @@
     padding: 8rem;
 }
 
-.discount p {
+.discount__info {
     padding: 2rem;
     background-color: var(--graphite);
     color: var(--white);
@@ -195,7 +195,7 @@
     font-size: 1.875rem;
 }
 
-.discount span {
+.discount__code {
     font-weight: 700;
     text-shadow: 0.0938rem 0.0938rem var(--nitro-blue);
 }
@@ -210,12 +210,12 @@
     padding: 3rem 0;
 }
 
-.footer span {
-    font-weight: 700;
+.footer__subtitle {
+    padding: .6rem 0;
 }
 
-.footer h3 {
-    padding: .6rem 0;
+.footer__days {
+    font-weight: 700;
 }
 
 .footer__social-pages {
@@ -263,17 +263,17 @@
 /* mobile */
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
-    .products h2 {
-        font-size: 2.5rem;
-    }
     .nav-nitro__about {
         width: fit-content;
     }
-    .nav-nitro__about p {
+    .nav-nitro__detail {
         width: 100%;
     }
     .nav-nitro__img img {
         display: none;
+    }
+    .products__title {
+        font-size: 2.5rem;
     }
     .products__list {
         flex-direction: column;

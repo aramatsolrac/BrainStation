@@ -94,25 +94,42 @@ h3 {
     align-items: center;
 }
 
-.nav-menu__pages ul {
+.nav-menu__list {
     display: flex;
     flex-direction: row;
 }
 
-.nav-menu__pages li {
+.nav-menu__item {
     text-transform: uppercase;
     padding: 1rem;
 }
 
-.nav-menu__pages a {
+.nav-menu__item a {
     color: var(--graphite);
     border-radius: .1rem;
     font-size: 1.25rem;
     padding: .1rem;
 }
 
-.nav-menu__pages li:last-child a {
+.nav-menu__item:last-child a {
     color: var(--nitro-blue);
+}
+
+
+/* hover and focus states */
+
+.nav-menu__logo a:hover {
+    color: var(--nitro-blue);
+}
+
+.nav-menu__item a:hover {
+    color: var(--nitro-blue);
+    text-decoration: underline;
+}
+
+.nav-menu__item:last-child a:hover {
+    color: var(--graphite);
+    text-decoration: underline;
 }
 
 
@@ -155,23 +172,6 @@ h3 {
 }
 
 
-/* hover and focus states */
-
-.nav-menu__pages a:hover {
-    color: var(--nitro-blue);
-    text-decoration: underline;
-}
-
-.nav-menu__logo a:hover {
-    color: var(--nitro-blue);
-}
-
-.nav-menu__pages li:last-child a:hover {
-    color: var(--graphite);
-    text-decoration: underline;
-}
-
-
 /* mobile responsive design */
 
 @media screen and (min-width: 0px) and (max-width: 500px) {
@@ -179,14 +179,14 @@ h3 {
         min-width: 1rem;
         max-width: 2.5rem;
     }
-    .nav-menu__pages li {
+    .nav-menu__list {
+        padding-left: .3rem;
+    }
+    .nav-menu__item {
         padding: 1rem .5rem 0rem .5rem;
         margin: 0;
     }
-    .nav-menu__pages ul {
-        padding-left: .3rem;
-    }
-    .nav-menu__pages a {
+    .nav-menu__item a {
         font-size: .7rem;
     }
 }

@@ -8,7 +8,7 @@
     align-items: flex-start;
 }
 
-.menu__title {
+.menu__box {
     display: flex;
     justify-content: center;
     min-width: 100%;
@@ -20,7 +20,7 @@
     background-size: cover;
 }
 
-.menu__title h1 {
+.menu__title {
     align-self: center;
     color: var(--white);
     background-color: var(--graphite);
@@ -54,23 +54,23 @@
     max-width: 100%;
 }
 
-.menu__options ul {
+.menu__list {
     display: flex;
     justify-content: center;
     flex-direction: row;
     width: 100%;
 }
 
-.menu__options a {
+.menu__link {
     padding: 0 1rem;
 }
 
-.menu__options a:hover {
+.menu__link:hover {
     color: var(--nitro-blue);
 }
 
-.menu__options ul,
-.menu__options a {
+.menu__list,
+.menu__link {
     color: var(--white);
 }
 
@@ -101,7 +101,7 @@ main section:nth-child(2) {
     font-weight: 300;
 }
 
-.drinks h2 {
+.drinks__title {
     font-size: 3.75rem;
     padding: 1rem 0;
 }
@@ -130,7 +130,7 @@ main section:nth-child(2) {
 /* mobile responsive design */
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
-    .menu__title h1 {
+    .menu__title {
         margin-right: 9rem;
         min-width: 9rem;
         min-height: 1rem;
@@ -143,10 +143,10 @@ main section:nth-child(2) {
         min-width: 9rem;
         min-height: 6rem;
     }
-    .menu__options a {
+    .menu__link {
         padding: 0 .5rem;
     }
-    .drinks h2 {
+    .drinks__title {
         font-size: 2.5rem;
     }
 }
