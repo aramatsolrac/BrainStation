@@ -176,6 +176,16 @@
     margin-left: 28%;
 }
 
+.nitro-history__banner--img:hover {
+    animation: mymove 2s infinite;
+}
+
+@keyframes mymove {
+    50% {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* discount section */
 
@@ -193,6 +203,19 @@
     width: 80%;
     text-align: center;
     font-size: 1.875rem;
+    animation: moveBackground 2.5s ease alternate infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-color: var(--graphite);
+    }
+    50% {
+        background-color: var(--nitro-blue);
+    }
+    100% {
+        background-color: var(--nitro-blue-darker);
+    }
 }
 
 .discount__code {
