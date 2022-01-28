@@ -7,7 +7,7 @@
 - [Technologies](#technologies)
 - [Installing](#installing)
 - [Live](#live)
-- [Screenshots](#screenshots)
+
 
 ## Overview
 
@@ -17,8 +17,8 @@
 ### Features
 - Multi-page website
 - Responsive design
-- Users can access basic information on landing page
-- Users can access further details on menu page
+- Access basic information on landing page
+- Access further details on menu page
 
 ### Technologies
 
@@ -37,31 +37,3 @@
 
 - [Coffee Shop](https://aramatsolrac.github.io/BrainStation/coffee_shop/)
 
-### Screenshots
-
-<details>
-<summary>Landing Page</summary>
-
-##### Desktop
-![](./assets/screenshots/landing-page/landing-page_desktop.png)
-
-##### Tablet
-![](./assets/screenshots/landing-page/landing-page_tablet.png)
-
-##### Mobile
-![](./assets/screenshots/landing-page/landing-page_mobile.png)
-
-</details>
-<details>
-<summary>Menu</summary>
-
-##### Desktop
-![](./assets/screenshots/menu/menu_desktop.png)
-
-##### Tablet
-![](./assets/screenshots/menu/menu_tablet.png)
-
-##### Mobile
-![](./assets/screenshots/menu/menu_mobile.png)
-
-</details>
