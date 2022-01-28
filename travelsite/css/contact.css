@@ -11,7 +11,14 @@
     color: var(--blue);
 }
 
-.information__form fieldset {
+.information__title {
+    color: var(--blue);
+    font-size: 1.5rem;
+    margin: 4rem 0 1rem 0;
+    text-transform: uppercase;
+}
+
+.information__form {
     border-radius: .5rem;
     padding: 3rem;
     background-color: var(--white);
@@ -19,15 +26,8 @@
     border: 0.0625rem solid var(--black-opacity);
 }
 
-.information__form fieldset * {
+.information__form * {
     margin: .2rem;
-}
-
-.information__form h1 {
-    color: var(--blue);
-    font-size: 1.5rem;
-    margin: 2rem 0 1rem 0;
-    text-transform: uppercase;
 }
 
 input[type='text'],
@@ -84,7 +84,7 @@ input[type="submit"]:hover {
     .information {
         padding: 1rem;
     }
-    .information__form fieldset {
+    .information__form {
         padding: 2rem 2rem 2rem 1rem;
     }
 }

@@ -24,21 +24,24 @@
     margin: .7rem;
 }
 
-.nav-hero__about a {
+.nav-hero__link {
     background-color: var(--orange);
     width: 25%;
     padding: .5rem;
     border-radius: 2rem;
     text-align: center;
+}
+
+.nav-hero__about a {
     color: var(--white);
 }
 
-.nav-hero__about a:focus {
+.nav-hero__link:focus {
     outline: none;
     box-shadow: 0 0 0 0.1875rem var(--lightblue);
 }
 
-.nav-hero__about a:hover {
+.nav-hero__link:hover {
     opacity: 0.8;
 }
 
@@ -72,7 +75,7 @@
     margin: 2rem;
 }
 
-.recommendations__cards img {
+.recommendations__pic img {
     width: 100%;
     height: 28rem;
     border: 0.0625rem solid var(--black-opacity);
@@ -80,16 +83,19 @@
     box-shadow: var(--box-shadow);
 }
 
-.recommendations__pic a:last-child {
+.recommendations__pic a {
+    color: var(--white);
+}
+
+.recommendations__name {
     position: relative;
     left: 11.25rem;
     bottom: 3.125rem;
-    color: var(--white);
     font-weight: bold;
     font-size: 1.5rem;
 }
 
-.recommendations__pic a:last-child:hover {
+.recommendations__name:hover {
     color: var(--orange);
     text-shadow: var(--black-opacity) 0.1875rem 0.3125rem 0.125rem;
 }
@@ -109,10 +115,10 @@
     .nav-hero__img {
         display: none;
     }
-    .nav-hero__about h2 {
+    .nav-hero__title {
         font-size: 2rem;
     }
-    .nav-hero__about a {
+    .nav-hero__link {
         width: 55%;
         font-size: .8rem;
     }
@@ -128,7 +134,7 @@
     .recommendations__pic img {
         height: 23rem;
     }
-    .recommendations__pic a:last-child {
+    .recommendations__name {
         font-size: 1rem;
         left: 10rem;
         bottom: 2.5rem;
@@ -159,7 +165,7 @@
     .recommendations__pic img {
         height: 23rem;
     }
-    .recommendations__pic a:last-child {
+    .recommendations__name {
         font-size: 1rem;
         left: 10rem;
         bottom: 2.5rem;

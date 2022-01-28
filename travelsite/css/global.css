@@ -59,10 +59,6 @@ h3 {
     background-color: var(--rose);
 }
 
-.full-width--white {
-    background-color: var(--white);
-}
-
 
 /* navigation bar */
 
@@ -83,30 +79,30 @@ h3 {
     box-shadow: var(--box-shadow);
 }
 
-.nav-menu__logo h1 {
+.nav-menu__title {
     font-size: 1.5rem;
     color: var(--blue);
 }
 
-.nav-menu__logo a:hover {
+.nav-menu__link:hover {
     color: var(--orange);
 }
 
-.nav-menu__pages ul {
+.nav-menu__list {
     display: flex;
     flex-direction: row;
 }
 
-.nav-menu__pages li {
+.nav-menu__item {
     padding: 1rem;
 }
 
-.nav-menu__pages a {
+.nav-menu__link {
     color: inherit;
 }
 
-.nav-menu__pages li:hover>a,
-.nav-menu__pages li:active>a,
+.nav-menu__item:hover>a,
+.nav-menu__item:active>a,
 .nav-menu__pages--active {
     border-bottom: 0.3125rem solid var(--orange);
     padding-bottom: 0.4375rem;
@@ -125,16 +121,6 @@ h3 {
     font-size: .7rem;
 }
 
-.footer h3 {
-    color: var(--blue);
-    padding: .5em 0 0 0;
-}
-
-.footer p:first-of-type {
-    color: var(--orange);
-    text-transform: uppercase;
-}
-
 .footer__contact,
 .footer__hours,
 .footer__social {
@@ -148,30 +134,37 @@ h3 {
     flex-direction: row;
 }
 
-.footer__contact p:first-child {
-    padding: 1rem 1.5rem 0 0;
+.footer__title {
+    color: var(--blue);
+    padding: .5rem 0 0 0;
 }
 
-.footer__contact p:last-child,
-.footer__hours * {
-    padding: .5rem 1.5rem 0 0;
+.footer__subtitle {
+    color: var(--orange);
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding: 1rem 1.5rem .5rem 0;
 }
 
-.footer__social a {
-    margin: 1.6rem 2rem 0 0;
+.footer__detail {
+    padding: 0 2rem 0 0;
+}
+
+.footer__link {
+    margin: 1.6rem 1.5rem 0 0;
     padding: .2rem;
     border-radius: .2rem;
 }
 
-.footer__social a:nth-of-type(odd) {
+.footer__link:nth-of-type(odd) {
     width: 2rem;
 }
 
-.footer__social a:nth-of-type(2) {
+.footer__link:nth-of-type(2) {
     width: 1.2rem;
 }
 
-.footer__social a:hover {
+.footer__link:hover {
     background-color: var(--orange);
 }
 
@@ -180,15 +173,15 @@ h3 {
 
 @media screen and (min-width: 0px) and (max-width: 700px) {
     .nav-menu {
-        padding: 0 1rem;
+        padding: 0 1.5rem;
     }
-    .nav-menu__logo h1 {
+    .nav-menu__title {
         font-size: 1rem;
     }
-    .nav-menu__pages li {
-        padding: .5rem;
+    .nav-menu__item {
+        padding-right: 0;
     }
-    .nav-menu__pages a {
+    .nav-menu__list a {
         font-size: .7rem;
     }
     .footer,
@@ -198,7 +191,7 @@ h3 {
     .footer {
         align-items: flex-start;
     }
-    .footer__social a {
+    .footer__link {
         margin: 1rem 1rem 0 0;
     }
 }
@@ -216,7 +209,7 @@ h3 {
     .nav-menu {
         justify-content: center;
     }
-    .nav-menu h1 {
+    .nav-menu__title {
         padding-right: 39rem;
     }
 }
