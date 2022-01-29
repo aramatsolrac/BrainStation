@@ -177,10 +177,10 @@
 }
 
 .nitro-history__banner--img:hover {
-    animation: mymove 2s infinite;
+    animation: moveImg 2s infinite;
 }
 
-@keyframes mymove {
+@keyframes moveImg {
     50% {
         transform: rotate(360deg);
     }
