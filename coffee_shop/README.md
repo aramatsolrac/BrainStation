@@ -23,8 +23,9 @@
 ### Technologies
 
 - HTML5
-- CSS
 - BEM
+- CSS
+- Sass
 - FlexBox
 
 ### Installing
