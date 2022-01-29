@@ -1,0 +1,40 @@
+@import "./helpers/_mixins";
+@import "./helpers/_variables.scss";
+h1 {
+    @include border(4px, solid, $teal);
+    font-family: $arial;
+}
+
+h2 {
+    font-size: 14px;
+    font-family: $cursive;
+}
+
+ul {
+    @include background($beige);
+    il {
+        font-weight: bold;
+        color: $teal;
+    }
+    #snack-special {
+        @include background($lightsalmon);
+    }
+}
+
+.cold-drink-list {
+    @include background($green);
+    #cold-drink-special {
+        font-weight: lighter;
+        font-style: italic;
+    }
+}
+
+.hot-drink-list {
+    @include background($red);
+}
+
+.hot-drink-list,
+.cold-drink-list,
+.snack-list {
+    @include border(thin, dashed, $black);
+}

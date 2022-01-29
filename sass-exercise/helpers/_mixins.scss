@@ -1,0 +1,7 @@
+@mixin background($color) {
+    background: $color;
+}
+
+@mixin border($width, $style, $color) {
+    border: $width $style $color;
+}
