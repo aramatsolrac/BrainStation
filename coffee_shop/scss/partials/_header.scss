@@ -1,0 +1,65 @@
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    background-color: $nitro-pink;
+    &__logo a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-transform: lowercase;
+        color: $graphite;
+        border-radius: .1rem;
+        &:hover {
+            color: $nitro-blue;
+        }
+    }
+    &__pages {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__list {
+        display: flex;
+        flex-direction: row;
+    }
+    &__item {
+        text-transform: uppercase;
+        padding: 1rem;
+        a {
+            color: $graphite;
+            border-radius: .1rem;
+            font-size: 1.25rem;
+            padding: .1rem;
+            &:hover {
+                color: $nitro-blue;
+                text-decoration: underline;
+            }
+        }
+        &:last-child a {
+            color: $nitro-blue;
+            &:hover {
+                color: $graphite;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+    .nav-menu {
+        &__list {
+            padding-left: .3rem;
+        }
+        &__item {
+            padding: 1rem .5rem 0rem .5rem;
+            margin: 0;
+            a {
+                font-size: .7rem;
+            }
+        }
+    }
+}

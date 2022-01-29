@@ -1,0 +1,56 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: $nitro-pink;
+    padding: 3rem 0;
+    &__subtitle {
+        padding: .6rem 0;
+    }
+    &__days {
+        font-weight: 700;
+    }
+    &__social-pages {
+        display: flex;
+        flex-direction: row;
+        a {
+            border-radius: .3rem;
+            margin: .5rem .5rem .5rem 0;
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 0 0.125rem $nitro-blue-darker;
+            }
+            &:hover {
+                background-color: $nitro-blue;
+            }
+        }
+    }
+    &__coffee-banner {
+        display: flex;
+        width: 6.25rem;
+        background-image: url(../assets/logos/coffee-beans-footer.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        &--left {
+            position: relative;
+            bottom: 2.5rem;
+        }
+        &--right {
+            position: relative;
+            left: .1rem;
+            top: 2.5rem;
+        }
+    }
+}
+
+
+/* responsive design */
+
+
+/* mobile */
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        padding: 1.6rem;
+    }
+}
