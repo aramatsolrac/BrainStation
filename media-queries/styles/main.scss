@@ -1,0 +1,42 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+    }
+    &__item {
+        text-align: center;
+        background: lightblue;
+        margin: 20px 0;
+        padding: 20px 0;
+        font-size: 5rem;
+        border-radius: 5px;
+        @include tablet {
+            width: 40%;
+            margin: 3vw 0;
+            background: lightgreen;
+        }
+        @include desktop {
+            width: 30%;
+            margin: 1.25vw 0;
+            background: lightpink;
+        }
+    }
+}
