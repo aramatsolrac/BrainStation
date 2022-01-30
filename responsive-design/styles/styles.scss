@@ -15,12 +15,26 @@ body {
     background-color: #bbbbbb;
     padding: 1rem;
     text-align: center;
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+    }
     &__logo {
         font-size: 2rem;
     }
     &__left,
     &__right {
         display: none;
+    }
+    @include tablet {
+        &__left,
+        &__right {
+            display: flex;
+            padding: 1rem;
+        }
+        &__link {
+            padding: 0 .5rem;
+        }
     }
 }
 
