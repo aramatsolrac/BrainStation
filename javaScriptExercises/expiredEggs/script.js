@@ -41,7 +41,7 @@ var yyyy = today.getFullYear();
 
 today = yyyy + '-' + mm + '-' + dd;
 
-function checkExpiredEggs(expired) {
+function checkExpiredEggs() {
     const expiredEggs = eggsExpiredDay.filter(expired => expired.date < today).map((item) => item.cost);
     const sum = expiredEggs.reduce((partialSum, a) => partialSum + a, 0);
     return `Total loss: ${sum}`;
