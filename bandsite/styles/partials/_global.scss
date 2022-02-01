@@ -1,14 +1,10 @@
-@font-face {
-    font-family: "Avenir Next";
-    src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("otf"), url("../../assets/font/AvenirNextLTPro-Demi.otf") format("otf"), url("../../assets/font/AvenirNextLTPro-Bold.otf") format("otf");
-}
-
+@use 'typography' as *;
 * {
     box-sizing: border-box;
 }
 
 html {
-    font-family: "Avenir Next";
+    @extend %font-family;
 }
 
 ul,

@@ -1,3 +1,4 @@
-@use 'global' as *;
-@use 'mixins' as *;
-@use 'variables' as *;
+@forward 'global';
+@forward 'mixins';
+@forward 'variables';
+@forward 'typography';
