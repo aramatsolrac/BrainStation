@@ -1,0 +1,23 @@
+// fonts
+@use '../main' as *;
+%font-family {
+    font-family: "Avenir Next";
+}
+
+%font-regular {
+    font-weight: 400;
+}
+
+%font-demi {
+    font-weight: 600;
+}
+
+%font-bold {
+    font-weight: 700;
+}
+
+%header {
+    font-size: 24px;
+    line-height: 32px;
+    @extend %font-regular;
+}

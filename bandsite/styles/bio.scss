@@ -1,41 +1,4 @@
 @use './partials/main' as *;
-.navbar {
-    background-color: $black-primary;
-    @include flex (column, center, center);
-    width: 100%;
-    &__img {
-        @include box (100%, 4.5vh);
-        margin: 2rem 0 0 0;
-    }
-    &__pages {
-        width: 100%;
-    }
-    &__list {
-        @include flex (row, flex-end, space-around);
-        @extend %font-regular;
-        position: relative;
-        top: 16px;
-    }
-    &__item {
-        width: 100%;
-        text-align: center;
-        padding: 0 0 1rem 0;
-        border-bottom: 5px solid $black-primary;
-        transition: all ease-in-out .2s;
-        line-height: 32px;
-        letter-spacing: 1px;
-        &--active,
-        &:hover,
-        &:focus {
-            border-bottom: 5px solid $white-primary;
-            @extend %font-bold;
-        }
-    }
-    &__link {
-        color: $white-primary;
-    }
-}
-
 .hero {
     background-image: url('../assets/images/hero-bio.jpg');
     @include cover-background;
@@ -43,10 +6,10 @@
     display: flex;
     padding: .5rem;
     &__about {
+        @extend %header;
         align-self: center;
         margin: 1rem;
         color: $white-primary;
-        @extend %header;
         letter-spacing: 2px;
     }
 }
@@ -73,26 +36,5 @@
     &__images-list,
     &__img {
         padding: .5rem;
-    }
-}
-
-.footer {
-    background-color: $black-primary;
-    color: $white-primary;
-    padding: 2rem;
-    * {
-        padding: .3rem 0;
-    }
-    &__social-media {
-        @include flex-direction (column);
-    }
-    &__links {
-        @include flex-direction (row);
-    }
-    &__link {
-        padding: 1rem 1rem 1rem 0;
-    }
-    &__email {
-        color: $white-primary;
     }
 }
