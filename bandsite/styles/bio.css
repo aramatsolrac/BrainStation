@@ -111,7 +111,7 @@ html {
   font-weight: 400;
 }
 
-.about__subtitle, .footer__subtitle, .footer__position {
+.about__subtitle, .footer__subtitle, .footer__position, .hero__title h2, .about__title, .gallery__title, .footer__title {
   font-weight: 600;
 }
 
@@ -119,9 +119,9 @@ html {
   font-weight: 700;
 }
 
-.hero__about, .about__title, .gallery__title, .footer__title {
+.hero__title h2, .about__title, .gallery__title, .footer__title {
   letter-spacing: 0.125rem;
-  font-size: 1.6rem;
+  font-size: 2.4rem;
 }
 
 .footer {
@@ -143,6 +143,10 @@ html {
 .footer__link {
   padding: 1rem 1rem 1rem 0;
   margin-right: 1.5rem;
+}
+.footer__icon {
+  width: 2.6875rem;
+  height: 2.6875rem;
 }
 .footer__email {
   color: #FFFFFF;
@@ -169,7 +173,7 @@ html {
 }
 .navbar__img {
   width: 100%;
-  height: 4.5vh;
+  height: 4vh;
   margin: 2rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
@@ -199,10 +203,10 @@ html {
   width: 100%;
   text-align: center;
   padding: 0 0 1rem 0;
-  border-bottom: 5px solid #323232;
+  border-bottom: 0.3125rem solid #323232;
   transition: all ease-in-out 0.2s;
-  line-height: 32px;
-  letter-spacing: 1px;
+  line-height: 2rem;
+  letter-spacing: 0.0625rem;
 }
 @media screen and (min-width: 768px) {
   .navbar__item {
@@ -211,7 +215,7 @@ html {
   }
 }
 .navbar__item--active, .navbar__item:hover, .navbar__item:focus {
-  border-bottom: 5px solid #FFFFFF;
+  border-bottom: 0.3125rem solid #FFFFFF;
 }
 .navbar__link {
   color: #FFFFFF;
@@ -226,17 +230,16 @@ html {
   display: flex;
   padding: 0.5rem;
 }
-.hero__about {
+.hero__title {
   line-height: 2rem;
   align-self: center;
   margin: 1rem;
   color: #FFFFFF;
 }
-
 .about {
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  margin: 1rem 2rem;
 }
 .about * {
   padding: 0.3rem 0;
@@ -250,11 +253,13 @@ html {
 }
 
 .gallery {
+  background-color: #FAFAFA;
   margin: 1rem;
+  padding: 1.5rem 0;
 }
 .gallery__title {
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
 }
 .gallery__images-list, .gallery__img {
-  padding: 0.5rem;
+  padding: 0.8rem 0.6rem;
 }/*# sourceMappingURL=bio.css.map */

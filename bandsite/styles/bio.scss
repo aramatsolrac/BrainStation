@@ -5,18 +5,20 @@
     height: 40vh;
     display: flex;
     padding: .5rem;
-    &__about {
+    &__title {
         line-height: 2rem;
         align-self: center;
         margin: 1rem;
         color: $white-primary;
+    }
+    &__title h2 {
         @extend %title;
     }
 }
 
 .about {
     @include flex-direction (column);
-    margin: 2rem;
+    margin: 1rem 2rem;
     * {
         padding: .3rem 0;
     }
@@ -37,13 +39,15 @@
 }
 
 .gallery {
+    background-color: $white-secondary;
     margin: 1rem;
+    padding: 1.5rem 0;
     &__title {
-        padding: .5rem 1rem;
+        padding: 0 1rem;
         @extend %title;
     }
     &__images-list,
     &__img {
-        padding: .5rem;
+        padding: .8rem .6rem;
     }
 }

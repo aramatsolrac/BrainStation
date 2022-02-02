@@ -9,11 +9,10 @@
         @include flex(row, center, flex-end)
     }
     &__img {
-        @include box (100%, 4.5vh);
+        @include box (100%, 4vh);
         margin: 2rem 0 0 0;
         @include tablet {
             margin: 0 2rem;
-            // padding: .3rem;
         }
     }
     &__pages {
@@ -34,10 +33,10 @@
         width: 100%;
         text-align: center;
         padding: 0 0 1rem 0;
-        border-bottom: 5px solid $black-primary;
+        border-bottom: 0.3125rem solid $black-primary;
         transition: all ease-in-out .2s;
-        line-height: 32px;
-        letter-spacing: 1px;
+        line-height: 2rem;
+        letter-spacing: 0.0625rem;
         @include tablet {
             padding: 1rem;
             width: 25%;
@@ -45,7 +44,7 @@
         &--active,
         &:hover,
         &:focus {
-            border-bottom: 5px solid $white-primary;
+            border-bottom: 0.3125rem solid $white-primary;
             @extend %font-bold;
         }
     }
