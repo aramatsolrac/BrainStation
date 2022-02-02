@@ -5,6 +5,9 @@
     height: 35vh;
     display: flex;
     padding: .5rem;
+    @include tablet {
+        height: 60vh;
+    }
     &__title {
         line-height: 2rem;
         align-self: center;
@@ -13,6 +16,9 @@
     }
     &__title h2 {
         @extend %title;
+        @include tablet {
+            font-size: 4rem;
+        }
     }
 }
 
@@ -22,8 +28,20 @@
     * {
         padding: .3rem 0;
     }
+    &__content {
+        @include tablet {
+            padding: 1rem 3rem;
+        }
+    }
     &__title {
         @extend %title;
+    }
+    &__img img {
+        height: 36vh;
+        width: 100%;
+        @include tablet {
+            height: 45vh;
+        }
     }
     &__subtitle {
         @extend %font-demi;
@@ -34,17 +52,40 @@
         margin: 1rem 0;
     }
     &__text {
+        @include tablet {
+            @include flex-direction(row);
+        }
+    }
+    &__paragraph {
         margin: 1rem 0;
+        @include tablet {
+            padding: 1rem 1.3rem 1rem 0;
+        }
     }
 }
 
 .gallery {
     background-color: $white-secondary;
-    margin: 1rem;
     padding: 1.5rem 0;
     &__title {
-        padding: 0 1rem;
         @extend %title;
+        padding: 0 1rem;
+        @include tablet {
+            padding: 0 2rem;
+        }
+    }
+    &__images-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: flex-start;
+        justify-content: space-between;
+        margin: 1rem;
+    }
+    &__img {
+        @include tablet {
+            width: 16rem;
+        }
     }
     &__images-list,
     &__img {

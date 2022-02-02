@@ -26,7 +26,8 @@
         padding: 0;
         @include tablet {
             justify-content: left;
-            margin-left: 5rem;
+            margin: .5rem 0 .5rem 5rem;
+            top: .5rem;
         }
     }
     &__item {
@@ -39,8 +40,9 @@
         letter-spacing: 0.0625rem;
         font-size: 1.2rem;
         @include tablet {
-            padding: 1rem;
-            width: 25%;
+            padding: 2rem 0;
+            margin: 0 1.5rem;
+            width: 23%;
         }
         &--active,
         &:hover,

@@ -127,32 +127,119 @@ html {
 .footer {
   background-color: #323232;
   color: #FFFFFF;
-  padding: 2rem;
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 }
 .footer * {
-  padding: 0.3rem 0;
+  padding: 0.4rem 0;
 }
-.footer__social-media {
+@media screen and (min-width: 768px) {
+  .footer__content {
+    width: 100%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+.footer__social {
+  display: flex;
+  width: 100%;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__medias {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__title {
+    font-size: 2.2rem;
+  }
 }
 .footer__links {
   display: flex;
   flex-direction: row;
 }
 .footer__link {
-  padding: 1rem 1rem 1rem 0;
-  margin-right: 1.5rem;
+  padding: 0 1.5rem 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__link {
+    padding: 0.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__link-mobile {
+    display: none;
+  }
 }
 .footer__icon {
-  width: 2.6875rem;
-  height: 2.6875rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+.footer__info {
+  padding-right: 1.5rem;
+}
+.footer__subtitle, .footer__address {
+  padding: 0;
 }
 .footer__email {
   color: #FFFFFF;
 }
-.footer__logo {
+.footer__logo-mobile {
   margin: 2rem 0 0 0;
+}
+.footer__logo-tablet {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo-tablet {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__logo-tablet {
+    display: none;
+  }
+}
+.footer__logo-desktop {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .footer__logo-desktop {
+    display: flex;
+    margin: 2.5rem 0 0 0;
+  }
 }
 
 .navbar {
@@ -196,7 +283,8 @@ html {
 @media screen and (min-width: 768px) {
   .navbar__list {
     justify-content: left;
-    margin-left: 5rem;
+    margin: 0.5rem 0 0.5rem 5rem;
+    top: 0.5rem;
   }
 }
 .navbar__item {
@@ -211,8 +299,9 @@ html {
 }
 @media screen and (min-width: 768px) {
   .navbar__item {
-    padding: 1rem;
-    width: 25%;
+    padding: 2rem 0;
+    margin: 0 1.5rem;
+    width: 23%;
   }
 }
 .navbar__item--active, .navbar__item:hover, .navbar__item:focus {
@@ -231,12 +320,23 @@ html {
   display: flex;
   padding: 0.5rem;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+}
 .hero__title {
   line-height: 2rem;
   align-self: center;
   margin: 1rem;
   color: #FFFFFF;
 }
+@media screen and (min-width: 768px) {
+  .hero__title h2 {
+    font-size: 4rem;
+  }
+}
+
 .about {
   display: flex;
   flex-direction: column;
@@ -245,21 +345,63 @@ html {
 .about * {
   padding: 0.3rem 0;
 }
+@media screen and (min-width: 768px) {
+  .about__content {
+    padding: 1rem 3rem;
+  }
+}
+.about__img img {
+  height: 36vh;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .about__img img {
+    height: 45vh;
+  }
+}
 .about__quote {
   text-align: left;
   margin: 1rem 0;
 }
-.about__text {
+@media screen and (min-width: 768px) {
+  .about__text {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.about__paragraph {
   margin: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .about__paragraph {
+    padding: 1rem 1.3rem 1rem 0;
+  }
 }
 
 .gallery {
   background-color: #FAFAFA;
-  margin: 1rem;
   padding: 1.5rem 0;
 }
 .gallery__title {
   padding: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .gallery__title {
+    padding: 0 2rem;
+  }
+}
+.gallery__images-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: space-between;
+  margin: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .gallery__img {
+    width: 16rem;
+  }
 }
 .gallery__images-list, .gallery__img {
   padding: 0.8rem 0.6rem;
