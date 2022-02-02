@@ -1,0 +1,35 @@
+@use './../variables' as *;
+@use './../mixins' as *;
+@use './../typography' as *;
+.footer {
+    background-color: $black-primary;
+    color: $white-primary;
+    padding: 2rem;
+    * {
+        padding: .3rem 0;
+    }
+    &__title {
+        @extend %title;
+        // color: red;
+    }
+    &__social-media {
+        @include flex-direction (column);
+    }
+    &__links {
+        @include flex-direction (row);
+    }
+    &__link {
+        padding: 1rem 1rem 1rem 0;
+        margin-right: 1.5rem;
+    }
+    &__subtitle,
+    &__position {
+        @extend %font-demi;
+    }
+    &__email {
+        color: $white-primary;
+    }
+    &__logo {
+        margin: 2rem 0 0 0;
+    }
+}

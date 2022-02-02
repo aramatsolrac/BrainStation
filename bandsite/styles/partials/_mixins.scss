@@ -1,0 +1,36 @@
+@mixin cover-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin box($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+// flexbox
+@mixin flex ($flex-direction, $align-items, $justify-content) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin flex-direction ($flex-direction) {
+    display: flex;
+    flex-direction: $flex-direction;
+}
+
+// responsive design
+@mixin tablet {
+    @media screen and (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}

@@ -1,0 +1,49 @@
+@use './partials/main' as *;
+.hero {
+    background-image: url('../assets/images/hero-bio.jpg');
+    @include cover-background;
+    height: 40vh;
+    display: flex;
+    padding: .5rem;
+    &__about {
+        line-height: 2rem;
+        align-self: center;
+        margin: 1rem;
+        color: $white-primary;
+        @extend %title;
+    }
+}
+
+.about {
+    @include flex-direction (column);
+    margin: 2rem;
+    * {
+        padding: .3rem 0;
+    }
+    &__title {
+        @extend %title;
+    }
+    &__subtitle {
+        @extend %font-demi;
+    }
+    &__quote {
+        @extend %font-bold;
+        text-align: left;
+        margin: 1rem 0;
+    }
+    &__text {
+        margin: 1rem 0;
+    }
+}
+
+.gallery {
+    margin: 1rem;
+    &__title {
+        padding: .5rem 1rem;
+        @extend %title;
+    }
+    &__images-list,
+    &__img {
+        padding: .5rem;
+    }
+}
