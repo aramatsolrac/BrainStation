@@ -1,15 +1,33 @@
-* {
+/* Box sizing rules */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html {
-  font-family: "Avenir Next";
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
 }
 
 ul,
 li {
   list-style-type: none;
-  padding: 0;
 }
 
 a,
@@ -17,6 +35,56 @@ a:visited {
   text-decoration: none;
 }
 
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 @font-face {
   font-family: "Avenir Next LT Pro";
   src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("otf");
@@ -35,16 +103,25 @@ a:visited {
   font-weight: 700;
   font-style: normal;
 }
+html {
+  font-family: "Avenir Next";
+}
+
 .navbar__list {
   font-weight: 400;
 }
 
-.about__subtitle {
+.about__subtitle, .footer__subtitle, .footer__position {
   font-weight: 600;
 }
 
 .about__quote, .navbar__item--active, .navbar__item:hover, .navbar__item:focus {
   font-weight: 700;
+}
+
+.hero__about, .about__title, .gallery__title, .footer__title {
+  letter-spacing: 0.125rem;
+  font-size: 1.6rem;
 }
 
 .footer {
@@ -54,9 +131,6 @@ a:visited {
 }
 .footer * {
   padding: 0.3rem 0;
-}
-.footer__title {
-  letter-spacing: 2px;
 }
 .footer__social-media {
   display: flex;
@@ -68,9 +142,13 @@ a:visited {
 }
 .footer__link {
   padding: 1rem 1rem 1rem 0;
+  margin-right: 1.5rem;
 }
 .footer__email {
   color: #FFFFFF;
+}
+.footer__logo {
+  margin: 2rem 0 0 0;
 }
 
 .navbar {
@@ -96,6 +174,7 @@ a:visited {
   justify-content: space-around;
   position: relative;
   top: 16px;
+  padding: 0;
 }
 .navbar__item {
   width: 100%;
@@ -123,12 +202,10 @@ a:visited {
   padding: 0.5rem;
 }
 .hero__about {
-  font-size: 24px;
-  line-height: 32px;
+  line-height: 2rem;
   align-self: center;
   margin: 1rem;
   color: #FFFFFF;
-  letter-spacing: 2px;
 }
 
 .about {
@@ -139,6 +216,14 @@ a:visited {
 .about * {
   padding: 0.3rem 0;
 }
+.about__quote {
+  text-align: left;
+  margin: 1rem 0;
+}
+.about__text {
+  margin: 1rem 0;
+}
+
 .gallery {
   margin: 1rem;
 }

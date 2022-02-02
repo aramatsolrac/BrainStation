@@ -19,6 +19,10 @@
     font-style: normal;
 }
 
+html {
+    font-family: "Avenir Next";
+}
+
 %font-regular {
     font-weight: 400;
 }
@@ -29,4 +33,9 @@
 
 %font-bold {
     font-weight: 700;
+}
+
+%title {
+    letter-spacing: 0.125rem;
+    font-size: 1.6rem;
 }
