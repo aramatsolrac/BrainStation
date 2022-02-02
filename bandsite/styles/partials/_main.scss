@@ -1,6 +1,7 @@
-@forward './base/global';
-@forward './base/typography';
-@forward './helpers/mixins';
-@forward './helpers/variables';
+@forward 'global';
+@forward 'typography';
+@forward 'mixins';
+@forward 'placeholders';
+@forward 'variables';
 @forward './layout/footer';
-@forward './layout/footer';
+@forward './layout/header';

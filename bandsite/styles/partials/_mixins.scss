@@ -17,13 +17,6 @@
     justify-content: $justify-content;
 }
 
-@mixin flex ($flex-direction, $align-items, $justify-content) {
-    display: flex;
-    flex-direction: $flex-direction;
-    align-items: $align-items;
-    justify-content: $justify-content;
-}
-
 @mixin flex-direction ($flex-direction) {
     display: flex;
     flex-direction: $flex-direction;

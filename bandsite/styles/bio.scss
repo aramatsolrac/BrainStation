@@ -1,3 +1,10 @@
+// @use './partials/global' as *;
+// @use './partials/typography' as *;
+// @use './partials/mixins' as *;
+// @use './partials/placeholders' as *;
+// @use './partials/variables' as *;
+// @use './partials/header' as *;
+// @use './partials/footer' as *;
 @use './partials/main' as *;
 .hero {
     background-image: url('../assets/images/hero-bio.jpg');
@@ -6,7 +13,8 @@
     display: flex;
     padding: .5rem;
     &__about {
-        @extend %header;
+        font-size: 24px;
+        line-height: 32px;
         align-self: center;
         margin: 1rem;
         color: $white-primary;

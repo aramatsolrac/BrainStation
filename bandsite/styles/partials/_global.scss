@@ -1,10 +1,9 @@
-@use 'typography' as *;
 * {
     box-sizing: border-box;
 }
 
 html {
-    @extend %font-family;
+    font-family: "Avenir Next";
 }
 
 ul,

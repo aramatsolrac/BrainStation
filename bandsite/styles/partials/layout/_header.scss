@@ -1,3 +1,7 @@
+@use './../variables' as *;
+@use './../mixins' as *;
+@use './../placeholders' as *;
+@use './../typography' as *;
 .navbar {
     background-color: $black-primary;
     @include flex (column, center, center);

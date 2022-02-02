@@ -1,3 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Avenir Next";
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "Avenir Next LT Pro";
   src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("otf");
@@ -16,11 +35,7 @@
   font-weight: 700;
   font-style: normal;
 }
-html {
-  font-family: "Avenir Next";
-}
-
-.navbar__list, .hero__about {
+.navbar__list {
   font-weight: 400;
 }
 
@@ -28,28 +43,34 @@ html {
   font-weight: 600;
 }
 
-.navbar__item--active, .navbar__item:hover, .navbar__item:focus, .about__quote {
+.about__quote, .navbar__item--active, .navbar__item:hover, .navbar__item:focus {
   font-weight: 700;
 }
 
-.hero__about {
-  font-size: 24px;
-  line-height: 32px;
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding: 2rem;
 }
-
-* {
-  box-sizing: border-box;
+.footer * {
+  padding: 0.3rem 0;
 }
-
-ul,
-li {
-  list-style-type: none;
-  padding: 0;
+.footer__title {
+  letter-spacing: 2px;
 }
-
-a,
-a:visited {
-  text-decoration: none;
+.footer__social-media {
+  display: flex;
+  flex-direction: column;
+}
+.footer__links {
+  display: flex;
+  flex-direction: row;
+}
+.footer__link {
+  padding: 1rem 1rem 1rem 0;
+}
+.footer__email {
+  color: #FFFFFF;
 }
 
 .navbar {
@@ -102,6 +123,8 @@ a:visited {
   padding: 0.5rem;
 }
 .hero__about {
+  font-size: 24px;
+  line-height: 32px;
   align-self: center;
   margin: 1rem;
   color: #FFFFFF;
@@ -124,27 +147,4 @@ a:visited {
 }
 .gallery__images-list, .gallery__img {
   padding: 0.5rem;
-}
-
-.footer {
-  background-color: #323232;
-  color: #FFFFFF;
-  padding: 2rem;
-}
-.footer * {
-  padding: 0.3rem 0;
-}
-.footer__social-media {
-  display: flex;
-  flex-direction: column;
-}
-.footer__links {
-  display: flex;
-  flex-direction: row;
-}
-.footer__link {
-  padding: 1rem 1rem 1rem 0;
-}
-.footer__email {
-  color: #FFFFFF;
 }/*# sourceMappingURL=bio.css.map */

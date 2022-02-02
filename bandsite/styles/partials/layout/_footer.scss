@@ -1,9 +1,16 @@
+@use './../variables' as *;
+@use './../mixins' as *;
+@use './../placeholders' as *;
+@use './../typography' as *;
 .footer {
     background-color: $black-primary;
     color: $white-primary;
     padding: 2rem;
     * {
         padding: .3rem 0;
+    }
+    &__title {
+        letter-spacing: 2px;
     }
     &__social-media {
         @include flex-direction (column);
