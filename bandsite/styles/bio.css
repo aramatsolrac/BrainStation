@@ -190,7 +190,7 @@ html {
   align-items: flex-end;
   justify-content: space-around;
   position: relative;
-  top: 16px;
+  top: 1rem;
   padding: 0;
 }
 @media screen and (min-width: 768px) {
@@ -205,8 +205,9 @@ html {
   padding: 0 0 1rem 0;
   border-bottom: 0.3125rem solid #323232;
   transition: all ease-in-out 0.2s;
-  line-height: 2rem;
+  line-height: 1.5rem;
   letter-spacing: 0.0625rem;
+  font-size: 1.2rem;
 }
 @media screen and (min-width: 768px) {
   .navbar__item {
@@ -226,7 +227,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 40vh;
+  height: 35vh;
   display: flex;
   padding: 0.5rem;
 }

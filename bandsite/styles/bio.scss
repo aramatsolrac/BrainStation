@@ -2,7 +2,7 @@
 .hero {
     background-image: url('../assets/images/hero-bio.jpg');
     @include cover-background;
-    height: 40vh;
+    height: 35vh;
     display: flex;
     padding: .5rem;
     &__title {

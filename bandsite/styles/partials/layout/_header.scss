@@ -22,7 +22,7 @@
         @include flex (row, flex-end, space-around);
         @extend %font-regular;
         position: relative;
-        top: 16px;
+        top: 1rem;
         padding: 0;
         @include tablet {
             justify-content: left;
@@ -35,8 +35,9 @@
         padding: 0 0 1rem 0;
         border-bottom: 0.3125rem solid $black-primary;
         transition: all ease-in-out .2s;
-        line-height: 2rem;
+        line-height: 1.5rem;
         letter-spacing: 0.0625rem;
+        font-size: 1.2rem;
         @include tablet {
             padding: 1rem;
             width: 25%;
