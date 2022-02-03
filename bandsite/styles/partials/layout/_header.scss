@@ -9,13 +9,14 @@
         @include flex(row, center, flex-end)
     }
     &__img {
-        @include box (100%, 4vh);
+        @include box (100%, 3vh);
         margin: 2rem 0 0 0;
         @include tablet {
             margin: 0 2rem;
         }
         @include desktop {
-            margin: 0 4rem;
+            @include box (100%, 2.2vh);
+            margin: 0 3rem;
         }
     }
     &__pages {

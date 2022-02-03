@@ -8,11 +8,17 @@
     @include tablet {
         height: 60vh;
     }
+    @include desktop {
+        height: 60vh;
+    }
     &__title {
         line-height: 2rem;
         align-self: center;
         margin: 1rem;
         color: $white-primary;
+        @include desktop {
+            margin: 5rem;
+        }
     }
     &__title h2 {
         @extend %title;
@@ -33,7 +39,7 @@
             padding: 1rem 3rem;
         }
         @include desktop {
-            padding: 1rem 8rem;
+            margin: 0 8rem;
         }
     }
     &__title {
@@ -41,37 +47,54 @@
         @include tablet {
             font-size: 3rem;
         }
+        @include desktop {
+            margin: .5rem 5rem 0 5rem;
+            font-size: 2.5rem;
+        }
     }
     &__img img {
         height: 30vh;
         width: 100%;
         @include tablet {
-            height: 35vh;
+            height: 40vh;
         }
-        @include desktop {
-            height: 50vh;
-        }
-    }
-    &__subtitle {
-        @extend %font-demi;
     }
     &__quote {
-        @extend %font-bold;
-        text-align: left;
         margin: 1rem 0;
         @include desktop {
-            width: 80%;
+            width: 78%;
         }
+    }
+    &__quotation {
+        @extend %font-bold;
+        text-align: left;
+        @include desktop {
+            font-weight: 600;
+            font-size: 1.4rem;
+            text-align: left;
+        }
+    }
+    &__autor {
+        font-weight: 600;
     }
     &__text {
         @include tablet {
             @include flex-direction(row);
         }
     }
+    &__subtitle {
+        @extend %font-demi;
+        @include desktop {
+            font-size: 1.5rem;
+        }
+    }
     &__paragraph {
         margin: 1rem 0;
         @include tablet {
             padding: 1rem 1.3rem 1rem 0;
+        }
+        @include desktop {
+            margin: 0;
         }
     }
 }
