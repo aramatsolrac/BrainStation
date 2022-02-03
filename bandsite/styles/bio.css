@@ -121,7 +121,7 @@ html {
 
 .hero__title h2, .about__title, .gallery__title, .footer__title {
   letter-spacing: 0.125rem;
-  font-size: 2.4rem;
+  font-size: 1.5rem;
 }
 
 .footer {
@@ -221,6 +221,7 @@ html {
 }
 .footer__logo-tablet {
   display: none;
+  padding: 0.5rem;
 }
 @media screen and (min-width: 768px) {
   .footer__logo-tablet {
@@ -268,6 +269,11 @@ html {
     margin: 0 2rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .navbar__img {
+    margin: 0 4rem;
+  }
+}
 .navbar__pages {
   width: 100%;
 }
@@ -302,6 +308,13 @@ html {
     padding: 2rem 0;
     margin: 0 1.5rem;
     width: 23%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navbar__item {
+    padding: 2rem 0;
+    margin: 0 1.5rem;
+    width: 15%;
   }
 }
 .navbar__item--active, .navbar__item:hover, .navbar__item:focus {
@@ -350,18 +363,38 @@ html {
     padding: 1rem 3rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .about__content {
+    padding: 1rem 8rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about__title {
+    font-size: 3rem;
+  }
+}
 .about__img img {
-  height: 36vh;
+  height: 30vh;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
   .about__img img {
-    height: 45vh;
+    height: 35vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about__img img {
+    height: 50vh;
   }
 }
 .about__quote {
   text-align: left;
   margin: 1rem 0;
+}
+@media screen and (min-width: 1024px) {
+  .about__quote {
+    width: 80%;
+  }
 }
 @media screen and (min-width: 768px) {
   .about__text {
@@ -388,6 +421,7 @@ html {
 @media screen and (min-width: 768px) {
   .gallery__title {
     padding: 0 2rem;
+    font-size: 3rem;
   }
 }
 .gallery__images-list {

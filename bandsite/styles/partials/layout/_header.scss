@@ -14,6 +14,9 @@
         @include tablet {
             margin: 0 2rem;
         }
+        @include desktop {
+            margin: 0 4rem;
+        }
     }
     &__pages {
         width: 100%;
@@ -43,6 +46,11 @@
             padding: 2rem 0;
             margin: 0 1.5rem;
             width: 23%;
+        }
+        @include desktop {
+            padding: 2rem 0;
+            margin: 0 1.5rem;
+            width: 15%;
         }
         &--active,
         &:hover,

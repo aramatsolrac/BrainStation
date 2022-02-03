@@ -84,6 +84,7 @@
     }
     &__logo-tablet {
         display: none;
+        padding: .5rem;
         @include tablet {
             display: flex;
         }
