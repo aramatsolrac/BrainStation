@@ -8,6 +8,7 @@
     padding: .5rem;
     @include tablet {
         height: 35vh;
+        padding: 2rem;
     }
     @include desktop {
         height: 60vh;
@@ -18,7 +19,7 @@
         margin: .5rem;
         color: $white-primary;
         @include tablet {
-            margin: 2rem;
+            // margin: 2rem;
         }
         @include desktop {
             margin: 5rem;
@@ -38,9 +39,12 @@
     * {
         padding: .3rem 0;
     }
+    @include tablet {
+        padding: 2rem;
+    }
     &__content {
         @include tablet {
-            padding: 1rem 3rem;
+            padding: 0 2rem;
         }
         @include desktop {
             margin: 0 7rem;
@@ -60,8 +64,11 @@
         padding: 0;
         img {
             width: 100%;
+            height: 170px;
+            object-fit: cover;
+            object-position: center;
             @include tablet {
-                height: 40vh;
+                height: 300px;
             }
             @include desktop {
                 padding-right: 1rem;
@@ -70,6 +77,9 @@
     }
     &__quote {
         margin: .2rem 0;
+        @include tablet {
+            margin: 1rem 0;
+        }
         @include desktop {
             width: 75%;
         }
@@ -78,6 +88,9 @@
         @extend %font-demi;
         font-size: .9rem;
         text-align: left;
+        @include tablet {
+            font-size: 1.4rem;
+        }
         @include desktop {
             font-weight: 600;
             font-size: 1.4rem;
@@ -87,6 +100,10 @@
     &__autor {
         font-weight: 600;
         font-size: .9rem;
+        @include tablet {
+            padding: .7rem 0;
+            font-size: 1rem;
+        }
     }
     &__bio {
         width: 100%;
@@ -122,6 +139,9 @@
 .gallery {
     background-color: $white-secondary;
     padding: .5rem 0;
+    @include tablet {
+        padding: 3rem 2rem;
+    }
     @include desktop {
         padding: 3rem 7rem 0 7rem;
     }
@@ -129,7 +149,7 @@
         @extend %title;
         padding: 1rem 1rem 0 1rem;
         @include tablet {
-            padding: 0 2rem;
+            padding: 0 1.3rem;
             font-size: 3rem;
         }
         @include desktop {
@@ -137,18 +157,18 @@
         }
     }
     &__images-list {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-content: flex-start;
-        justify-content: space-between;
-        padding: 0 .5rem;
-        // margin: 1rem;
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            // align-content: flex-start;
+            justify-content: center;
+        }
     }
     &__img {
         padding: .5rem;
         @include tablet {
-            width: 16rem;
+            width: 14rem;
         }
         @include desktop {
             width: 20.5rem;

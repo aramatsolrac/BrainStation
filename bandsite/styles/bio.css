@@ -142,7 +142,7 @@ html {
 @media screen and (min-width: 768px) {
   .footer__content {
     width: 100%;
-    margin: 1rem;
+    margin: 1rem 2.2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -186,7 +186,12 @@ html {
   flex-direction: row;
   padding: 0;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
+  .footer__links {
+    padding-left: 0.3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
   .footer__links {
     padding: 0.5rem;
   }
@@ -195,21 +200,16 @@ html {
   padding: 0 0.5rem 0 0;
 }
 @media screen and (min-width: 768px) {
-  .footer__link {
-    padding-left: 1rem;
-  }
-}
-@media screen and (min-width: 768px) {
   .footer__link--mobile {
     display: none;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .footer__link--mobile {
     display: none;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .footer__link--desktop {
     display: flex;
   }
@@ -230,14 +230,21 @@ html {
     width: 100%;
   }
 }
-.footer__info {
-  padding-right: 1.8rem;
+@media screen and (min-width: 768px) {
+  .footer__info {
+    padding-right: 2rem;
+  }
 }
 .footer__subtitle, .footer__address {
   padding: 0;
 }
 .footer__subtitle, .footer__position {
   padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__subtitle, .footer__position {
+    font-size: 0.9rem;
+  }
 }
 .footer__email {
   color: #FFFFFF;
@@ -255,9 +262,10 @@ html {
 @media screen and (min-width: 768px) {
   .footer__logo--tablet {
     display: flex;
+    padding: 0.5rem 0 0.5rem 0.5rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .footer__logo--tablet {
     display: none;
   }
@@ -265,7 +273,7 @@ html {
 .footer__logo--desktop {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .footer__logo--desktop {
     display: flex;
     margin: 2.5rem 0 0 0;
@@ -300,7 +308,7 @@ html {
     margin: 0 2rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .navbar__img {
     width: 100%;
     height: 2.2vh;
@@ -344,7 +352,7 @@ html {
     font-size: 1rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .navbar__item {
     padding: 2rem 0;
     margin: 0 1.5rem;
@@ -371,9 +379,10 @@ html {
 @media screen and (min-width: 768px) {
   .hero {
     height: 35vh;
+    padding: 2rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .hero {
     height: 60vh;
   }
@@ -384,12 +393,7 @@ html {
   margin: 0.5rem;
   color: #FFFFFF;
 }
-@media screen and (min-width: 768px) {
-  .hero__title {
-    margin: 2rem;
-  }
-}
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .hero__title {
     margin: 5rem;
   }
@@ -409,11 +413,16 @@ html {
   padding: 0.3rem 0;
 }
 @media screen and (min-width: 768px) {
-  .about__content {
-    padding: 1rem 3rem;
+  .about {
+    padding: 2rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
+  .about__content {
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
   .about__content {
     margin: 0 7rem;
   }
@@ -423,7 +432,7 @@ html {
     font-size: 3rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .about__title {
     margin: 0.5rem 5rem 0 5rem;
     font-size: 2.5rem;
@@ -434,13 +443,18 @@ html {
 }
 .about__img img {
   width: 100%;
+  height: 170px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 @media screen and (min-width: 768px) {
   .about__img img {
-    height: 40vh;
+    height: 300px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .about__img img {
     padding-right: 1rem;
   }
@@ -448,7 +462,12 @@ html {
 .about__quote {
   margin: 0.2rem 0;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
+  .about__quote {
+    margin: 1rem 0;
+  }
+}
+@media screen and (min-width: 1280px) {
   .about__quote {
     width: 75%;
   }
@@ -457,7 +476,12 @@ html {
   font-size: 0.9rem;
   text-align: left;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
+  .about__quotation {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1280px) {
   .about__quotation {
     font-weight: 600;
     font-size: 1.4rem;
@@ -468,13 +492,19 @@ html {
   font-weight: 600;
   font-size: 0.9rem;
 }
+@media screen and (min-width: 768px) {
+  .about__autor {
+    padding: 0.7rem 0;
+    font-size: 1rem;
+  }
+}
 .about__bio {
   width: 100%;
 }
 .about__subtitle {
   font-size: 1rem;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .about__subtitle {
     font-size: 1.5rem;
   }
@@ -494,7 +524,7 @@ html {
     padding: 1rem 1.3rem 1rem 0;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .about__paragraph {
     width: 100%;
     margin: 0;
@@ -508,7 +538,12 @@ html {
   background-color: #FAFAFA;
   padding: 0.5rem 0;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding: 3rem 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
   .gallery {
     padding: 3rem 7rem 0 7rem;
   }
@@ -518,32 +553,32 @@ html {
 }
 @media screen and (min-width: 768px) {
   .gallery__title {
-    padding: 0 2rem;
+    padding: 0 1.3rem;
     font-size: 3rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .gallery__title {
     font-size: 2.5rem;
   }
 }
-.gallery__images-list {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-content: flex-start;
-  justify-content: space-between;
-  padding: 0 0.5rem;
+@media screen and (min-width: 768px) {
+  .gallery__images-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 .gallery__img {
   padding: 0.5rem;
 }
 @media screen and (min-width: 768px) {
   .gallery__img {
-    width: 16rem;
+    width: 14rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .gallery__img {
     width: 20.5rem;
     padding: 0.8rem 0.3rem;

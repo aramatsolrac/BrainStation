@@ -14,7 +14,7 @@
     &__content {
         @include tablet {
             width: 100%;
-            margin: 1rem;
+            margin: 1rem 2.2rem;
             @include flex (column, flex-start, flex-start);
         }
     }
@@ -43,15 +43,15 @@
     &__links {
         @include flex-direction (row);
         padding: 0;
+        @include tablet {
+            padding-left: .3rem;
+        }
         @include desktop {
             padding: .5rem;
         }
     }
     &__link {
         padding: 0 .5rem 0 0;
-        @include tablet {
-            padding-left: 1rem;
-        }
         &--mobile {
             @include tablet {
                 display: none;
@@ -78,7 +78,9 @@
         }
     }
     &__info {
-        padding-right: 1.8rem;
+        @include tablet {
+            padding-right: 2rem;
+        }
     }
     &__subtitle,
     &__address {
@@ -88,6 +90,9 @@
     &__position {
         padding: 0;
         @extend %font-demi;
+        @include tablet {
+            font-size: .9rem;
+        }
     }
     &__email {
         color: $white-primary;
@@ -105,6 +110,7 @@
             padding: .5rem;
             @include tablet {
                 display: flex;
+                padding: .5rem 0 .5rem .5rem;
             }
             @include desktop {
                 display: none;
