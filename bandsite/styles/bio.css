@@ -292,7 +292,6 @@ html {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 3vh;
 }
 @media screen and (min-width: 768px) {
   .navbar {
@@ -300,15 +299,6 @@ html {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 0.5rem;
-    min-height: 9vh;
-    max-height: 9vh;
-  }
-}
-@media screen and (min-width: 1280px) and (min-width: 768px) {
-  .navbar {
-    min-height: 9vh;
-    max-height: 9vh;
   }
 }
 .navbar__img {
@@ -343,13 +333,7 @@ html {
 @media screen and (min-width: 768px) {
   .navbar__list {
     justify-content: left;
-    margin: 0.5rem 0 0.5rem 5rem;
-    top: 1rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .navbar__list {
-    top: 1rem;
+    padding: 0.5rem 0 0 4rem;
   }
 }
 .navbar__item {
@@ -358,20 +342,19 @@ html {
   padding: 0rem 0 0.5rem 0;
   border-bottom: 0.3125rem solid #323232;
   transition: all ease-in-out 0.2s;
-  letter-spacing: 0.0625rem;
   font-size: 0.9rem;
 }
 @media screen and (min-width: 768px) {
   .navbar__item {
-    padding: 0 0 1rem 0;
-    margin: 0 1.5rem;
+    padding: 0 0 1.5rem 0;
+    margin: 0 1rem;
     width: 6.2rem;
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .navbar__item {
-    padding: 0 0 1rem 0;
+    padding: 0 0 1.5rem 0;
     margin: 0 1rem;
     width: 6.5rem;
   }
