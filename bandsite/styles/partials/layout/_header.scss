@@ -18,7 +18,7 @@
         }
         @include desktop {
             @include box (100%, 2.2vh);
-            margin: 0 3rem;
+            margin: 0 4rem;
         }
     }
     &__pages {
@@ -52,9 +52,9 @@
             font-size: 1rem;
         }
         @include desktop {
-            padding: 2rem 0;
+            padding: 1.5rem 0;
             margin: 0 1.5rem;
-            width: 15%;
+            width: 10%;
         }
         &--active,
         &:hover,
