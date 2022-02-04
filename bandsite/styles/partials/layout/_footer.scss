@@ -33,39 +33,52 @@
     }
     &__title {
         @extend %title;
+        padding: 0;
+        font-size: 1.6rem;
         @include tablet {
             font-size: 2.2rem;
+            margin-right: 1.5rem;
         }
     }
     &__links {
         @include flex-direction (row);
-        @include tablet {
-            // margin-right: 2rem;
-        }
-    }
-    &__link {
-        padding: 0 1.5rem 1rem 0;
-        @include tablet {
+        padding: 0;
+        @include desktop {
             padding: .5rem;
         }
     }
-    &__link-mobile {
+    &__link {
+        padding: 0 .5rem 0 0;
         @include tablet {
-            display: none;
+            padding-left: 1rem;
+        }
+        &--mobile {
+            @include tablet {
+                display: none;
+            }
+            @include desktop {
+                display: none;
+            }
+        }
+        &--desktop {
+            @include desktop {
+                display: flex;
+            }
         }
     }
     &__icon {
-        width: 2.5rem;
-        height: 2.5rem;
+        margin: 0 1.5rem 0 0;
+        height: 2.3rem;
     }
     &__contacts {
+        font-size: .8rem;
         @include tablet {
             @include flex (row, center, flex-start);
             width: 100%;
         }
     }
     &__info {
-        padding-right: 1.5rem;
+        padding-right: 1.8rem;
     }
     &__subtitle,
     &__address {
@@ -73,30 +86,36 @@
     }
     &__subtitle,
     &__position {
+        padding: 0;
         @extend %font-demi;
     }
     &__email {
         color: $white-primary;
     }
+    &__copy {
+        font-size: .7rem;
+    }
     // logo
-    &__logo-mobile {
-        margin: 2rem 0 0 0;
-    }
-    &__logo-tablet {
-        display: none;
-        padding: .5rem;
-        @include tablet {
-            display: flex;
+    &__logo {
+        &--mobile {
+            margin: 2rem 0 0 0;
         }
-        @include desktop {
+        &--tablet {
             display: none;
+            padding: .5rem;
+            @include tablet {
+                display: flex;
+            }
+            @include desktop {
+                display: none;
+            }
         }
-    }
-    &__logo-desktop {
-        display: none;
-        @include desktop {
-            display: flex;
-            margin: 2.5rem 0 0 0;
+        &--desktop {
+            display: none;
+            @include desktop {
+                display: flex;
+                margin: 2.5rem 0 0 0;
+            }
         }
     }
 }
