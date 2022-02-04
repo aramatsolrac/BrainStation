@@ -5,9 +5,15 @@
     background-position: center;
 }
 
-@mixin box($width, $height) {
+@mixin box($width: $width, $height) {
     width: $width;
     height: $height;
+}
+
+@mixin border-bottom ($color) {
+    border-bottom-width: 0.3125rem;
+    border-bottom-style: solid;
+    border-bottom-color: $color;
 }
 
 // flexbox

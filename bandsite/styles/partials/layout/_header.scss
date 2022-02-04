@@ -2,25 +2,24 @@
 @use './../mixins' as *;
 @use './../typography' as *;
 .navbar {
-    width: 100%;
     background-color: $black-primary;
     @include flex (column, center, center);
     @include tablet {
         @include flex(row, center, flex-end);
     }
     &__img {
-        @include box (100%, 2vh);
+        @include box ($width, 2.8vh);
         margin: 1rem 0 0 0;
         @include tablet {
             margin: 0 2rem;
         }
         @include desktop {
-            @include box (100%, 2.2vh);
+            @include box ($width, 2.2vh);
             margin: 0 4rem;
         }
     }
     &__pages {
-        width: 100%;
+        width: $width;
     }
     &__list {
         @include flex (row, flex-end, space-around);
@@ -34,27 +33,21 @@
         }
     }
     &__item {
-        width: 100%;
+        width: $width;
         text-align: center;
         padding: 0rem 0 .5rem 0;
-        border-bottom: 0.3125rem solid $black-primary;
         transition: all ease-in-out .2s;
-        font-size: .9rem;
+        font-size: 1rem;
+        @include border-bottom($black-primary);
         @include tablet {
             padding: 0 0 1.5rem 0;
             margin: 0 1rem;
             width: 6.2rem;
-            font-size: 1rem;
-        }
-        @include desktop {
-            padding: 0 0 1.5rem 0;
-            margin: 0 1rem;
-            width: 6.5rem;
         }
         &--active,
         &:hover,
         &:focus {
-            border-bottom: 0.3125rem solid $white-primary;
+            @include border-bottom($white-primary);
             @extend %font-bold;
         }
     }
