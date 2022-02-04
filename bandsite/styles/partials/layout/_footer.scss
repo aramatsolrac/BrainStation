@@ -1,12 +1,14 @@
 @use './../variables' as *;
 @use './../mixins' as *;
 @use './../typography' as *;
+@use './../placeholders' as *;
 .footer {
     background-color: $black-primary;
     color: $white-primary;
-    padding: 1rem;
+    @extend %wrapper-mobile;
     @include tablet {
-        @include flex (row, flex-start, space-between)
+        @include flex (row, flex-start, space-between);
+        padding: 0 2rem;
     }
     @include desktop {
         padding: 1rem 5.6rem;
@@ -17,7 +19,7 @@
     &__content {
         @include tablet {
             width: 100%;
-            margin: 1rem 2.2rem;
+            margin: 1rem 1.5rem;
             @include flex (column, flex-start, flex-start);
         }
     }
@@ -113,7 +115,7 @@
             padding: .5rem;
             @include tablet {
                 display: flex;
-                padding: .5rem 0 .5rem .5rem;
+                padding: .5rem 0 .5rem 1.5rem;
             }
             @include desktop {
                 display: none;

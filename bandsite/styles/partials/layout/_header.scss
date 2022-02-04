@@ -2,9 +2,9 @@
 @use './../mixins' as *;
 @use './../typography' as *;
 .navbar {
+    width: 100%;
     background-color: $black-primary;
     @include flex (column, center, center);
-    width: 100%;
     @include tablet {
         @include flex(row, center, flex-end);
     }
