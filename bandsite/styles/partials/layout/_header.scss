@@ -25,11 +25,13 @@
         @include flex (row, flex-end, space-around);
         @extend %font-regular;
         position: relative;
-        top: 1rem;
+        top: .5rem;
         padding: 0;
+        margin: .3rem 0;
         @include tablet {
             justify-content: left;
             padding: .5rem 0 0 4rem;
+            margin: .5rem 0;
         }
     }
     &__item {

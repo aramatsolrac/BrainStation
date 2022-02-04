@@ -330,13 +330,15 @@ html {
   align-items: flex-end;
   justify-content: space-around;
   position: relative;
-  top: 1rem;
+  top: 0.5rem;
   padding: 0;
+  margin: 0.3rem 0;
 }
 @media screen and (min-width: 768px) {
   .navbar__list {
     justify-content: left;
     padding: 0.5rem 0 0 4rem;
+    margin: 0.5rem 0;
   }
 }
 .navbar__item {
