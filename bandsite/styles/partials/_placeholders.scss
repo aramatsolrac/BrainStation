@@ -1,7 +1,11 @@
 @use 'variables' as *;
 //wrapper paddings
 %wrapper-mobile {
-    padding: 0 1rem;
+    padding: 1rem;
+}
+
+%content-mobile {
+    padding: .5rem 0;
 }
 
 %wrapper-tablet {
@@ -11,18 +15,3 @@
 %wrapper-desktop {
     padding: 0 4rem;
 }
-
-//large-scale display wrapper
-// .wrapper-large-display {
-//     max-width: 1280px;
-//     margin: 0 auto;
-// }
-// .full-width {
-//     width: 100%;
-// }
-// .full-width--primary-color {
-//     background-color: $black-primary;
-// }
-// .full-width--secondary-color {
-//     background-color: $white-secondary;
-// }
