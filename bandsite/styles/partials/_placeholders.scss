@@ -1,0 +1,44 @@
+@use 'variables' as *;
+//wrapper paddings
+%wrapper-mobile {
+    padding: 0 1rem;
+}
+
+%wrapper-tablet {
+    padding: 0 2rem;
+}
+
+%wrapper-desktop {
+    padding: 0 4rem;
+}
+
+//contents paddings
+// %content-mobile {
+//     padding: .5rem 0;
+// }
+// %content-mobile-top {
+//     padding: 1rem 0 0 0;
+// }
+// %content-mobile-bottom {
+//     padding: 0 0 .5rem 0;
+// }
+// %content-tablet {
+//     padding: 2rem 0;
+// }
+// %content-desktop {
+//     padding: 4rem 0;
+// }
+//large-scale display wrapper
+// .wrapper-large-display {
+//     max-width: 1280px;
+//     margin: 0 auto;
+// }
+// .full-width {
+//     width: 100%;
+// }
+// .full-width--primary-color {
+//     background-color: $black-primary;
+// }
+// .full-width--secondary-color {
+//     background-color: $white-secondary;
+// }
