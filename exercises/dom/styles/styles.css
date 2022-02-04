@@ -1,0 +1,156 @@
+/* Box-sizing border-box */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  padding: 0.625rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 3.125rem;
+  background: #999999;
+  border-bottom: solid 1px;
+  z-index: 10;
+}
+
+.header-item--left,
+.header-item--right,
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.header-item--left {
+  padding-left: 1.25rem;
+}
+
+.header-item--right {
+  padding-right: 1.25rem;
+}
+
+.hero {
+  height: 18.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eeeeee;
+  text-align: center;
+  border-bottom: solid 1px #666666;
+}
+
+main {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 2.1875rem;
+}
+
+.card {
+  width: 9.375rem;
+  height: 12.5rem;
+  margin: 0.625rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: #eeeeee;
+  box-shadow: 3px 3px 3px #aaaaaa;
+  border-radius: 5px;
+  flex-wrap: wrap;
+}
+
+.card__content {
+  flex: 0 0 100%;
+  justify-self: center;
+  text-align: center;
+}
+
+.card__title {
+  flex: 0 0 100%;
+  text-align: center;
+  border-top: dashed 1px #555555;
+  padding-top: 0.9375rem;
+}
+
+.activity-list {
+  background: #dddddd;
+  padding: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.activity-list > * {
+  flex: 0 0 100%;
+}
+
+.activity-item {
+  width: 18.75rem;
+  height: 9.375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  margin: 0.625rem 0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #999999;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background: #999999;
+  border-top: solid 1px #666666;
+  padding: 1.5625rem;
+}
+
+.header-item--left {
+  align-self: left;
+}
+
+.header-item--right {
+  align-self: right;
+}
+
+.footer--left {
+  align-self: right;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-item--left,
+  .header-item--right {
+    display: none;
+  }
+
+  .hero {
+    height: 40vw;
+  }
+}
