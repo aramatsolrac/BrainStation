@@ -1,3 +1,45 @@
+.hero, .about {
+  padding: 1rem;
+}
+
+.about__title, .about__quote, .about__autor, .about__bio, .about__subtitle, .about__paragraph {
+  padding: 0.5rem 0;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/font/AvenirNextLTPro-Demi.otf") format("otf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/font/AvenirNextLTPro-Bold.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+}
+html {
+  font-family: "Avenir Next";
+}
+
+.navbar__item--desactive {
+  font-weight: 400;
+}
+
+.hero__text, .about__quotation, .about__autor, .about__subtitle, .navbar__item--active, .navbar__item:hover, .navbar__item:focus, .footer__subtitle, .footer__position, .about__title, .gallery__title, .footer__title {
+  font-weight: 600;
+}
+
+.about__title, .gallery__title, .footer__title {
+  font-size: 1.5rem;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -85,48 +127,15 @@ select {
     scroll-behavior: auto !important;
   }
 }
-@font-face {
-  font-family: "Avenir Next LT Pro";
-  src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("otf");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Avenir Next";
-  src: url("../../assets/font/AvenirNextLTPro-Demi.otf") format("otf");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Avenir Next";
-  src: url("../../assets/font/AvenirNextLTPro-Bold.otf") format("otf");
-  font-weight: 700;
-  font-style: normal;
-}
-html {
-  font-family: "Avenir Next";
-}
-
-.navbar__list {
-  font-weight: 400;
-}
-
-.about__quotation, .about__subtitle, .footer__subtitle, .footer__position, .hero__title h2, .about__title, .gallery__title, .footer__title {
-  font-weight: 600;
-}
-
-.navbar__item--active, .navbar__item:hover, .navbar__item:focus {
-  font-weight: 700;
-}
-
-.hero__title h2, .about__title, .gallery__title, .footer__title {
-  font-size: 1.5rem;
+.wrapper--footer {
+  width: 100%;
+  background: #323232;
 }
 
 .footer {
   background-color: #323232;
   color: #FFFFFF;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 @media screen and (min-width: 768px) {
   .footer {
@@ -134,20 +143,25 @@ html {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+    padding: 1rem 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer {
-    padding: 1rem 5.6rem;
+    padding: 1rem 8rem;
+    max-width: 1280px;
+    margin: 0 auto;
   }
 }
 .footer * {
   padding: 0.4rem 0;
 }
+.footer__content {
+  padding: 0;
+}
 @media screen and (min-width: 768px) {
   .footer__content {
     width: 100%;
-    margin: 1rem 2.2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -155,6 +169,7 @@ html {
   }
 }
 .footer__social {
+  padding: 0;
   display: flex;
   width: 100%;
   display: flex;
@@ -183,26 +198,16 @@ html {
 @media screen and (min-width: 768px) {
   .footer__title {
     font-size: 2.2rem;
-    margin-right: 1.5rem;
+    margin-right: 1.6rem;
   }
 }
 .footer__links {
+  padding: 0;
   display: flex;
   flex-direction: row;
-  padding: 0;
-}
-@media screen and (min-width: 768px) {
-  .footer__links {
-    padding-left: 0.3rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__links {
-    padding: 0.5rem;
-  }
 }
 .footer__link {
-  padding: 0 0.5rem 0 0;
+  margin: 0 0.4rem 0 0;
 }
 @media screen and (min-width: 768px) {
   .footer__link--mobile {
@@ -220,8 +225,13 @@ html {
   }
 }
 .footer__icon {
-  margin: 0 1.5rem 0 0;
-  height: 2.3rem;
+  margin: 0 1.2rem 0 0;
+  height: 1.5rem;
+  padding: 0;
+  border-radius: 0.2rem;
+}
+.footer__icon:hover {
+  background-color: #AFAFAF;
 }
 .footer__contacts {
   font-size: 0.8rem;
@@ -233,6 +243,7 @@ html {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
+    padding: 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -240,7 +251,7 @@ html {
     padding-right: 2rem;
   }
 }
-.footer__subtitle, .footer__address {
+.footer__address {
   padding: 0;
 }
 .footer__subtitle, .footer__position {
@@ -253,12 +264,21 @@ html {
 }
 .footer__email {
   color: #FFFFFF;
+  border-radius: 0.3rem;
+}
+.footer__email:hover {
+  background-color: #AFAFAF;
 }
 .footer__copy {
   font-size: 0.7rem;
 }
 .footer__logo--mobile {
   margin: 2rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo--mobile {
+    margin: 0;
+  }
 }
 .footer__logo--tablet {
   display: none;
@@ -267,7 +287,7 @@ html {
 @media screen and (min-width: 768px) {
   .footer__logo--tablet {
     display: flex;
-    padding: 0.5rem 0 0.5rem 0.5rem;
+    padding: 0.5rem 0 0.5rem 1.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -281,8 +301,13 @@ html {
 @media screen and (min-width: 1280px) {
   .footer__logo--desktop {
     display: flex;
-    margin: 2.5rem 2.6rem 0 0;
+    padding: 1.5rem 0.9rem 0 0;
   }
+}
+
+.wrapper--header {
+  width: 100%;
+  background: #323232;
 }
 
 .navbar {
@@ -291,8 +316,6 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 8.5vh;
 }
 @media screen and (min-width: 768px) {
   .navbar {
@@ -300,24 +323,31 @@ html {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 0.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navbar {
+    max-width: 1280px;
+    margin: 0 auto;
   }
 }
 .navbar__img {
   width: 100%;
-  height: 2vh;
+  height: 3vh;
   margin: 1.5rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
   .navbar__img {
-    margin: 0 2rem;
+    width: 100%;
+    height: 2vh;
+    margin: 0 1.4rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .navbar__img {
     width: 100%;
-    height: 2.2vh;
-    margin: 0 4rem;
+    height: 1.8vh;
+    margin: 0 4.5rem;
   }
 }
 .navbar__pages {
@@ -331,75 +361,90 @@ html {
   position: relative;
   top: 0.5rem;
   padding: 0;
+  margin: 0.3rem 0;
 }
 @media screen and (min-width: 768px) {
   .navbar__list {
     justify-content: left;
-    margin: 0.5rem 0 0.5rem 5rem;
-    top: 0.8rem;
+    padding: 0.5rem 0 0 4rem;
+    margin: 0.5rem 0;
   }
 }
 .navbar__item {
   width: 100%;
   text-align: center;
-  padding: 0 0 0.5rem 0;
-  border-bottom: 0.3125rem solid #323232;
+  padding: 0rem 0 0.5rem 0;
   transition: all ease-in-out 0.2s;
-  line-height: 1.5rem;
-  letter-spacing: 0.0625rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  border-bottom-width: 0.3125rem;
+  border-bottom-style: solid;
+  border-bottom-color: #323232;
 }
 @media screen and (min-width: 768px) {
   .navbar__item {
-    padding: 1.5rem 0;
-    margin: 0 1.5rem;
-    width: 23%;
-    font-size: 1rem;
+    padding: 0 0 1rem 0;
+    margin: 0 1rem;
+    width: 5.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .navbar__item {
-    padding: 1.5rem 0;
-    margin: 0 1.5rem;
-    width: 10%;
+    margin: 0 0.4rem;
   }
 }
 .navbar__item--active, .navbar__item:hover, .navbar__item:focus {
-  border-bottom: 0.3125rem solid #FFFFFF;
+  border-bottom-width: 0.3125rem;
+  border-bottom-style: solid;
+  border-bottom-color: #FFFFFF;
+}
+.navbar__item--desactive {
+  color: #AFAFAF;
 }
 .navbar__link {
   color: #FFFFFF;
 }
 
+.wrapper--hero {
+  width: 100%;
+  background: linear-gradient(#a52e7b, #501050);
+}
+.wrapper--about {
+  width: 100%;
+  background: #FFFFFF;
+}
+.wrapper--gallery {
+  width: 100%;
+  background: #FAFAFA;
+}
+
 .hero {
+  display: flex;
   background-image: url("../assets/images/hero-bio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 18vh;
-  display: flex;
-  padding: 0.5rem;
+  height: 24vh;
 }
 @media screen and (min-width: 768px) {
   .hero {
-    height: 35vh;
+    height: 50vh;
     padding: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    height: 60vh;
+    height: 63vh;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
+    max-width: 1280px;
+    margin: 0 auto;
   }
 }
 .hero__title {
-  line-height: 2rem;
   align-self: center;
-  margin: 0.5rem;
   color: #FFFFFF;
 }
 @media screen and (min-width: 1280px) {
@@ -408,18 +453,16 @@ html {
   }
 }
 @media screen and (min-width: 768px) {
-  .hero__title h2 {
-    font-size: 4rem;
+  .hero__text {
+    font-size: 3.3rem;
   }
 }
 
 .about {
   display: flex;
   flex-direction: column;
-  margin: 0.5rem 1rem;
-}
-.about * {
-  padding: 0.3rem 0;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .about {
@@ -428,7 +471,7 @@ html {
 }
 @media screen and (min-width: 768px) {
   .about__content {
-    padding: 0 2rem;
+    padding: 0 3.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -438,7 +481,7 @@ html {
 }
 @media screen and (min-width: 768px) {
   .about__title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -448,38 +491,33 @@ html {
   }
 }
 .about__img {
-  padding: 0;
-}
-.about__img img {
+  padding: 0.3rem 0;
   width: 100%;
-  height: 10.625rem;
+  height: 10.6rem;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 @media screen and (min-width: 768px) {
-  .about__img img {
+  .about__img {
     height: 18.75rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .about__img img {
+  .about__img {
     height: 28.125rem;
     padding-right: 1rem;
   }
 }
-.about__quote {
-  margin: 0.2rem 0;
-}
 @media screen and (min-width: 768px) {
   .about__quote {
-    margin: 1rem 0;
+    margin: 1rem 0 0 0;
   }
 }
 @media screen and (min-width: 1280px) {
   .about__quote {
-    width: 75%;
+    width: 76%;
   }
 }
 .about__quotation {
@@ -493,13 +531,11 @@ html {
 }
 @media screen and (min-width: 1280px) {
   .about__quotation {
-    font-weight: 600;
     font-size: 1.4rem;
     text-align: left;
   }
 }
 .about__autor {
-  font-weight: 600;
   font-size: 0.9rem;
 }
 @media screen and (min-width: 768px) {
@@ -508,11 +544,13 @@ html {
     font-size: 1rem;
   }
 }
-.about__bio {
-  width: 100%;
-}
 .about__subtitle {
   font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .about__subtitle {
+    font-size: 1.3rem;
+  }
 }
 @media screen and (min-width: 1280px) {
   .about__subtitle {
@@ -526,12 +564,11 @@ html {
   }
 }
 .about__paragraph {
-  margin: 0.4rem 0;
   font-size: 0.8rem;
 }
 @media screen and (min-width: 768px) {
   .about__paragraph {
-    padding: 1rem 1.3rem 1rem 0;
+    padding: 1rem 2rem 0 0;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -546,51 +583,66 @@ html {
 
 .gallery {
   background-color: #FAFAFA;
-  padding: 0.5rem 0;
+  padding: 0.5rem 1rem;
 }
 @media screen and (min-width: 768px) {
   .gallery {
-    padding: 3rem 2rem;
+    padding: 1.5rem 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .gallery {
     padding: 3rem 7rem 2rem 7rem;
+    max-width: 1280px;
+    margin: 0 auto;
   }
 }
 .gallery__title {
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
   .gallery__title {
-    padding: 0 1.3rem;
-    font-size: 3rem;
+    padding: 1.5rem 0 0.5rem 1rem;
+    font-size: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .gallery__title {
     font-size: 2.5rem;
+    padding: 1.5rem 0 0.5rem 0.7rem;
   }
 }
 @media screen and (min-width: 768px) {
   .gallery__images-list {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery__images-list {
+    padding: 0;
   }
 }
 .gallery__img {
-  padding: 0.5rem;
+  padding: 0.5rem 0;
+  filter: grayscale(100%);
+}
+.gallery__img:hover {
+  filter: grayscale(0%);
+  transition: all ease-in-out 0.2s;
 }
 @media screen and (min-width: 768px) {
   .gallery__img {
-    width: 14rem;
+    width: 15rem;
+    padding: 0.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .gallery__img {
     width: 21.5rem;
-    padding: 0.7rem;
+    padding: 0.7rem 1.1rem 0.7rem 0;
   }
 }/*# sourceMappingURL=bio.css.map */

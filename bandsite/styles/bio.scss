@@ -1,61 +1,70 @@
 @use './partials/main' as *;
+.wrapper {
+    &--hero {
+        @include full-width($linear-gradient);
+    }
+    &--about {
+        @include full-width($white-primary);
+    }
+    &--gallery {
+        @include full-width($white-secondary);
+    }
+}
+
 .hero {
+    display: flex;
     background-image: url('../assets/images/hero-bio.jpg');
     @include cover-background;
-    width: 100%;
-    height: 18vh;
-    display: flex;
-    padding: .5rem;
+    @include box (100%,
+    24vh);
+    @extend %wrapper-mobile;
     @include tablet {
-        height: 35vh;
+        height: 50vh;
         padding: 2rem;
     }
     @include desktop {
-        height: 60vh;
+        height: 63vh;
         object-fit: cover;
         object-position: center;
+        @include wrap($max-width,
+        $margin);
     }
     &__title {
-        line-height: 2rem;
         align-self: center;
-        margin: .5rem;
         color: $white-primary;
-        @include tablet {
-            // margin: 2rem;
-        }
         @include desktop {
             margin: 5rem;
         }
     }
-    &__title h2 {
-        @extend %title;
+    &__text {
+        @extend %font-demi;
         @include tablet {
-            font-size: 4rem;
+            font-size: 3.3rem;
         }
     }
 }
 
 .about {
     @include flex-direction (column);
-    margin: .5rem 1rem;
-    * {
-        padding: .3rem 0;
-    }
+    @extend %wrapper-mobile;
     @include tablet {
         padding: 2rem;
     }
+    @include wrap($max-width,
+    $margin);
     &__content {
         @include tablet {
-            padding: 0 2rem;
+            padding: 0 3.5rem;
         }
         @include desktop {
             margin: 0 7rem;
         }
     }
     &__title {
+        @extend %content-mobile;
         @extend %title;
         @include tablet {
-            font-size: 3rem;
+            font-size: 2rem;
         }
         @include desktop {
             margin: .5rem 5rem 0 5rem;
@@ -63,57 +72,59 @@
         }
     }
     &__img {
-        padding: 0;
-        img {
-            width: 100%;
-            height: 10.625rem;
-            object-fit: cover;
-            object-position: center;
-            @include tablet {
-                height: 18.75rem;
-            }
-            @include desktop {
-                height: 28.125rem;
-                padding-right: 1rem;
-            }
+        padding: .3rem 0;
+        @include box (100%,
+        10.6rem);
+        object-fit: cover;
+        object-position: bottom;
+        @include tablet {
+            height: 18.75rem;
+        }
+        @include desktop {
+            height: 28.125rem;
+            padding-right: 1rem;
         }
     }
     &__quote {
-        margin: .2rem 0;
+        @extend %content-mobile;
         @include tablet {
-            margin: 1rem 0;
+            margin: 1rem 0 0 0;
         }
         @include desktop {
-            width: 75%;
+            width: 76%;
         }
     }
     &__quotation {
-        @extend %font-demi;
         font-size: .9rem;
         text-align: left;
+        @extend %font-demi;
         @include tablet {
             font-size: 1.4rem;
         }
         @include desktop {
-            font-weight: 600;
             font-size: 1.4rem;
             text-align: left;
         }
     }
     &__autor {
-        font-weight: 600;
         font-size: .9rem;
+        @extend %font-demi;
+        @extend %content-mobile;
         @include tablet {
             padding: .7rem 0;
             font-size: 1rem;
         }
     }
     &__bio {
-        width: 100%;
+        @extend %content-mobile;
     }
     &__subtitle {
-        @extend %font-demi;
         font-size: 1rem;
+        @extend %content-mobile;
+        @extend %font-demi;
+        @include tablet {
+            font-size: 1.3rem;
+        }
         @include desktop {
             font-size: 1.5rem;
         }
@@ -124,10 +135,10 @@
         }
     }
     &__paragraph {
-        margin: .4rem 0;
         font-size: .8rem;
+        @extend %content-mobile;
         @include tablet {
-            padding: 1rem 1.3rem 1rem 0;
+            padding: 1rem 2rem 0 0;
         }
         @include desktop {
             width: 100%;
@@ -141,40 +152,53 @@
 
 .gallery {
     background-color: $white-secondary;
-    padding: .5rem 0;
+    padding: .5rem 1rem;
     @include tablet {
-        padding: 3rem 2rem;
+        padding: 1.5rem 1rem;
     }
     @include desktop {
         padding: 3rem 7rem 2rem 7rem;
+        @include wrap($max-width,
+        $margin);
     }
     &__title {
+        padding: 1rem 0 0 0;
         @extend %title;
-        padding: 1rem 1rem 0 1rem;
         @include tablet {
-            padding: 0 1.3rem;
-            font-size: 3rem;
+            padding: 1.5rem 0 .5rem 1rem;
+            font-size: 2rem;
         }
         @include desktop {
             font-size: 2.5rem;
+            padding: 1.5rem 0 .5rem .7rem;
         }
     }
     &__images-list {
+        // padding: 0 0 .5rem 0;
         @include tablet {
-            display: flex;
+            @include flex(row,
+            center,
+            center);
             flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: center;
+        }
+        @include desktop {
+            padding: 0;
         }
     }
     &__img {
-        padding: .5rem;
+        padding: .5rem 0;
+        filter: grayscale(100%);
+        &:hover {
+            filter: grayscale(0%);
+            transition: all ease-in-out .2s;
+        }
         @include tablet {
-            width: 14rem;
+            width: 15rem;
+            padding: .5rem;
         }
         @include desktop {
             width: 21.5rem;
-            padding: .7rem;
+            padding: .7rem 1.1rem .7rem 0;
         }
     }
 }

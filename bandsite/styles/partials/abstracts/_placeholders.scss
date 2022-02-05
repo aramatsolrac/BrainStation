@@ -1,0 +1,9 @@
+@use './variables' as *;
+//wrapper paddings on mobile
+%wrapper-mobile {
+    padding: 1rem;
+}
+
+%content-mobile {
+    padding: .5rem 0;
+}

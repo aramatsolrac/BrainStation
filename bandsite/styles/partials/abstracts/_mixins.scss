@@ -1,13 +1,22 @@
-@use 'variables' as *;
+@use './variables' as *;
+//image cover
 @mixin cover-background {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-@mixin box($width, $height) {
+// width and height
+@mixin box($width: $width, $height) {
     width: $width;
     height: $height;
+}
+
+//border bottom: hover, focus, and active
+@mixin border-bottom ($color) {
+    border-bottom-width: 0.3125rem;
+    border-bottom-style: solid;
+    border-bottom-color: $color;
 }
 
 // flexbox
@@ -18,9 +27,21 @@
     justify-content: $justify-content;
 }
 
+// flex direction
 @mixin flex-direction ($flex-direction) {
     display: flex;
     flex-direction: $flex-direction;
+}
+
+// larger displays
+@mixin wrap ($max-width, $margin) {
+    max-width: $max-width;
+    margin: $margin;
+}
+
+@mixin full-width ($color) {
+    width: 100%;
+    background: $color;
 }
 
 // responsive design
