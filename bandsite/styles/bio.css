@@ -111,7 +111,7 @@ html {
   font-weight: 400;
 }
 
-.about__quotation, .about__subtitle, .footer__subtitle, .footer__position, .hero__title h2, .about__title, .gallery__title, .footer__title {
+.hero__text, .about__quotation, .about__autor, .about__subtitle, .footer__subtitle, .footer__position, .about__title, .gallery__title, .footer__title {
   font-weight: 600;
 }
 
@@ -119,7 +119,7 @@ html {
   font-weight: 700;
 }
 
-.hero__title h2, .about__title, .gallery__title, .footer__title {
+.about__title, .gallery__title, .footer__title {
   font-size: 1.5rem;
 }
 
@@ -155,7 +155,6 @@ html {
 @media screen and (min-width: 768px) {
   .footer__content {
     width: 100%;
-    margin: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -195,9 +194,9 @@ html {
   }
 }
 .footer__links {
+  padding: 0;
   display: flex;
   flex-direction: row;
-  padding: 0;
 }
 @media screen and (min-width: 768px) {
   .footer__links {
@@ -248,7 +247,7 @@ html {
     padding-right: 2rem;
   }
 }
-.footer__subtitle, .footer__address {
+.footer__address {
   padding: 0;
 }
 .footer__subtitle, .footer__position {
@@ -357,7 +356,7 @@ html {
 }
 @media screen and (min-width: 768px) {
   .navbar__item {
-    padding: 0 0 1.5rem 0;
+    padding: 0 0 1rem 0;
     margin: 0 1rem;
     width: 6.2rem;
   }
@@ -382,7 +381,7 @@ html {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    height: 35vh;
+    height: 50vh;
     padding: 2rem;
   }
 }
@@ -396,7 +395,6 @@ html {
   }
 }
 .hero__title {
-  line-height: 2rem;
   align-self: center;
   color: #FFFFFF;
 }
@@ -406,8 +404,8 @@ html {
   }
 }
 @media screen and (min-width: 768px) {
-  .hero__title h2 {
-    font-size: 4rem;
+  .hero__text {
+    font-size: 3.3rem;
   }
 }
 
@@ -422,7 +420,7 @@ html {
 }
 @media screen and (min-width: 768px) {
   .about__content {
-    padding: 0 2rem;
+    padding: 0 3.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -432,7 +430,7 @@ html {
 }
 @media screen and (min-width: 768px) {
   .about__title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -463,7 +461,7 @@ html {
 }
 @media screen and (min-width: 768px) {
   .about__quote {
-    margin: 1rem 0;
+    margin: 1rem 0 0 0;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -482,13 +480,11 @@ html {
 }
 @media screen and (min-width: 1280px) {
   .about__quotation {
-    font-weight: 600;
     font-size: 1.4rem;
     text-align: left;
   }
 }
 .about__autor {
-  font-weight: 600;
   font-size: 0.9rem;
 }
 @media screen and (min-width: 768px) {
@@ -499,6 +495,11 @@ html {
 }
 .about__subtitle {
   font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .about__subtitle {
+    font-size: 1.3rem;
+  }
 }
 @media screen and (min-width: 1280px) {
   .about__subtitle {
@@ -516,7 +517,7 @@ html {
 }
 @media screen and (min-width: 768px) {
   .about__paragraph {
-    padding: 1rem 1.3rem 1rem 0;
+    padding: 1rem 2rem 0 0;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -534,7 +535,7 @@ html {
 }
 @media screen and (min-width: 768px) {
   .gallery {
-    padding: 3rem 2rem;
+    padding: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -547,8 +548,8 @@ html {
 }
 @media screen and (min-width: 768px) {
   .gallery__title {
-    padding: 0 1.3rem;
-    font-size: 3rem;
+    padding: 1.5rem 0 0.5rem 1rem;
+    font-size: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -562,9 +563,10 @@ html {
 @media screen and (min-width: 768px) {
   .gallery__images-list {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
   }
 }
 .gallery__img {
@@ -572,7 +574,7 @@ html {
 }
 @media screen and (min-width: 768px) {
   .gallery__img {
-    width: 14rem;
+    width: 15rem;
     padding: 0.5rem;
   }
 }

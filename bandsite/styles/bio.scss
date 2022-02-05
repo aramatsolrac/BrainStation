@@ -7,7 +7,7 @@
     24vh);
     @extend %wrapper-mobile;
     @include tablet {
-        height: 35vh;
+        height: 50vh;
         padding: 2rem;
     }
     @include desktop {
@@ -16,20 +16,16 @@
         object-position: center;
     }
     &__title {
-        line-height: 2rem;
         align-self: center;
         color: $white-primary;
-        @include tablet {
-            // margin: 2rem;
-        }
         @include desktop {
             margin: 5rem;
         }
     }
-    &__title h2 {
-        @extend %title;
+    &__text {
+        @extend %font-demi;
         @include tablet {
-            font-size: 4rem;
+            font-size: 3.3rem;
         }
     }
 }
@@ -42,7 +38,7 @@
     }
     &__content {
         @include tablet {
-            padding: 0 2rem;
+            padding: 0 3.5rem;
         }
         @include desktop {
             margin: 0 7rem;
@@ -52,7 +48,7 @@
         @extend %content-mobile;
         @extend %title;
         @include tablet {
-            font-size: 3rem;
+            font-size: 2rem;
         }
         @include desktop {
             margin: .5rem 5rem 0 5rem;
@@ -76,7 +72,7 @@
     &__quote {
         @extend %content-mobile;
         @include tablet {
-            margin: 1rem 0;
+            margin: 1rem 0 0 0;
         }
         @include desktop {
             width: 75%;
@@ -92,7 +88,7 @@
         @include desktop {
             font-size: 1.4rem;
             text-align: left;
-            @extend %font-demi;
+            // @extend %font-demi;
         }
     }
     &__autor {
@@ -111,6 +107,9 @@
         font-size: 1rem;
         @extend %content-mobile;
         @extend %font-demi;
+        @include tablet {
+            font-size: 1.3rem;
+        }
         @include desktop {
             font-size: 1.5rem;
         }
@@ -124,7 +123,7 @@
         font-size: .8rem;
         @extend %content-mobile;
         @include tablet {
-            padding: 1rem 1.3rem 1rem 0;
+            padding: 1rem 2rem 0 0;
         }
         @include desktop {
             width: 100%;
@@ -140,7 +139,7 @@
     background-color: $white-secondary;
     @extend %wrapper-mobile;
     @include tablet {
-        padding: 3rem 2rem;
+        padding: 1rem;
     }
     @include desktop {
         padding: 3rem 7rem 2rem 7rem;
@@ -149,8 +148,8 @@
         padding: 1rem 0 0 0;
         @extend %title;
         @include tablet {
-            padding: 0 1.3rem;
-            font-size: 3rem;
+            padding: 1.5rem 0 .5rem 1rem;
+            font-size: 2rem;
         }
         @include desktop {
             font-size: 2.5rem;
@@ -159,16 +158,16 @@
     &__images-list {
         padding: 0 0 .5rem 0;
         @include tablet {
-            display: flex;
+            @include flex(row,
+            center,
+            center);
             flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: center;
         }
     }
     &__img {
         padding: .5rem 0;
         @include tablet {
-            width: 14rem;
+            width: 15rem;
             padding: .5rem;
         }
         @include desktop {

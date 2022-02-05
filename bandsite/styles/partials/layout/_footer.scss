@@ -19,7 +19,6 @@
     &__content {
         @include tablet {
             width: 100%;
-            margin: 1rem 1.5rem;
             @include flex (column, flex-start, flex-start);
         }
     }
@@ -37,17 +36,17 @@
         }
     }
     &__title {
-        @extend %title;
         padding: 0;
         font-size: 1.6rem;
+        @extend %title;
         @include tablet {
             font-size: 2.2rem;
             margin-right: 1.5rem;
         }
     }
     &__links {
-        @include flex-direction (row);
         padding: 0;
+        @include flex-direction (row);
         @include tablet {
             padding-left: .3rem;
         }
@@ -87,7 +86,6 @@
             padding-right: 2rem;
         }
     }
-    &__subtitle,
     &__address {
         padding: 0;
     }
