@@ -5,13 +5,13 @@
 .footer {
     background-color: $black-primary;
     color: $white-primary;
-    @extend %wrapper-mobile;
+    padding: 1rem 1rem 0 1rem;
     @include tablet {
         @include flex (row, flex-start, space-between);
-        padding: 0 2rem;
+        padding: 1rem 2rem;
     }
     @include desktop {
-        padding: 1rem 5.6rem;
+        padding: 1rem 8rem;
     }
     * {
         padding: .4rem 0;
@@ -107,6 +107,9 @@
     &__logo {
         &--mobile {
             margin: 2rem 0 0 0;
+            @include tablet {
+                margin: 0;
+            }
         }
         &--tablet {
             display: none;
@@ -123,7 +126,7 @@
             display: none;
             @include desktop {
                 display: flex;
-                margin: 2.5rem 2.6rem 0 0;
+                padding: 1.5rem .9rem 0 0;
             }
         }
     }
