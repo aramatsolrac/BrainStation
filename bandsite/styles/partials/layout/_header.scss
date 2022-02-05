@@ -31,7 +31,6 @@
     }
     &__list {
         @include flex (row, flex-end, space-around);
-        @extend %font-regular;
         position: relative;
         top: .5rem;
         padding: 0;
@@ -61,7 +60,11 @@
         &:hover,
         &:focus {
             @include border-bottom($white-primary);
-            @extend %font-bold;
+            @extend %font-demi;
+        }
+        &--desactive {
+            color: $silver-primary;
+            @extend %font-regular;
         }
     }
     &__link {

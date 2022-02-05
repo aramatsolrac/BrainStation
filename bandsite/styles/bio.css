@@ -1,4 +1,4 @@
-.hero, .about, .gallery {
+.hero, .about {
   padding: 1rem;
 }
 
@@ -28,16 +28,12 @@ html {
   font-family: "Avenir Next";
 }
 
-.navbar__list {
+.navbar__item--desactive {
   font-weight: 400;
 }
 
-.hero__text, .about__quotation, .about__autor, .about__subtitle, .footer__subtitle, .footer__position, .about__title, .gallery__title, .footer__title {
+.hero__text, .about__quotation, .about__autor, .about__subtitle, .navbar__item--active, .navbar__item:hover, .navbar__item:focus, .footer__subtitle, .footer__position, .about__title, .gallery__title, .footer__title {
   font-weight: 600;
-}
-
-.navbar__item--active, .navbar__item:hover, .navbar__item:focus {
-  font-weight: 700;
 }
 
 .about__title, .gallery__title, .footer__title {
@@ -160,6 +156,9 @@ select {
 .footer * {
   padding: 0.4rem 0;
 }
+.footer__content {
+  padding: 0;
+}
 @media screen and (min-width: 768px) {
   .footer__content {
     width: 100%;
@@ -170,6 +169,7 @@ select {
   }
 }
 .footer__social {
+  padding: 0;
   display: flex;
   width: 100%;
   display: flex;
@@ -198,7 +198,7 @@ select {
 @media screen and (min-width: 768px) {
   .footer__title {
     font-size: 2.2rem;
-    margin-right: 1.5rem;
+    margin-right: 1.6rem;
   }
 }
 .footer__links {
@@ -206,18 +206,8 @@ select {
   display: flex;
   flex-direction: row;
 }
-@media screen and (min-width: 768px) {
-  .footer__links {
-    padding-left: 0.3rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer__links {
-    padding: 0.5rem;
-  }
-}
 .footer__link {
-  padding: 0 0.5rem 0 0;
+  margin: 0 0.4rem 0 0;
 }
 @media screen and (min-width: 768px) {
   .footer__link--mobile {
@@ -235,8 +225,13 @@ select {
   }
 }
 .footer__icon {
-  margin: 0 1.5rem 0 0;
-  height: 2.3rem;
+  margin: 0 1.2rem 0 0;
+  height: 1.5rem;
+  padding: 0;
+  border-radius: 0.2rem;
+}
+.footer__icon:hover {
+  background-color: #AFAFAF;
 }
 .footer__contacts {
   font-size: 0.8rem;
@@ -248,6 +243,7 @@ select {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
+    padding: 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -268,6 +264,10 @@ select {
 }
 .footer__email {
   color: #FFFFFF;
+  border-radius: 0.3rem;
+}
+.footer__email:hover {
+  background-color: #AFAFAF;
 }
 .footer__copy {
   font-size: 0.7rem;
@@ -397,6 +397,9 @@ select {
   border-bottom-style: solid;
   border-bottom-color: #FFFFFF;
 }
+.navbar__item--desactive {
+  color: #AFAFAF;
+}
 .navbar__link {
   color: #FFFFFF;
 }
@@ -431,7 +434,7 @@ select {
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    height: 67vh;
+    height: 63vh;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
@@ -580,10 +583,11 @@ select {
 
 .gallery {
   background-color: #FAFAFA;
+  padding: 0.5rem 1rem;
 }
 @media screen and (min-width: 768px) {
   .gallery {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -608,9 +612,6 @@ select {
     padding: 1.5rem 0 0.5rem 0.7rem;
   }
 }
-.gallery__images-list {
-  padding: 0 0 0.5rem 0;
-}
 @media screen and (min-width: 768px) {
   .gallery__images-list {
     display: flex;
@@ -627,6 +628,11 @@ select {
 }
 .gallery__img {
   padding: 0.5rem 0;
+  filter: grayscale(100%);
+}
+.gallery__img:hover {
+  filter: grayscale(0%);
+  transition: all ease-in-out 0.2s;
 }
 @media screen and (min-width: 768px) {
   .gallery__img {

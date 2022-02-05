@@ -1,7 +1,7 @@
 @use './partials/main' as *;
 .wrapper {
     &--hero {
-        @include full-width(linear-gradient(rgb(165, 46, 123), rgb(80, 16, 80)));
+        @include full-width($linear-gradient);
     }
     &--about {
         @include full-width($white-primary);
@@ -23,7 +23,7 @@
         padding: 2rem;
     }
     @include desktop {
-        height: 67vh;
+        height: 63vh;
         object-fit: cover;
         object-position: center;
         @include wrap($max-width,
@@ -152,9 +152,9 @@
 
 .gallery {
     background-color: $white-secondary;
-    @extend %wrapper-mobile;
+    padding: .5rem 1rem;
     @include tablet {
-        padding: 1rem;
+        padding: 1.5rem 1rem;
     }
     @include desktop {
         padding: 3rem 7rem 2rem 7rem;
@@ -174,7 +174,7 @@
         }
     }
     &__images-list {
-        padding: 0 0 .5rem 0;
+        // padding: 0 0 .5rem 0;
         @include tablet {
             @include flex(row,
             center,
@@ -187,6 +187,11 @@
     }
     &__img {
         padding: .5rem 0;
+        filter: grayscale(100%);
+        &:hover {
+            filter: grayscale(0%);
+            transition: all ease-in-out .2s;
+        }
         @include tablet {
             width: 15rem;
             padding: .5rem;
