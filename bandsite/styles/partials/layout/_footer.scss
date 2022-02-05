@@ -1,4 +1,10 @@
 @use './../global' as *;
+.wrapper {
+    &--footer {
+        @include full-width($black-primary);
+    }
+}
+
 .footer {
     background-color: $black-primary;
     color: $white-primary;
@@ -9,6 +15,7 @@
     }
     @include desktop {
         padding: 1rem 8rem;
+        @include wrap($max-width, $margin);
     }
     * {
         padding: .4rem 0;

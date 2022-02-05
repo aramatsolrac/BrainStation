@@ -1,4 +1,16 @@
 @use './partials/main' as *;
+.wrapper {
+    &--hero {
+        @include full-width(linear-gradient(rgb(165, 46, 123), rgb(80, 16, 80)));
+    }
+    &--about {
+        @include full-width($white-primary);
+    }
+    &--gallery {
+        @include full-width($white-secondary);
+    }
+}
+
 .hero {
     display: flex;
     background-image: url('../assets/images/hero-bio.jpg');
@@ -13,6 +25,9 @@
     @include desktop {
         height: 67vh;
         object-fit: cover;
+        object-position: center;
+        @include wrap($max-width,
+        $margin);
     }
     &__title {
         align-self: center;
@@ -35,6 +50,8 @@
     @include tablet {
         padding: 2rem;
     }
+    @include wrap($max-width,
+    $margin);
     &__content {
         @include tablet {
             padding: 0 3.5rem;
@@ -141,6 +158,8 @@
     }
     @include desktop {
         padding: 3rem 7rem 2rem 7rem;
+        @include wrap($max-width,
+        $margin);
     }
     &__title {
         padding: 1rem 0 0 0;

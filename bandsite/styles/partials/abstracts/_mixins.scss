@@ -33,6 +33,17 @@
     flex-direction: $flex-direction;
 }
 
+// larger displays
+@mixin wrap ($max-width, $margin) {
+    max-width: $max-width;
+    margin: $margin;
+}
+
+@mixin full-width ($color) {
+    width: 100%;
+    background: $color;
+}
+
 // responsive design
 @mixin tablet {
     @media screen and (min-width: $tablet-breakpoint) {
