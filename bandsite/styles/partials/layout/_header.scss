@@ -1,21 +1,21 @@
 @use './../global' as *;
 .wrapper {
     &--header {
-        @include full-width($black-primary);
+        @include full-width($color-primary);
     }
 }
 
 .navbar {
-    background-color: $black-primary;
+    background-color: $color-primary;
     @include flex (column, center, center);
     @include tablet {
         @include flex(row, center, flex-end);
     }
     @include desktop {
-        @include wrap ($max-width, $margin);
+        @include wrap ($max-width, $margin-center);
     }
     &__img {
-        @include box ($width, 3vh);
+        @include box ($width, 2.6vh);
         margin: 1.5rem 0 0 0;
         @include tablet {
             @include box ($width, 2vh);
@@ -47,7 +47,7 @@
         padding: 0rem 0 .5rem 0;
         transition: all ease-in-out .2s;
         font-size: 1rem;
-        @include border-bottom($black-primary);
+        @include border-bottom($color-primary);
         @include tablet {
             padding: 0 0 1rem 0;
             margin: 0 1rem;
@@ -59,15 +59,15 @@
         &--active,
         &:hover,
         &:focus {
-            @include border-bottom($white-primary);
+            @include border-bottom($color-secondary);
             @extend %font-demi;
         }
         &--desactive {
-            color: $silver-primary;
+            color: $color-tertiary;
             @extend %font-regular;
         }
     }
     &__link {
-        color: $white-primary;
+        color: $color-secondary;
     }
 }

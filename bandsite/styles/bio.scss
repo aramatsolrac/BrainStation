@@ -4,10 +4,10 @@
         @include full-width($linear-gradient);
     }
     &--about {
-        @include full-width($white-primary);
+        @include full-width($color-secondary);
     }
     &--gallery {
-        @include full-width($white-secondary);
+        @include full-width($color-secondary-dark);
     }
 }
 
@@ -19,19 +19,19 @@
     24vh);
     @extend %wrapper-mobile;
     @include tablet {
-        height: 50vh;
+        height: 47vh;
         padding: 2rem;
     }
     @include desktop {
-        height: 63vh;
+        height: 65vh;
         object-fit: cover;
         object-position: center;
         @include wrap($max-width,
-        $margin);
+        $margin-center);
     }
     &__title {
         align-self: center;
-        color: $white-primary;
+        color: $color-secondary;
         @include desktop {
             margin: 5rem;
         }
@@ -51,7 +51,7 @@
         padding: 2rem;
     }
     @include wrap($max-width,
-    $margin);
+    $margin-center);
     &__content {
         @include tablet {
             padding: 0 3.5rem;
@@ -63,6 +63,7 @@
     &__title {
         @extend %content-mobile;
         @extend %title;
+        padding: 0;
         @include tablet {
             font-size: 2rem;
         }
@@ -151,7 +152,7 @@
 }
 
 .gallery {
-    background-color: $white-secondary;
+    background-color: $color-secondary-dark;
     padding: .5rem 1rem;
     @include tablet {
         padding: 1.5rem 1rem;
@@ -159,7 +160,7 @@
     @include desktop {
         padding: 3rem 7rem 2rem 7rem;
         @include wrap($max-width,
-        $margin);
+        $margin-center);
     }
     &__title {
         padding: 1rem 0 0 0;
@@ -174,7 +175,6 @@
         }
     }
     &__images-list {
-        // padding: 0 0 .5rem 0;
         @include tablet {
             @include flex(row,
             center,

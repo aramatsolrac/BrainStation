@@ -1,13 +1,13 @@
 @use './../global' as *;
 .wrapper {
     &--footer {
-        @include full-width($black-primary);
+        @include full-width($color-primary);
     }
 }
 
 .footer {
-    background-color: $black-primary;
-    color: $white-primary;
+    background-color: $color-primary;
+    color: $color-secondary;
     padding: 1rem 1rem 0 1rem;
     @include tablet {
         @include flex (row, flex-start, space-between);
@@ -15,7 +15,7 @@
     }
     @include desktop {
         padding: 1rem 8rem;
-        @include wrap($max-width, $margin);
+        @include wrap($max-width, $margin-center);
     }
     * {
         padding: .4rem 0;
@@ -76,7 +76,7 @@
         padding: 0;
         border-radius: .2rem;
         &:hover {
-            background-color: $silver-primary;
+            background-color: $color-tertiary;
         }
     }
     &__contacts {
@@ -104,10 +104,10 @@
         }
     }
     &__email {
-        color: $white-primary;
+        color: $color-secondary;
         border-radius: .3rem;
         &:hover {
-            background-color: $silver-primary;
+            background-color: $color-tertiary;
         }
     }
     &__copy {
