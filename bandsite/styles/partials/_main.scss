@@ -1,8 +1,8 @@
-@forward 'reset';
 @forward 'global';
-@forward 'typography';
-@forward 'mixins';
-@forward 'variables';
-@forward 'placeholders';
 @forward './layout/footer';
 @forward './layout/header';
+// @forward './base/reset';
+// @forward './base/typography';
+// @forward './abstracts/mixins';
+// @forward './abstracts/variables';
+// @forward './abstracts/placeholders';

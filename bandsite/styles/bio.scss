@@ -13,7 +13,6 @@
     @include desktop {
         height: 67vh;
         object-fit: cover;
-        // object-position: top;
     }
     &__title {
         align-self: center;
@@ -75,7 +74,7 @@
             margin: 1rem 0 0 0;
         }
         @include desktop {
-            width: 75%;
+            width: 76%;
         }
     }
     &__quotation {

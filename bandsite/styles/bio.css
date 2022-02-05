@@ -1,3 +1,49 @@
+.hero, .about, .gallery {
+  padding: 1rem;
+}
+
+.about__title, .about__quote, .about__autor, .about__bio, .about__subtitle, .about__paragraph {
+  padding: 0.5rem 0;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/font/AvenirNextLTPro-Demi.otf") format("otf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/font/AvenirNextLTPro-Bold.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+}
+html {
+  font-family: "Avenir Next";
+}
+
+.navbar__list {
+  font-weight: 400;
+}
+
+.hero__text, .about__quotation, .about__autor, .about__subtitle, .footer__subtitle, .footer__position, .about__title, .gallery__title, .footer__title {
+  font-weight: 600;
+}
+
+.navbar__item--active, .navbar__item:hover, .navbar__item:focus {
+  font-weight: 700;
+}
+
+.about__title, .gallery__title, .footer__title {
+  font-size: 1.5rem;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -85,52 +131,6 @@ select {
     scroll-behavior: auto !important;
   }
 }
-@font-face {
-  font-family: "Avenir Next LT Pro";
-  src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("otf");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Avenir Next";
-  src: url("../../assets/font/AvenirNextLTPro-Demi.otf") format("otf");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Avenir Next";
-  src: url("../../assets/font/AvenirNextLTPro-Bold.otf") format("otf");
-  font-weight: 700;
-  font-style: normal;
-}
-html {
-  font-family: "Avenir Next";
-}
-
-.navbar__list {
-  font-weight: 400;
-}
-
-.hero__text, .about__quotation, .about__autor, .about__subtitle, .footer__subtitle, .footer__position, .about__title, .gallery__title, .footer__title {
-  font-weight: 600;
-}
-
-.navbar__item--active, .navbar__item:hover, .navbar__item:focus {
-  font-weight: 700;
-}
-
-.about__title, .gallery__title, .footer__title {
-  font-size: 1.5rem;
-}
-
-.hero, .about, .gallery {
-  padding: 1rem;
-}
-
-.about__title, .about__quote, .about__autor, .about__bio, .about__subtitle, .about__paragraph {
-  padding: 0.5rem 0;
-}
-
 .footer {
   background-color: #323232;
   color: #FFFFFF;
@@ -315,7 +315,7 @@ html {
 }
 .navbar__img {
   width: 100%;
-  height: 2.8vh;
+  height: 3vh;
   margin: 1rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
@@ -325,8 +325,6 @@ html {
 }
 @media screen and (min-width: 1280px) {
   .navbar__img {
-    width: 100%;
-    height: 2.3vh;
     margin: 0 4.5rem;
   }
 }
@@ -476,7 +474,7 @@ html {
 }
 @media screen and (min-width: 1280px) {
   .about__quote {
-    width: 75%;
+    width: 76%;
   }
 }
 .about__quotation {
