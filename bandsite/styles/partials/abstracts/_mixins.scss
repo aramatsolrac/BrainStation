@@ -1,5 +1,5 @@
 @use './variables' as *;
-//image cover
+// image cover
 @mixin cover-background {
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,7 +12,7 @@
     height: $height;
 }
 
-//border bottom: hover, focus, and active
+// border bottom: hover, focus, and active
 @mixin border-bottom ($color) {
     border-bottom-width: 0.3125rem;
     border-bottom-style: solid;
