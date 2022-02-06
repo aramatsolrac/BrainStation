@@ -55,7 +55,7 @@ h3 {
     width: 100%;
 }
 
-.full-width--rose {
+.full-width--secondary {
     background-color: var(--rose);
 }
 
@@ -171,15 +171,17 @@ h3 {
 
 /* mobile responsive design */
 
-@media screen and (min-width: 0px) and (max-width: 700px) {
+@media screen and (min-width: 0px) and (max-width: 767px) {
     .nav-menu {
         padding: 0 1.5rem;
+        flex-direction: column;
     }
     .nav-menu__title {
+        padding: 1rem 0 0 0;
         font-size: 1rem;
     }
     .nav-menu__item {
-        padding-right: 0;
+        padding: 0 1rem;
     }
     .nav-menu__list a {
         font-size: .7rem;
@@ -199,7 +201,7 @@ h3 {
 
 /* tablet */
 
-@media screen and (min-width: 601px) and (max-width: 1072px) {
+@media screen and (min-width: 768px) and (max-width: 1280px) {
     .nav-menu {
         padding: 0 4rem;
     }

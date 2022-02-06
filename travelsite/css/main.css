@@ -106,10 +106,10 @@
 
 /* mobile */
 
-@media screen and (min-width: 0px) and (max-width: 600px) {
+@media screen and (min-width: 0px) and (max-width: 767px) {
     .nav-hero {
         padding: 1rem;
-        height: 43rem;
+        height: 46rem;
         justify-content: flex-start;
     }
     .nav-hero__img {
@@ -144,7 +144,7 @@
 
 /* tablet */
 
-@media screen and (min-width: 601px) and (max-width: 1072px) {
+@media screen and (min-width: 768px) and (max-width: 1280px) {
     .nav-hero {
         padding: 3rem;
         height: 50rem;
