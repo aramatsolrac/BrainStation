@@ -35,5 +35,11 @@ function sayMyName(firstName, lastName, outputName) {
     return outputName(`${firstName} ${lastName}`);
 }
 const myName = sayMyName('Tamara', 'Carlos', outputName);
+setTimeout(() => { console.log(myName) }, 1000); // => Your name is: Tamara Carlos
 
+
+// Arrow function
+const sayMyName = (firstName, lastName, outputName) => { return outputName(`${firstName} ${lastName}`) };
+const myName = sayMyName('Tamara', 'Carlos', outputName);
+console.log(myName)
 setTimeout(() => { console.log(myName) }, 1000); // => Your name is: Tamara Carlos
