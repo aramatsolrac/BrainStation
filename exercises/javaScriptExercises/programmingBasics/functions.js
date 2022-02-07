@@ -22,3 +22,18 @@ function output(sth) {
 }
 
 console.log(output(1)); // => undefined
+
+// Advanced Functions
+
+const outputName = function(name) {
+    return `Your name is: ${name}`
+}
+
+console.log(outputName('Tamara'));
+
+function sayMyName(firstName, lastName, outputName) {
+    return outputName(`${firstName} ${lastName}`);
+}
+const myName = sayMyName('Tamara', 'Carlos', outputName);
+
+setTimeout(() => { console.log(myName) }, 1000);
