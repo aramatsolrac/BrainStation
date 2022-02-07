@@ -29,11 +29,11 @@ const outputName = function(name) {
     return `Your name is: ${name}`
 }
 
-console.log(outputName('Tamara'));
+console.log(outputName('Tamara')); // => Your name is: Tamara
 
 function sayMyName(firstName, lastName, outputName) {
     return outputName(`${firstName} ${lastName}`);
 }
 const myName = sayMyName('Tamara', 'Carlos', outputName);
 
-setTimeout(() => { console.log(myName) }, 1000);
+setTimeout(() => { console.log(myName) }, 1000); // => Your name is: Tamara Carlos
