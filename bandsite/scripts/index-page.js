@@ -21,6 +21,7 @@ let comments = [{
     }
 ]
 
+
 function displayComment() {
     for (let i = 0; i < comments.length; i++) {
         const name = document.createElement("li");
@@ -45,25 +46,23 @@ let dd = String(today.getDate()).padStart(2, '0');
 let mm = String(today.getMonth() + 1).padStart(2, '0');
 let yyyy = today.getFullYear();
 
-today = dd + '/' + mm + '/' + yyyy;
+today = mm + '/' + dd + '/' + yyyy;
 
 function newComment() {
     const nameValue = nameInput.value;
     const commentValue = commentText.value;
 
-    const addName = document.createElement("li");
-    addName.textContent = nameValue;
-    commentsList.appendChild(addName);
-    addName.value = ""
+    const addComment = document.createElement("li");
+    addComment.textContent = commentValue;
+    commentsList.prepend(addComment);
+    commentText.value = ""
 
     const addDate = document.createElement("li");
     addDate.textContent = today;
-    commentsList.appendChild(addDate);
-    addDate.value = ""
+    commentsList.prepend(addDate);
 
-    const addComment = document.createElement("li");
-    addComment.textContent = commentValue;
-    commentsList.appendChild(addComment);
-    addComment.value = ""
-
+    const addName = document.createElement("li");
+    addName.textContent = nameValue;
+    commentsList.prepend(addName);
+    nameInput.value = ""
 };
