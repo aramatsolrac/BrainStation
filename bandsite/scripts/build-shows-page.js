@@ -55,6 +55,7 @@ function displayConcerts() {
 
         const button = document.createElement("li");
         button.textContent = concerts[i].button
+        button.classList.add('test') // only to test if it works
         concertsList.appendChild(button);
     }
 };
