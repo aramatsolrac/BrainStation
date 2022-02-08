@@ -4,7 +4,6 @@ const addCommentBtn = document.getElementById("addComment");
 const commentsList = document.getElementById("comments-list")
 addCommentBtn.addEventListener('click', newComment);
 
-
 let comments = [{
         name: "Connor Walton",
         date: "02/17/2021",
