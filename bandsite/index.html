@@ -102,7 +102,7 @@
                 </div>
                 <div>
                     <form action="#" method="POST">
-                        <h1 class="information__title">Join the Conversation</h1>
+                        <h1>Join the Conversation</h1>
                         <section>
                             <ul>
                                 <li>
@@ -113,11 +113,15 @@
                                     <label for="comment">Comment</label>
                                     <textarea id="comment" name="comment" rows="3" cols="30" placeholder="Add a new comment" required></textarea>
                                 </li>
-                                <li><input type="submit" value="Comment"></li>
+                                <button id="addComment" type="button">Comment</button>
                             </ul>
                         </section>
                     </form>
                 </div>
+            </section>
+            <section>
+                <ul class="comments-list" id="comments-list">
+                </ul>
             </section>
         </section>
 
@@ -203,6 +207,7 @@
         </footer>
 
     </main>
+    <script src="./scripts/index-page.js"></script>
 </body>
 
 </html>
