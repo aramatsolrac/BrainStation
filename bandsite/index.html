@@ -96,27 +96,29 @@
 
         <!-- join conversation -->
         <section>
-            <section>
-                <div>
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <form action="#" method="POST">
-                        <h1>Join the Conversation</h1>
-                        <section>
-                            <ul>
-                                <li>
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" name="name" value="" placeholder="Enter your name" required>
-                                </li>
-                                <li>
-                                    <label for="comment">Comment</label>
-                                    <textarea id="comment" name="comment" rows="3" cols="30" placeholder="Add a new comment" required></textarea>
-                                </li>
-                                <button id="addComment" type="button">Comment</button>
-                            </ul>
-                        </section>
-                    </form>
+            <section class="comments">
+                <h1 class="comments__title">Join the Conversation</h1>
+                <div class="comments__addComment">
+                    <div>
+                        <img class="comments__img" src="./assets/images/Mohan-muruge.jpg" alt="Mohan Muruge profile picture">
+                    </div>
+                    <div>
+                        <form action="#" method="POST">
+                            <section class="comments__form">
+                                <ul class="comments__list">
+                                    <li>
+                                        <label class="comments__label" for="name">Name</label>
+                                        <input class="comments__name" type="text" id="name" name="name" value="" placeholder="Enter your name" required>
+                                    </li>
+                                    <li>
+                                        <label class="comments__label" for="comment">Comment</label>
+                                        <textarea class="comments__text" id="comment" name="comment" rows="3" cols="30" placeholder="Add a new comment" required></textarea>
+                                    </li>
+                                    <button id="addComment" type="button">Comment</button>
+                                </ul>
+                            </section>
+                        </form>
+                    </div>
                 </div>
             </section>
             <section>
