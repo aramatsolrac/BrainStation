@@ -1,0 +1,33 @@
+@use './partials/main' as *;
+.hero {
+    display: flex;
+    background-image: url('./../assets/images/hero-shows.jpg');
+    @include cover-background;
+    @include box (100%,
+    24vh);
+    @extend %wrapper-mobile;
+    @include tablet {
+        height: 47vh;
+        padding: 2rem;
+    }
+    @include desktop {
+        height: 65vh;
+        object-fit: cover;
+        object-position: center;
+        @include wrap($max-width,
+        $margin-center);
+    }
+    &__title {
+        align-self: center;
+        color: $color-secondary;
+        @include desktop {
+            margin: 5rem;
+        }
+    }
+    &__text {
+        @extend %font-demi;
+        @include tablet {
+            font-size: 3.3rem;
+        }
+    }
+}
