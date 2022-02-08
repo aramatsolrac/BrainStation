@@ -32,11 +32,11 @@ html {
   font-weight: 400;
 }
 
-.hero__text, .about__quotation, .about__autor, .about__subtitle, .navbar__item--active, .navbar__item:hover, .navbar__item:focus, .footer__subtitle, .footer__position, .about__title, .gallery__title, .footer__title {
+.hero__text, .about__quotation, .about__autor, .about__subtitle, .navbar__item--active, .navbar__item:hover, .navbar__item:focus, .footer__subtitle, .footer__position, .about__title, .gallery__title, .comments__title, .footer__title {
   font-weight: 600;
 }
 
-.about__title, .gallery__title, .footer__title {
+.about__title, .gallery__title, .comments__title, .footer__title {
   font-size: 1.5rem;
 }
 
@@ -648,4 +648,53 @@ select {
     width: 21.5rem;
     padding: 0.7rem 1.1rem 0.7rem 0;
   }
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+}
+.comments__title {
+  padding: 1rem 0;
+}
+.comments__img {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 1rem 0;
+}
+.comments__addComment {
+  display: flex;
+  flex-direction: row;
+}
+.comments__list {
+  margin: 0;
+  padding: 0 0 0 1.5rem;
+}
+.comments__label {
+  text-transform: uppercase;
+}
+.comments__name, .comments__text {
+  color: grey;
+  border: solid 0.125rem grey;
+  margin: 0 0 1rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 0.3rem;
+}
+.comments__name::-moz-placeholder, .comments__text::-moz-placeholder {
+  color: black;
+}
+.comments__name:-ms-input-placeholder, .comments__text:-ms-input-placeholder {
+  color: black;
+}
+.comments__name::placeholder, .comments__text::placeholder {
+  color: black;
+}
+.comments__name:focus, .comments__text:focus {
+  outline: none;
 }/*# sourceMappingURL=bio.css.map */

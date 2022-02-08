@@ -202,3 +202,47 @@
         }
     }
 }
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    &__title {
+        @extend %title;
+        padding: 1rem 0;
+    }
+    &__img {
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 1rem 0;
+    }
+    &__addComment {
+        display: flex;
+        flex-direction: row;
+    }
+    &__list {
+        margin: 0;
+        padding: 0 0 0 1.5rem;
+    }
+    &__label {
+        text-transform: uppercase;
+    }
+    &__name,
+    &__text {
+        color: grey;
+        border: solid 0.125rem grey;
+        margin: 0 0 1rem 0;
+        padding: .5rem;
+        width: 100%;
+        border-radius: .3rem;
+        &::placeholder {
+            color: black;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
