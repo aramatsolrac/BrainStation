@@ -74,8 +74,6 @@ function displayConcerts() {
 
 displayConcerts();
 
-
-
 function highlightSelectedRow() {
     concertsList.addEventListener("click", (event) => {
         event.stopPropagation();
