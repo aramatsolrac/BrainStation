@@ -95,14 +95,14 @@
         </section>
 
         <!-- join conversation -->
-        <section>
+        <section class="wrapper--comments">
             <section class="comments">
                 <h1 class="comments__title">Join the Conversation</h1>
                 <div class="comments__addComment">
                     <div class="comments__img"></div>
-                    <div>
+                    <div class="comments__form">
                         <form action="#" method="POST">
-                            <section class="comments__form">
+                            <section>
                                 <ul class="comments__list">
                                     <li>
                                         <label class="comments__label" for="name">Name</label>
@@ -112,7 +112,9 @@
                                         <label class="comments__label" for="comment">Comment</label>
                                         <textarea class="comments__text" id="comment" name="comment" rows="3" cols="30" placeholder="Add a new comment" required></textarea>
                                     </li>
-                                    <button id="addComment" class="comments__button" type="button">Comment</button>
+                                    <li class="comments__btn">
+                                        <button id="addComment" class="comments__button" type="button">Comment</button>
+                                    </li>
                                 </ul>
                             </section>
                         </form>
