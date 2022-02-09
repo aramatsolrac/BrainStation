@@ -52,9 +52,11 @@ let concerts = [{
 ]
 
 concerts.forEach((item) => {
+    const labelsConcerts = Object.keys(item);
+
     // date label
     const dateLabel = document.createElement("li");
-    dateLabel.textContent = "date".toUpperCase()
+    dateLabel.textContent = labelsConcerts[0].toUpperCase();
     concertsList.appendChild(dateLabel);
 
     // date data
@@ -64,7 +66,7 @@ concerts.forEach((item) => {
 
     // venue label
     const venueLabel = document.createElement("li");
-    venueLabel.textContent = "venue".toUpperCase()
+    venueLabel.textContent = labelsConcerts[1].toUpperCase();
     concertsList.appendChild(venueLabel);
 
     // venue data
@@ -74,7 +76,7 @@ concerts.forEach((item) => {
 
     // location label
     const locationLabel = document.createElement("li");
-    locationLabel.textContent = "location".toUpperCase()
+    locationLabel.textContent = labelsConcerts[2].toUpperCase();
     concertsList.appendChild(locationLabel);
 
     // location data
