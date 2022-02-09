@@ -75,6 +75,7 @@ function displayConcerts() {
 displayConcerts();
 
 function highlightSelectedRow() {
+    // TODO: apply it only to lis.
     concertsList.addEventListener("click", (event) => {
         event.stopPropagation();
         event.preventDefault();
