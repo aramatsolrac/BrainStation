@@ -778,12 +778,12 @@ select {
 @media screen and (min-width: 768px) {
   .comments__button {
     width: 30%;
-    padding: 0.7rem;
+    padding: 0.6rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .comments__button {
-    width: 40%;
+    width: 35%;
   }
 }
 
