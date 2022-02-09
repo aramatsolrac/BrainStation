@@ -1,44 +1,61 @@
-const nameInput = document.getElementById("name");
-const commentText = document.getElementById("comment");
-const addCommentBtn = document.getElementById("addComment");
-const commentsList = document.getElementById("comments-list")
-addCommentBtn.addEventListener('click', newComment);
+'use strict';
+const commentsSection = document.querySelector(".comments");
+const newSection = document.createElement("section"); // add section
+commentsSection.appendChild(newSection); // append section to main
 
-let comments = [{
+const newList = document.createElement("ul"); // add list
+newList.setAttribute("id", "comments-list"); // add id to the list
+newSection.appendChild(newList) // append list to section
+const commentsList = document.getElementById("comments-list");
+
+let commentsArr = [{
         name: "Connor Walton",
-        date: "02/17/2021",
-        comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
+        timestamp: "02/17/2021",
+        commentText: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
     },
     {
         name: "Emilie Beach",
-        date: "01/09/2021",
-        comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
+        timestamp: "01/09/2021",
+        commentText: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
     },
     {
         name: "Miles Acosta",
-        date: "12/20/2020",
-        comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
+        timestamp: "12/20/2020",
+        commentText: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
     }
 ]
 
+// Display comment
+function displayComment(comment) {
+    const nameLi = document.createElement("li");
+    nameLi.textContent = comment.name
+    commentsList.appendChild(nameLi);
 
-function displayComment() {
-    for (let i = 0; i < comments.length; i++) {
-        const name = document.createElement("li");
-        name.textContent = comments[i].name
-        commentsList.appendChild(name);
+    const dateLi = document.createElement("li");
+    dateLi.textContent = comment.timestamp
+    commentsList.appendChild(dateLi);
 
-        const date = document.createElement("li");
-        date.textContent = comments[i].date
-        commentsList.appendChild(date);
+    const commentLi = document.createElement("li");
+    commentLi.textContent = comment.commentText
+    commentsList.appendChild(commentLi);
+}
 
-        const comment = document.createElement("li");
-        comment.textContent = comments[i].comment
-        commentsList.appendChild(comment);
+// clean and add comments
+function cleanAndAddComments() {
+    commentsList.textContent = "";
+    for (let i = 0; i < commentsArr.length; i++) {
+        displayComment(commentsArr[i])
     }
 };
 
-displayComment();
+cleanAndAddComments();
+
+
+// Add new comment
+const nameInput = document.getElementById("name");
+const commentText = document.getElementById("comment");
+const addCommentBtn = document.getElementById("addComment");
+addCommentBtn.addEventListener('click', newComment);
 
 
 let today = new Date();
@@ -48,21 +65,19 @@ let yyyy = today.getFullYear();
 
 today = mm + '/' + dd + '/' + yyyy;
 
-function newComment() {
+function newComment(event) {
+    event.preventDefault()
     const nameValue = nameInput.value;
     const commentValue = commentText.value;
 
-    const addComment = document.createElement("li");
-    addComment.textContent = commentValue;
-    commentsList.prepend(addComment);
-    commentText.value = ""
+    commentsArr.unshift({
+        name: nameValue,
+        timestamp: today,
+        commentText: commentValue
+    })
 
-    const addDate = document.createElement("li");
-    addDate.textContent = today;
-    commentsList.prepend(addDate);
-
-    const addName = document.createElement("li");
-    addName.textContent = nameValue;
-    commentsList.prepend(addName);
     nameInput.value = ""
+    commentText.value = ""
+    cleanAndAddComments();
+    console.log(commentsArr)
 };
