@@ -1,14 +1,16 @@
+'use strict';
+
 const main = document.getElementById("main");
-const newSection = document.createElement("section");
-main.prepend(newSection);
+const newSection = document.createElement("section"); // add section
+main.prepend(newSection); // append section to main
 
-const newTittle = document.createElement("h2");
-newTittle.textContent = "Shows";
-newSection.appendChild(newTittle);
+const newTittle = document.createElement("h2"); // add h2
+newTittle.textContent = "Shows"; // add tittle text
+newSection.appendChild(newTittle); // append tittle to section
 
-const newList = document.createElement("ul");
-newList.setAttribute("id", "concerts-list");
-newSection.appendChild(newList)
+const newList = document.createElement("ul"); // add list
+newList.setAttribute("id", "concerts-list"); // add id to the list
+newSection.appendChild(newList) // append list to section
 const concertsList = document.getElementById("concerts-list");
 
 let concerts = [{
