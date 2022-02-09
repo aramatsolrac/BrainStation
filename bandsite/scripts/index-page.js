@@ -1,9 +1,11 @@
 'use strict';
 const commentsSection = document.querySelector(".comments");
 const newSection = document.createElement("section"); // add section
+newSection.classList.add('display-comments')
 commentsSection.appendChild(newSection); // append section to main
 
 const newList = document.createElement("ul"); // add list
+newList.classList.add('display-comments__list')
 newList.setAttribute("id", "comments-list"); // add id to the list
 newSection.appendChild(newList) // append list to section
 const commentsList = document.getElementById("comments-list");
@@ -11,7 +13,7 @@ const commentsList = document.getElementById("comments-list");
 let commentsArr = [{
         name: "Connor Walton",
         timestamp: "02/17/2021",
-        commentText: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
+        commentText: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
     },
     {
         name: "Emilie Beach",
@@ -27,18 +29,42 @@ let commentsArr = [{
 
 // Display comment
 function displayComment(comment) {
-    const nameLi = document.createElement("li");
-    nameLi.textContent = comment.name
-    commentsList.appendChild(nameLi);
+    const commentDiv = document.createElement("div");
+    const commentCardDiv = document.createElement("div");
+    const nameAndDataDiv = document.createElement("div");
+    const textDiv = document.createElement("div");
 
-    const dateLi = document.createElement("li");
-    dateLi.textContent = comment.timestamp
-    commentsList.appendChild(dateLi);
+    const imgDiv = document.createElement("img");
+    imgDiv.classList.add("profile-pic");
 
-    const commentLi = document.createElement("li");
-    commentLi.textContent = comment.commentText
-    commentsList.appendChild(commentLi);
-}
+    const nameP = document.createElement("p");
+    nameP.textContent = comment.name
+    nameP.classList.add('display-comments__name');
+
+    const dateP = document.createElement("p");
+    dateP.textContent = comment.timestamp
+    dateP.classList.add('display-comments__date');
+
+    const commentP = document.createElement("p");
+    commentP.textContent = comment.commentText
+    commentP.classList.add('display-comments__text');
+
+    nameAndDataDiv.appendChild(nameP);
+    nameAndDataDiv.appendChild(dateP);
+    nameAndDataDiv.classList.add('display-comments__name-and-data');
+
+    textDiv.appendChild(commentP);
+
+    commentCardDiv.appendChild(nameAndDataDiv);
+    commentCardDiv.appendChild(textDiv);
+    commentCardDiv.classList.add('display-comments__content');
+
+    commentDiv.appendChild(imgDiv);
+    commentDiv.appendChild(commentCardDiv);
+    commentDiv.classList.add('display-comments__card')
+
+    commentsList.appendChild(commentDiv);
+};
 
 // clean and add comments
 function cleanAndAddComments() {
@@ -73,7 +99,7 @@ function newComment(event) {
     commentsArr.unshift({
         name: nameValue,
         timestamp: today,
-        commentText: commentValue
+        commentText: commentValue,
     })
 
     nameInput.value = ""
