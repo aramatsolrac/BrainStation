@@ -51,26 +51,53 @@ let concerts = [{
     }
 ]
 
-function displayConcerts() {
-    for (let i = 0; i < concerts.length; i++) {
-        const date = document.createElement("li");
-        date.textContent = concerts[i].date
-        concertsList.appendChild(date);
+Object.keys(concerts).forEach((name) => {
+    const nameItem = concerts[name];
 
-        const venue = document.createElement("li");
-        venue.textContent = concerts[i].venue
-        concertsList.appendChild(venue);
+    const date = document.createElement("li");
+    const labels = document.createElement("li");
+    // labels.textContent = nameItem
+    date.textContent = nameItem.date
+    concertsList.appendChild(date);
+    concertsList.appendChild(labels);
 
-        const location = document.createElement("li");
-        location.textContent = concerts[i].location
-        concertsList.appendChild(location);
+    const venue = document.createElement("li");
+    venue.textContent = nameItem.venue
+    concertsList.appendChild(venue);
 
-        const button = document.createElement("button");
-        button.textContent = concerts[i].button
-        button.classList.add('test') // only to test if it works
-        concertsList.appendChild(button);
-    }
-};
+    const location = document.createElement("li");
+    location.textContent = nameItem.location
+    concertsList.appendChild(location);
+
+    const button = document.createElement("button");
+    button.textContent = nameItem.button
+    button.classList.add('test') // only to test if it works
+    concertsList.appendChild(button);
+});
+
+// function displayConcerts() {
+//     for (let i = 0; i < concerts.length; i++) {
+//         const date = document.createElement("li");
+//         const labels = document.createElement("li");
+//         labels.textContent = Object.keys(concerts)
+//         date.textContent = concerts[i].date
+//         concertsList.appendChild(labels);
+//         concertsList.appendChild(date);
+
+//         const venue = document.createElement("li");
+//         venue.textContent = concerts[i].venue
+//         concertsList.appendChild(venue);
+
+//         const location = document.createElement("li");
+//         location.textContent = concerts[i].location
+//         concertsList.appendChild(location);
+
+//         const button = document.createElement("button");
+//         button.textContent = concerts[i].button
+//         button.classList.add('test') // only to test if it works
+//         concertsList.appendChild(button);
+//     }
+// };
 
 displayConcerts();
 
