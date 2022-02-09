@@ -32,8 +32,12 @@ html {
   font-weight: 400;
 }
 
-.hero__text, .about__quotation, .about__autor, .about__subtitle, .navbar__item--active, .navbar__item:hover, .navbar__item:focus, .footer__subtitle, .footer__position, .about__title, .gallery__title, .comments__title, .footer__title {
+.hero__text, .about__quotation, .about__autor, .about__subtitle, .comments__button, .navbar__item--active, .navbar__item:hover, .navbar__item:focus, .footer__subtitle, .footer__position, .about__title, .gallery__title, .comments__title, .footer__title {
   font-weight: 600;
+}
+
+.comments__label, .display-comments__name-and-data, .display-comments__text {
+  font-size: 0.9rem;
 }
 
 .about__title, .gallery__title, .comments__title, .footer__title {
@@ -654,37 +658,42 @@ select {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1rem;
+  justify-content: center;
+  padding: 0 1rem;
 }
 .comments__title {
   padding: 1rem 0;
-}
-.comments__img {
-  height: 3.5rem;
-  width: 3.5rem;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin: 1rem 0;
 }
 .comments__addComment {
   display: flex;
   flex-direction: row;
 }
+.comments__img {
+  background-image: url("../assets/images/Mohan-muruge.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: left;
+  width: 20%;
+  height: 3.9vh;
+  border-radius: 50%;
+  margin: 1.5rem 0;
+}
 .comments__list {
   margin: 0;
-  padding: 0 0 0 1.5rem;
+  padding: 0 0 0 1rem;
 }
 .comments__label {
   text-transform: uppercase;
+  color: #a1a1a1;
 }
 .comments__name, .comments__text {
-  color: grey;
-  border: solid 0.125rem grey;
-  margin: 0 0 1rem 0;
+  margin: 0.3rem 0 0.9rem 0;
   padding: 0.5rem;
   width: 100%;
   border-radius: 0.3rem;
+  border: #dedede solid 0.0625rem;
+  background-color: #fcfcfc;
 }
 .comments__name::-moz-placeholder, .comments__text::-moz-placeholder {
   color: black;
@@ -697,4 +706,55 @@ select {
 }
 .comments__name:focus, .comments__text:focus {
   outline: none;
+}
+.comments__button {
+  width: 100%;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background-color: #323232;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+}
+
+.display-comments {
+  margin: 0;
+  line-height: 1.3em;
+}
+.display-comments__list {
+  padding: 0;
+}
+.display-comments__card {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: space-between;
+  border-top: #a1a1a1 solid 0.0625rem;
+  border-bottom: #a1a1a1 solid 0.0625rem;
+  padding: 1rem 0;
+  width: 100%;
+}
+.display-comments__content {
+  width: 100%;
+  padding: 0 0 0 1rem;
+}
+.display-comments__name-and-data {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 0.5rem 0;
+}
+.display-comments__name {
+  font-weight: bold;
+}
+.display-comments__date {
+  color: #a1a1a1;
+}
+.display-comments__text {
+  text-align: left;
+}
+
+.profile-pic {
+  width: 20%;
+  height: 3.9vh;
+  border-radius: 50%;
+  background-color: #dedede;
 }/*# sourceMappingURL=bio.css.map */
