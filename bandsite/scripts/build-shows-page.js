@@ -51,63 +51,50 @@ let concerts = [{
     }
 ]
 
-Object.keys(concerts).forEach((name) => {
-    const nameItem = concerts[name];
+concerts.forEach((item) => {
+    // date label
+    const dateLabel = document.createElement("li");
+    dateLabel.textContent = "date".toUpperCase()
+    concertsList.appendChild(dateLabel);
 
+    // date data
     const date = document.createElement("li");
-    const labels = document.createElement("li");
-    // labels.textContent = nameItem
-    date.textContent = nameItem.date
+    date.textContent = item.date
     concertsList.appendChild(date);
-    concertsList.appendChild(labels);
 
+    // venue label
+    const venueLabel = document.createElement("li");
+    venueLabel.textContent = "venue".toUpperCase()
+    concertsList.appendChild(venueLabel);
+
+    // venue data
     const venue = document.createElement("li");
-    venue.textContent = nameItem.venue
+    venue.textContent = item.venue
     concertsList.appendChild(venue);
 
+    // location label
+    const locationLabel = document.createElement("li");
+    locationLabel.textContent = "location".toUpperCase()
+    concertsList.appendChild(locationLabel);
+
+    // location data
     const location = document.createElement("li");
-    location.textContent = nameItem.location
+    location.textContent = item.location
     concertsList.appendChild(location);
 
+    // button
     const button = document.createElement("button");
-    button.textContent = nameItem.button
+    button.textContent = item.button
     button.classList.add('test') // only to test if it works
     concertsList.appendChild(button);
 });
 
-// function displayConcerts() {
-//     for (let i = 0; i < concerts.length; i++) {
-//         const date = document.createElement("li");
-//         const labels = document.createElement("li");
-//         labels.textContent = Object.keys(concerts)
-//         date.textContent = concerts[i].date
-//         concertsList.appendChild(labels);
-//         concertsList.appendChild(date);
 
-//         const venue = document.createElement("li");
-//         venue.textContent = concerts[i].venue
-//         concertsList.appendChild(venue);
-
-//         const location = document.createElement("li");
-//         location.textContent = concerts[i].location
-//         concertsList.appendChild(location);
-
-//         const button = document.createElement("button");
-//         button.textContent = concerts[i].button
-//         button.classList.add('test') // only to test if it works
-//         concertsList.appendChild(button);
-//     }
-// };
-
-displayConcerts();
-
-function highlightSelectedRow() {
-    // TODO: apply it only to lis.
-    concertsList.addEventListener("click", (event) => {
-        event.stopPropagation();
-        event.preventDefault();
-        event.target.classList.toggle("selected");
-        console.log(event.target)
-    });
-}
-highlightSelectedRow()
+// function highlight selected row
+// TODO: apply it only to lis.
+concertsList.addEventListener("click", (event) => {
+    event.stopPropagation();
+    event.preventDefault();
+    event.target.classList.toggle("selected");
+    console.log(event.target)
+});
