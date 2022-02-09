@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 50px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    padding: 10px;
+    border-color: blue 1px;
+    border-radius: 5px;
+    width: 300px;
+    margin: .5rem 0;
+}
+
+div {
+    margin: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 200px;
+}
+
+button {
+    font-size: 18px;
+    padding: 7px;
+    border: steelblue solid 1px;
+    border-radius: 5px;
+    background-color: lightblue;
+    font-weight: bold;
+    color: white;
+    margin-top: 25px;
+}
+
+button:hover {
+    background-color: steelblue;
+}
+
+button:active {
+    background-color: blue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
