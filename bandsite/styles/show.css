@@ -443,4 +443,8 @@ select {
 
 .test {
   background-color: aqua;
+}
+
+.selected {
+  background-color: red;
 }/*# sourceMappingURL=show.css.map */

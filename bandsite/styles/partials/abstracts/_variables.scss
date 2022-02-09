@@ -3,10 +3,13 @@ $color-primary: #323232;
 $color-secondary: #FFFFFF;
 $color-tertiary: #E1E1E1;
 $linear-gradient: linear-gradient(rgb(165, 46, 123), rgb(80, 16, 80));
-// colours darker;
+// colours dark;
 $color-primary-dark: darken($color-primary, 1%);
 $color-secondary-dark: darken($color-secondary, 1%);
 $color-tertiary-dark: darken($color-tertiary, 1%);
+$color-primary-darker: darken($color-primary, 25%);
+$color-secondary-darker: darken($color-secondary, 25%);
+$color-tertiary-darker: darken($color-tertiary, 25%);
 // responsive design
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;

@@ -1,5 +1,17 @@
-const concertsList = document.getElementById("concerts-list")
+'use strict';
 
+const main = document.getElementById("main");
+const newSection = document.createElement("section"); // add section
+main.prepend(newSection); // append section to main
+
+const newTittle = document.createElement("h2"); // add h2
+newTittle.textContent = "Shows"; // add tittle text
+newSection.appendChild(newTittle); // append tittle to section
+
+const newList = document.createElement("ul"); // add list
+newList.setAttribute("id", "concerts-list"); // add id to the list
+newSection.appendChild(newList) // append list to section
+const concertsList = document.getElementById("concerts-list");
 
 let concerts = [{
         date: "Mon Sept 06 2021",
@@ -53,7 +65,7 @@ function displayConcerts() {
         location.textContent = concerts[i].location
         concertsList.appendChild(location);
 
-        const button = document.createElement("li");
+        const button = document.createElement("button");
         button.textContent = concerts[i].button
         button.classList.add('test') // only to test if it works
         concertsList.appendChild(button);
@@ -61,3 +73,13 @@ function displayConcerts() {
 };
 
 displayConcerts();
+
+function highlightSelectedRow() {
+    concertsList.addEventListener("click", (event) => {
+        event.stopPropagation();
+        event.preventDefault();
+        event.target.classList.toggle("selected");
+        console.log(event.target)
+    });
+}
+highlightSelectedRow()
