@@ -24,11 +24,11 @@ html {
   font-family: "Avenir Next";
 }
 
-.navbar__item--desactive {
+.concerts__label, .navbar__item--desactive {
   font-weight: 400;
 }
 
-.hero__text, .navbar__item--active, .navbar__item:hover, .navbar__item:focus, .footer__subtitle, .footer__position, .footer__title {
+.hero__text, .concerts__info, .concerts__button, .navbar__item--active, .navbar__item:hover, .navbar__item:focus, .footer__subtitle, .footer__position, .footer__title {
   font-weight: 600;
 }
 
@@ -441,10 +441,40 @@ select {
   }
 }
 
-.test {
-  background-color: aqua;
+.concerts {
+  display: flex;
 }
-
-.selected {
-  background-color: red;
+.concerts__list {
+  padding: 1rem;
+}
+.concerts__cards {
+  padding: 0 0 1rem 0;
+  margin: 0;
+  border-bottom: #a1a1a1 solid 0.0625rem;
+}
+.concerts__info {
+  padding: 0.5rem 0;
+}
+.concerts__label {
+  color: grey;
+  padding: 1rem 0 0 0;
+}
+.concerts__button {
+  width: 100%;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background-color: #323232;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 1rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .concerts__button {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concerts__button {
+    width: 35%;
+  }
 }/*# sourceMappingURL=show.css.map */

@@ -32,10 +32,40 @@
     }
 }
 
-.test {
-    background-color: aqua;
-}
-
-.selected {
-    background-color: red;
+.concerts {
+    // padding: 2rem;
+    display: flex;
+    &__list {
+        padding: 1rem;
+    }
+    &__cards {
+        padding: 0 0 1rem 0;
+        margin: 0;
+        border-bottom: $color-tertiary-darker solid 0.0625rem;
+    }
+    &__info {
+        padding: .5rem 0;
+        @extend %font-demi;
+    }
+    &__label {
+        color: grey;
+        padding: 1rem 0 0 0;
+        @extend %font-regular;
+    }
+    &__button {
+        @extend %font-demi;
+        width: 100%;
+        color: $color-secondary;
+        text-transform: uppercase;
+        background-color: $color-primary;
+        border-radius: .5rem;
+        padding: .5rem;
+        margin: 1rem 0 0 0;
+        @include tablet {
+            width: 30%;
+        }
+        @include desktop {
+            width: 35%;
+        }
+    }
 }

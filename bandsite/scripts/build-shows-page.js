@@ -10,8 +10,10 @@ newSection.appendChild(newTittle); // append tittle to section
 
 const newList = document.createElement("ul"); // add list
 newList.setAttribute("id", "concerts-list"); // add id to the list
-newSection.appendChild(newList) // append list to section
+newSection.appendChild(newList); // append list to section
 const concertsList = document.getElementById("concerts-list");
+const concertsDiv = document.createElement("div");
+concertsList.appendChild(newTittle);
 
 let concerts = [{
         date: "Mon Sept 06 2021",
@@ -53,42 +55,57 @@ let concerts = [{
 
 concerts.forEach((item) => {
     const labelsConcerts = Object.keys(item);
+    console.log(labelsConcerts)
 
     // date label
     const dateLabel = document.createElement("li");
     dateLabel.textContent = labelsConcerts[0].toUpperCase();
-    concertsList.appendChild(dateLabel);
+    dateLabel.classList.add("concerts__label");
 
     // date data
     const date = document.createElement("li");
     date.textContent = item.date
-    concertsList.appendChild(date);
 
     // venue label
     const venueLabel = document.createElement("li");
     venueLabel.textContent = labelsConcerts[1].toUpperCase();
-    concertsList.appendChild(venueLabel);
+    venueLabel.classList.add("concerts__label");
 
     // venue data
     const venue = document.createElement("li");
-    venue.textContent = item.venue
-    concertsList.appendChild(venue);
+    venue.textContent = item.venue;
 
     // location label
     const locationLabel = document.createElement("li");
     locationLabel.textContent = labelsConcerts[2].toUpperCase();
-    concertsList.appendChild(locationLabel);
+    locationLabel.classList.add("concerts__label");
 
     // location data
     const location = document.createElement("li");
-    location.textContent = item.location
-    concertsList.appendChild(location);
+    location.textContent = item.location;
 
     // button
     const button = document.createElement("button");
     button.textContent = item.button
-    button.classList.add('test') // only to test if it works
-    concertsList.appendChild(button);
+    button.classList.add('concerts__button') // only to test if it works
+
+
+    const concertCardDiv = document.createElement("div");
+    const concertInfoDiv = document.createElement("div");
+    concertInfoDiv.appendChild(dateLabel);
+    concertInfoDiv.appendChild(date);
+    concertInfoDiv.appendChild(venueLabel);
+    concertInfoDiv.appendChild(venue);
+    concertInfoDiv.appendChild(locationLabel);
+    concertInfoDiv.appendChild(location);
+    concertInfoDiv.appendChild(button);
+    concertInfoDiv.classList.add("concerts__info")
+
+    concertCardDiv.appendChild(concertInfoDiv);
+    concertCardDiv.classList.add("concerts__cards");
+
+    concertsList.appendChild(concertCardDiv);
+    concertsList.classList.add("concerts__list");
 });
 
 
