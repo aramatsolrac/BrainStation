@@ -24,11 +24,11 @@ html {
   font-family: "Avenir Next";
 }
 
-.navbar__item--desactive {
+.concerts__label, .navbar__item--desactive {
   font-weight: 400;
 }
 
-.hero__text, .navbar__item--active, .navbar__item:hover, .navbar__item:focus, .footer__subtitle, .footer__position, .footer__title {
+.hero__text, .concerts__button, .navbar__item--active, .navbar__item:hover, .navbar__item:focus, .footer__subtitle, .footer__position, .footer__title {
   font-weight: 600;
 }
 
@@ -441,10 +441,82 @@ select {
   }
 }
 
-.test {
-  background-color: aqua;
+.concerts {
+  display: flex;
 }
-
-.selected {
-  background-color: red;
+@media screen and (min-width: 768px) {
+  .concerts__title {
+    padding: 0 1rem;
+  }
+}
+.concerts__list {
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .concerts__list {
+    padding: 2rem;
+  }
+}
+.concerts__cards {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 1rem 0;
+  margin: 0;
+  border-bottom: #a1a1a1 solid 0.0625rem;
+}
+@media screen and (min-width: 768px) {
+  .concerts__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+  .concerts__cards li {
+    padding: 1.5rem 0 0 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .concerts__info--date, .concerts__info--venue, .concerts__info--location {
+    display: grid;
+    width: 8.8rem;
+    grid-gap: 0.1rem;
+  }
+}
+.concerts__label {
+  color: grey;
+  padding: 1rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .concerts__label {
+    display: none;
+  }
+}
+.concerts__label--tablet {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .concerts__label--tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 63.5%;
+    color: #a1a1a1;
+    padding: 1.5rem 0 0 1rem;
+    font-weight: 600;
+  }
+}
+.concerts__button {
+  width: 100%;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background-color: #323232;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 1rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .concerts__button {
+    width: 100%;
+    margin: 1rem;
+  }
 }/*# sourceMappingURL=show.css.map */

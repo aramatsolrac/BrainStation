@@ -8,6 +8,7 @@ const newList = document.createElement("ul"); // add list
 newList.classList.add('display-comments__list')
 newList.setAttribute("id", "comments-list"); // add id to the list
 newSection.appendChild(newList) // append list to section
+
 const commentsList = document.getElementById("comments-list");
 
 let commentsArr = [{
@@ -77,33 +78,29 @@ function cleanAndAddComments() {
 cleanAndAddComments();
 
 
-// Add new comment
-const nameInput = document.getElementById("name");
-const commentText = document.getElementById("comment");
-const addCommentBtn = document.getElementById("addComment");
-addCommentBtn.addEventListener('click', newComment);
-
-
+// Generate today's date
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
 let mm = String(today.getMonth() + 1).padStart(2, '0');
 let yyyy = today.getFullYear();
-
 today = mm + '/' + dd + '/' + yyyy;
 
-function newComment(event) {
-    event.preventDefault()
-    const nameValue = nameInput.value;
-    const commentValue = commentText.value;
+// Add new comment
+const form = document.getElementById('form');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const userName = event.target.user_name.value;
+    const comment = event.target.user_comment.value;
 
     commentsArr.unshift({
-        name: nameValue,
+        name: userName,
         timestamp: today,
-        commentText: commentValue,
+        commentText: comment,
     })
 
-    nameInput.value = ""
-    commentText.value = ""
+    event.target.user_name.value = ""
+    event.target.user_comment.value = ""
     cleanAndAddComments();
-    console.log(commentsArr)
-};
+});

@@ -420,6 +420,10 @@ select {
   width: 100%;
   background: #fcfcfc;
 }
+.wrapper--comments {
+  width: 100%;
+  background: #FFFFFF;
+}
 
 .hero {
   display: flex;
@@ -660,13 +664,43 @@ select {
   align-items: flex-start;
   justify-content: center;
   padding: 0 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .comments {
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments {
+    padding: 0 7.5rem;
+  }
 }
 .comments__title {
   padding: 1rem 0;
 }
+@media screen and (min-width: 1280px) {
+  .comments__title {
+    font-size: 2.3rem;
+  }
+}
 .comments__addComment {
   display: flex;
   flex-direction: row;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .comments__addComment {
+    justify-content: center;
+    padding: 0 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__addComment {
+    width: 60%;
+    align-self: center;
+  }
 }
 .comments__img {
   background-image: url("../assets/images/Mohan-muruge.jpg");
@@ -674,10 +708,28 @@ select {
   background-size: cover;
   background-position: center;
   background-position: left;
-  width: 20%;
-  height: 3.9vh;
+  height: 3.5vh;
+  width: 4vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
   border-radius: 50%;
   margin: 1.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .comments__img {
+    width: 3.6vh;
+  }
+}
+.comments__form {
+  display: flex;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
 }
 .comments__list {
   margin: 0;
@@ -707,18 +759,49 @@ select {
 .comments__name:focus, .comments__text:focus {
   outline: none;
 }
+.comments__btn {
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .comments__btn {
+    justify-content: right;
+  }
+}
 .comments__button {
   width: 100%;
   color: #FFFFFF;
   text-transform: uppercase;
   background-color: #323232;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   padding: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .comments__button {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__button {
+    width: 35%;
+  }
 }
 
 .display-comments {
   margin: 0;
   line-height: 1.3em;
+}
+@media screen and (min-width: 768px) {
+  .display-comments {
+    justify-content: center;
+    padding: 0 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .display-comments {
+    width: 60%;
+    align-self: center;
+    margin: 1rem;
+  }
 }
 .display-comments__list {
   padding: 0;
@@ -728,10 +811,12 @@ select {
   flex-direction: row;
   align-items: left;
   justify-content: space-between;
-  border-top: #a1a1a1 solid 0.0625rem;
   border-bottom: #a1a1a1 solid 0.0625rem;
   padding: 1rem 0;
   width: 100%;
+}
+.display-comments__card:first-child {
+  border-top: #a1a1a1 solid 0.0625rem;
 }
 .display-comments__content {
   width: 100%;
@@ -753,8 +838,12 @@ select {
 }
 
 .profile-pic {
-  width: 20%;
-  height: 3.9vh;
+  height: 3.5vh;
+  width: 4vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   border-radius: 50%;
   background-color: #dedede;
 }/*# sourceMappingURL=bio.css.map */

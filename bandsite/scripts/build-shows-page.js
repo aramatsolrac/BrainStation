@@ -4,14 +4,35 @@ const main = document.getElementById("main");
 const newSection = document.createElement("section"); // add section
 main.prepend(newSection); // append section to main
 
-const newTittle = document.createElement("h2"); // add h2
+const newTittle = document.createElement("h2");
+newTittle.classList.add("concerts__title") // add h2
 newTittle.textContent = "Shows"; // add tittle text
 newSection.appendChild(newTittle); // append tittle to section
 
 const newList = document.createElement("ul"); // add list
 newList.setAttribute("id", "concerts-list"); // add id to the list
-newSection.appendChild(newList) // append list to section
+newSection.appendChild(newList); // append list to section
 const concertsList = document.getElementById("concerts-list");
+const concertsDiv = document.createElement("div");
+concertsList.appendChild(newTittle);
+
+const labelsDiv = document.createElement("div");
+const dateLabelTablet = document.createElement("li");
+dateLabelTablet.textContent = 'date'.toUpperCase();
+const venueLabelTablet = document.createElement("li");
+venueLabelTablet.textContent = 'venue'.toUpperCase();
+const locationLabelTablet = document.createElement("li");
+locationLabelTablet.textContent = 'location'.toUpperCase();
+// const buttonLabelTablet = document.createElement("li");
+// buttonLabelTablet.textContent = 'button'.toUpperCase();
+
+labelsDiv.appendChild(dateLabelTablet);
+labelsDiv.appendChild(venueLabelTablet);
+labelsDiv.appendChild(locationLabelTablet);
+// labelsDiv.appendChild(buttonLabelTablet);
+
+concertsList.appendChild(labelsDiv);
+labelsDiv.classList.add('concerts__label--tablet')
 
 let concerts = [{
         date: "Mon Sept 06 2021",
@@ -51,35 +72,76 @@ let concerts = [{
     }
 ]
 
-function displayConcerts() {
-    for (let i = 0; i < concerts.length; i++) {
-        const date = document.createElement("li");
-        date.textContent = concerts[i].date
-        concertsList.appendChild(date);
+concerts.forEach((item) => {
+    const labelsConcerts = Object.keys(item);
 
-        const venue = document.createElement("li");
-        venue.textContent = concerts[i].venue
-        concertsList.appendChild(venue);
+    // date label
+    const dateLabel = document.createElement("li");
+    dateLabel.textContent = labelsConcerts[0].toUpperCase();
+    dateLabel.classList.add("concerts__label");
 
-        const location = document.createElement("li");
-        location.textContent = concerts[i].location
-        concertsList.appendChild(location);
+    // date data
+    const date = document.createElement("li");
+    date.textContent = item.date;
+    date.classList.add("concerts__info--date");
 
-        const button = document.createElement("button");
-        button.textContent = concerts[i].button
-        button.classList.add('test') // only to test if it works
-        concertsList.appendChild(button);
-    }
-};
+    // venue label
+    const venueLabel = document.createElement("li");
+    venueLabel.textContent = labelsConcerts[1].toUpperCase();
+    venueLabel.classList.add("concerts__label");
 
-displayConcerts();
+    // venue data
+    const venue = document.createElement("li");
+    venue.textContent = item.venue;
+    venue.classList.add("concerts__info--venue");
 
-function highlightSelectedRow() {
-    concertsList.addEventListener("click", (event) => {
-        event.stopPropagation();
-        event.preventDefault();
-        event.target.classList.toggle("selected");
-        console.log(event.target)
-    });
-}
-highlightSelectedRow()
+    // location label
+    const locationLabel = document.createElement("li");
+    locationLabel.textContent = labelsConcerts[2].toUpperCase();
+    locationLabel.classList.add("concerts__label");
+
+    // location data
+    const location = document.createElement("li");
+    location.textContent = item.location;
+    location.classList.add("concerts__info--location");
+
+    // button
+    const button = document.createElement("button");
+    button.textContent = item.button
+    button.classList.add('concerts__button') // only to test if it works
+
+
+    const concertCardDiv = document.createElement("div");
+    const concertDateDiv = document.createElement("div");
+    const concertVenueDiv = document.createElement("div");
+    const concertLocationDiv = document.createElement("div");
+    const concertButtonDiv = document.createElement("div");
+
+    concertDateDiv.appendChild(dateLabel);
+    concertDateDiv.appendChild(date);
+    concertVenueDiv.appendChild(venueLabel);
+    concertVenueDiv.appendChild(venue);
+    concertLocationDiv.appendChild(locationLabel);
+    concertLocationDiv.appendChild(location);
+    concertButtonDiv.appendChild(button);
+
+
+    concertCardDiv.appendChild(concertDateDiv);
+    concertCardDiv.appendChild(concertVenueDiv);
+    concertCardDiv.appendChild(concertLocationDiv);
+    concertCardDiv.appendChild(concertButtonDiv);
+    concertCardDiv.classList.add("concerts__cards");
+
+    concertsList.appendChild(concertCardDiv);
+    concertsList.classList.add("concerts__list");
+});
+
+
+// function highlight selected row
+// TODO: apply it only to lis.
+concertsList.addEventListener("click", (event) => {
+    event.stopPropagation();
+    event.preventDefault();
+    event.target.classList.toggle("selected");
+    console.log(event.target)
+});

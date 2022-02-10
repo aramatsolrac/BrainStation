@@ -9,6 +9,9 @@
     &--gallery {
         @include full-width($color-secondary-dark);
     }
+    &--comments {
+        @include full-width($color-secondary);
+    }
 }
 
 .hero {
@@ -208,21 +211,54 @@
     flex-start,
     center);
     padding: 0 1rem;
+    @include wrap($max-width,
+    $margin-center);
+    @include tablet {
+        padding: 0 2rem;
+    }
+    @include desktop {
+        padding: 0 7.5rem;
+    }
     &__title {
         @extend %title;
         padding: 1rem 0;
+        @include desktop {
+            font-size: 2.3rem;
+        }
     }
     &__addComment {
         @include flex-direction(row);
+        width: 100%;
+        @include tablet {
+            justify-content: center;
+            padding: 0 3rem;
+        }
+        @include desktop {
+            width: 60%;
+            align-self: center;
+        }
     }
     &__img {
         background-image: url('../assets/images/Mohan-muruge.jpg');
         @include cover-background;
         background-position: left;
-        @include box(20%,
-        3.9vh);
+        height: 3.5vh;
+        width: 4vh;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
         border-radius: 50%;
         margin: 1.5rem 0;
+        @include tablet {
+            width: 3.6vh;
+        }
+    }
+    &__form {
+        display: flex;
+        width: 100%;
+        @include flex (column,
+        left,
+        space-between);
     }
     &__list {
         margin: 0;
@@ -248,20 +284,41 @@
             outline: none;
         }
     }
+    &__btn {
+        display: flex;
+        @include tablet {
+            justify-content: right;
+        }
+    }
     &__button {
         @extend %font-demi;
         width: 100%;
         color: $color-secondary;
         text-transform: uppercase;
         background-color: $color-primary;
-        border-radius: .3rem;
+        border-radius: .5rem;
         padding: .5rem;
+        @include tablet {
+            width: 30%;
+        }
+        @include desktop {
+            width: 35%;
+        }
     }
 }
 
 .display-comments {
     margin: 0;
     line-height: 1.3em;
+    @include tablet {
+        justify-content: center;
+        padding: 0 3rem;
+    }
+    @include desktop {
+        width: 60%;
+        align-self: center;
+        margin: 1rem;
+    }
     &__list {
         padding: 0;
     }
@@ -269,10 +326,12 @@
         @include flex (row,
         left,
         space-between);
-        border-top: $color-tertiary-darker solid 0.0625rem;
         border-bottom: $color-tertiary-darker solid 0.0625rem;
         padding: 1rem 0;
         width: 100%;
+        &:first-child {
+            border-top: $color-tertiary-darker solid 0.0625rem;
+        }
     }
     &__content {
         width: 100%;
@@ -297,8 +356,10 @@
 }
 
 .profile-pic {
-    @include box(20%,
-    3.9vh);
+    height: 3.5vh;
+    width: 4vh;
+    object-fit: cover;
+    object-position: center;
     border-radius: 50%;
     background-color: $color-tertiary-dark;
 }
