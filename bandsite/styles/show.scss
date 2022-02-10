@@ -39,18 +39,39 @@
         padding: 1rem;
     }
     &__cards {
+        display: flex;
         padding: 0 0 1rem 0;
         margin: 0;
         border-bottom: $color-tertiary-darker solid 0.0625rem;
     }
     &__info {
+        display: flex;
         padding: .5rem 0;
         @extend %font-demi;
+        &--venue,
+        &--location {
+            @include tablet {
+                align-self: flex-start;
+            }
+        }
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            padding: 1rem;
+            justify-content: space-between;
+            width: 100%;
+            li {
+                padding: 1.5rem 2rem 0 0;
+            }
+        }
     }
     &__label {
         color: grey;
         padding: 1rem 0 0 0;
         @extend %font-regular;
+        @include tablet {
+            display: none;
+        }
     }
     &__button {
         @extend %font-demi;
@@ -62,7 +83,7 @@
         padding: .5rem;
         margin: 1rem 0 0 0;
         @include tablet {
-            width: 30%;
+            width: 16%;
         }
         @include desktop {
             width: 35%;

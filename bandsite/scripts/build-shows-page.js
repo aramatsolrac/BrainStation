@@ -74,6 +74,7 @@ concerts.forEach((item) => {
     // venue data
     const venue = document.createElement("li");
     venue.textContent = item.venue;
+    venue.classList.add("concerts__info--venue");
 
     // location label
     const locationLabel = document.createElement("li");
@@ -83,6 +84,7 @@ concerts.forEach((item) => {
     // location data
     const location = document.createElement("li");
     location.textContent = item.location;
+    location.classList.add("concerts__info--location");
 
     // button
     const button = document.createElement("button");

@@ -448,16 +448,40 @@ select {
   padding: 1rem;
 }
 .concerts__cards {
+  display: flex;
   padding: 0 0 1rem 0;
   margin: 0;
   border-bottom: #a1a1a1 solid 0.0625rem;
 }
 .concerts__info {
+  display: flex;
   padding: 0.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .concerts__info--venue, .concerts__info--location {
+    align-self: flex-start;
+  }
+}
+@media screen and (min-width: 768px) {
+  .concerts__info {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .concerts__info li {
+    padding: 1.5rem 2rem 0 0;
+  }
 }
 .concerts__label {
   color: grey;
   padding: 1rem 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .concerts__label {
+    display: none;
+  }
 }
 .concerts__button {
   width: 100%;
@@ -470,7 +494,7 @@ select {
 }
 @media screen and (min-width: 768px) {
   .concerts__button {
-    width: 30%;
+    width: 16%;
   }
 }
 @media screen and (min-width: 1280px) {
