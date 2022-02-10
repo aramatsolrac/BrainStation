@@ -35,33 +35,41 @@
 .concerts {
     // padding: 2rem;
     display: flex;
+    &__title {
+        @include tablet {
+            padding: 0 1rem;
+        }
+    }
     &__list {
         padding: 1rem;
+        @include tablet {
+            padding: 2rem;
+        }
     }
     &__cards {
         display: flex;
+        flex-direction: column;
         padding: 0 0 1rem 0;
         margin: 0;
         border-bottom: $color-tertiary-darker solid 0.0625rem;
-    }
-    &__info {
-        display: flex;
-        padding: .5rem 0;
-        @extend %font-demi;
-        &--venue,
-        &--location {
-            @include tablet {
-                align-self: flex-start;
-            }
-        }
         @include tablet {
             display: flex;
             flex-direction: row;
-            padding: 1rem;
             justify-content: space-between;
-            width: 100%;
+            padding: 0.5rem 1rem;
             li {
-                padding: 1.5rem 2rem 0 0;
+                padding: 1.5rem 0 0 0;
+            }
+        }
+    }
+    &__info {
+        &--date,
+        &--venue,
+        &--location {
+            @include tablet {
+                display: grid;
+                width: 8.8rem;
+                grid-gap: 0.1rem;
             }
         }
     }
@@ -71,6 +79,18 @@
         @extend %font-regular;
         @include tablet {
             display: none;
+        }
+        &--tablet {
+            display: none;
+            @include tablet {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 63.5%;
+                color: $color-tertiary-darker;
+                padding: 1.5rem 0 0 1rem;
+                font-weight: 600;
+            }
         }
     }
     &__button {
@@ -83,10 +103,8 @@
         padding: .5rem;
         margin: 1rem 0 0 0;
         @include tablet {
-            width: 16%;
-        }
-        @include desktop {
-            width: 35%;
+            width: 100%;
+            margin: 1rem;
         }
     }
 }

@@ -4,7 +4,8 @@ const main = document.getElementById("main");
 const newSection = document.createElement("section"); // add section
 main.prepend(newSection); // append section to main
 
-const newTittle = document.createElement("h2"); // add h2
+const newTittle = document.createElement("h2");
+newTittle.classList.add("concerts__title") // add h2
 newTittle.textContent = "Shows"; // add tittle text
 newSection.appendChild(newTittle); // append tittle to section
 
@@ -14,6 +15,24 @@ newSection.appendChild(newList); // append list to section
 const concertsList = document.getElementById("concerts-list");
 const concertsDiv = document.createElement("div");
 concertsList.appendChild(newTittle);
+
+const labelsDiv = document.createElement("div");
+const dateLabelTablet = document.createElement("li");
+dateLabelTablet.textContent = 'date'.toUpperCase();
+const venueLabelTablet = document.createElement("li");
+venueLabelTablet.textContent = 'venue'.toUpperCase();
+const locationLabelTablet = document.createElement("li");
+locationLabelTablet.textContent = 'location'.toUpperCase();
+// const buttonLabelTablet = document.createElement("li");
+// buttonLabelTablet.textContent = 'button'.toUpperCase();
+
+labelsDiv.appendChild(dateLabelTablet);
+labelsDiv.appendChild(venueLabelTablet);
+labelsDiv.appendChild(locationLabelTablet);
+// labelsDiv.appendChild(buttonLabelTablet);
+
+concertsList.appendChild(labelsDiv);
+labelsDiv.classList.add('concerts__label--tablet')
 
 let concerts = [{
         date: "Mon Sept 06 2021",
@@ -55,7 +74,6 @@ let concerts = [{
 
 concerts.forEach((item) => {
     const labelsConcerts = Object.keys(item);
-    console.log(labelsConcerts)
 
     // date label
     const dateLabel = document.createElement("li");
@@ -64,7 +82,8 @@ concerts.forEach((item) => {
 
     // date data
     const date = document.createElement("li");
-    date.textContent = item.date
+    date.textContent = item.date;
+    date.classList.add("concerts__info--date");
 
     // venue label
     const venueLabel = document.createElement("li");
@@ -93,17 +112,24 @@ concerts.forEach((item) => {
 
 
     const concertCardDiv = document.createElement("div");
-    const concertInfoDiv = document.createElement("div");
-    concertInfoDiv.appendChild(dateLabel);
-    concertInfoDiv.appendChild(date);
-    concertInfoDiv.appendChild(venueLabel);
-    concertInfoDiv.appendChild(venue);
-    concertInfoDiv.appendChild(locationLabel);
-    concertInfoDiv.appendChild(location);
-    concertInfoDiv.appendChild(button);
-    concertInfoDiv.classList.add("concerts__info")
+    const concertDateDiv = document.createElement("div");
+    const concertVenueDiv = document.createElement("div");
+    const concertLocationDiv = document.createElement("div");
+    const concertButtonDiv = document.createElement("div");
 
-    concertCardDiv.appendChild(concertInfoDiv);
+    concertDateDiv.appendChild(dateLabel);
+    concertDateDiv.appendChild(date);
+    concertVenueDiv.appendChild(venueLabel);
+    concertVenueDiv.appendChild(venue);
+    concertLocationDiv.appendChild(locationLabel);
+    concertLocationDiv.appendChild(location);
+    concertButtonDiv.appendChild(button);
+
+
+    concertCardDiv.appendChild(concertDateDiv);
+    concertCardDiv.appendChild(concertVenueDiv);
+    concertCardDiv.appendChild(concertLocationDiv);
+    concertCardDiv.appendChild(concertButtonDiv);
     concertCardDiv.classList.add("concerts__cards");
 
     concertsList.appendChild(concertCardDiv);

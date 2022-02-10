@@ -28,7 +28,7 @@ html {
   font-weight: 400;
 }
 
-.hero__text, .concerts__info, .concerts__button, .navbar__item--active, .navbar__item:hover, .navbar__item:focus, .footer__subtitle, .footer__position, .footer__title {
+.hero__text, .concerts__button, .navbar__item--active, .navbar__item:hover, .navbar__item:focus, .footer__subtitle, .footer__position, .footer__title {
   font-weight: 600;
 }
 
@@ -444,34 +444,42 @@ select {
 .concerts {
   display: flex;
 }
+@media screen and (min-width: 768px) {
+  .concerts__title {
+    padding: 0 1rem;
+  }
+}
 .concerts__list {
   padding: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .concerts__list {
+    padding: 2rem;
+  }
+}
 .concerts__cards {
   display: flex;
+  flex-direction: column;
   padding: 0 0 1rem 0;
   margin: 0;
   border-bottom: #a1a1a1 solid 0.0625rem;
 }
-.concerts__info {
-  display: flex;
-  padding: 0.5rem 0;
-}
 @media screen and (min-width: 768px) {
-  .concerts__info--venue, .concerts__info--location {
-    align-self: flex-start;
-  }
-}
-@media screen and (min-width: 768px) {
-  .concerts__info {
+  .concerts__cards {
     display: flex;
     flex-direction: row;
-    padding: 1rem;
     justify-content: space-between;
-    width: 100%;
+    padding: 0.5rem 1rem;
   }
-  .concerts__info li {
-    padding: 1.5rem 2rem 0 0;
+  .concerts__cards li {
+    padding: 1.5rem 0 0 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .concerts__info--date, .concerts__info--venue, .concerts__info--location {
+    display: grid;
+    width: 8.8rem;
+    grid-gap: 0.1rem;
   }
 }
 .concerts__label {
@@ -481,6 +489,20 @@ select {
 @media screen and (min-width: 768px) {
   .concerts__label {
     display: none;
+  }
+}
+.concerts__label--tablet {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .concerts__label--tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 63.5%;
+    color: #a1a1a1;
+    padding: 1.5rem 0 0 1rem;
+    font-weight: 600;
   }
 }
 .concerts__button {
@@ -494,11 +516,7 @@ select {
 }
 @media screen and (min-width: 768px) {
   .concerts__button {
-    width: 16%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .concerts__button {
-    width: 35%;
+    width: 100%;
+    margin: 1rem;
   }
 }/*# sourceMappingURL=show.css.map */
