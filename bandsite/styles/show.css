@@ -4,24 +4,24 @@
 
 @font-face {
   font-family: "Avenir Next LT Pro";
-  src: url("../../assets/font/AvenirNextLTPro-Regular.otf") format("otf");
+  src: url("./../assets/font/AvenirNextLTPro-Regular.otf") format("otf"), url("AvenirNextLTPro-Regular.woff2") format("woff2"), url("AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir Next";
-  src: url("../../assets/font/AvenirNextLTPro-Demi.otf") format("otf");
+  font-family: "Avenir Next LT Pro";
+  src: url("./../assets/font/AvenirNextLTPro-Demi.otf") format("otf"), url("AvenirNextLTPro-Demi.woff2") format("woff2"), url("AvenirNextLTPro-Demi.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir Next";
-  src: url("../../assets/font/AvenirNextLTPro-Bold.otf") format("otf");
+  font-family: "Avenir Next LT Pro";
+  src: url("./../assets/font/AvenirNextLTPro-Bold.otf") format("otf"), url("AvenirNextLTPro-Bold.woff2") format("woff2"), url("AvenirNextLTPro-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 html {
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", sans-serif;
 }
 
 .concerts__label, .navbar__item--desactive {
@@ -400,9 +400,18 @@ select {
   color: #FFFFFF;
 }
 
+.wrapper--hero {
+  width: 100%;
+  background: linear-gradient(#a52e7b, #501050);
+}
+.wrapper--concerts {
+  width: 100%;
+  background: #FFFFFF;
+}
+
 .hero {
   display: flex;
-  background-image: url("./../assets/images/hero-shows.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./../assets/images/hero-shows.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -441,20 +450,52 @@ select {
   }
 }
 
-.concerts {
-  display: flex;
+@media screen and (min-width: 1280px) {
+  .concerts {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.concerts__title {
+  padding: 1rem 0 0 1rem;
+  font-size: 2rem;
 }
 @media screen and (min-width: 768px) {
   .concerts__title {
-    padding: 0 1rem;
+    padding: 2.6rem 0 0 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concerts__title {
+    display: none;
+  }
+}
+.concerts__title--desktop {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .concerts__title--desktop {
+    display: flex;
+    font-size: 3rem;
+    padding: 1rem;
   }
 }
 .concerts__list {
-  padding: 1rem;
+  padding: 0 1rem;
 }
 @media screen and (min-width: 768px) {
   .concerts__list {
-    padding: 2rem;
+    padding: 0 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concerts__list {
+    width: 69%;
+    padding: 3rem 1rem 3rem 3rem;
   }
 }
 .concerts__cards {
@@ -485,25 +526,35 @@ select {
 .concerts__label {
   color: grey;
   padding: 1rem 0 0 0;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 768px) {
   .concerts__label {
     display: none;
   }
 }
-.concerts__label--tablet {
+.concerts__label--tabletAndDesktop {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .concerts__label--tablet {
+  .concerts__label--tabletAndDesktop {
+    text-transform: uppercase;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 63.5%;
+    width: 64.5%;
     color: #a1a1a1;
     padding: 1.5rem 0 0 1rem;
     font-weight: 600;
   }
+}
+@media screen and (min-width: 1280px) {
+  .concerts__label--tabletAndDesktop {
+    padding: 1.5rem 0 1rem 1rem;
+  }
+}
+.concerts__venue {
+  padding-left: 0.5rem;
 }
 .concerts__button {
   width: 100%;
@@ -519,4 +570,14 @@ select {
     width: 100%;
     margin: 1rem;
   }
+}
+@media screen and (min-width: 768px) {
+  .concerts__button {
+    width: 100%;
+    margin: 1rem 1.5rem 1rem 0;
+  }
+}
+
+.selected {
+  background-color: red;
 }/*# sourceMappingURL=show.css.map */

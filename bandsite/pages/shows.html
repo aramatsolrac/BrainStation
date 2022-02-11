@@ -40,8 +40,27 @@
         </section>
     </section>
 
-    <main id="main">
-        <!-- populate shows section via JS -->
+    <main>
+        <!-- concerts section -->
+        <section class="wrapper--concerts">
+            <section class="concerts">
+                <!-- title mobile and tablet -->
+                <h2 class="concerts__title">Shows</h2>
+                <!-- title desktop -->
+                <div>
+                    <h2 class="concerts__title--desktop">Shows</h2>
+                </div>
+                <ul id="concerts-list" class="concerts__list">
+                    <ul class="concerts__label--tabletAndDesktop">
+                        <li>Date</li>
+                        <li class="concerts__venue">Venue</li>
+                        <li>Location</li>
+                    </ul>
+                    <!-- populate shows section via JS -->
+                </ul>
+            </section>
+        </section>
+
         <!-- footer -->
         <footer class="wrapper--footer">
             <section class="footer">
@@ -124,7 +143,8 @@
         </footer>
 
     </main>
-    <script src="./../scripts/build-shows-page.js"></script>
+    <script src="./../scripts/shows/showsData.js"></script>
+    <script src="./../scripts/shows/showsPage.js"></script>
 </body>
 
 </html>

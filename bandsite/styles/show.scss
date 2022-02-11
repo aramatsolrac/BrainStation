@@ -1,7 +1,16 @@
 @use './partials/main' as *;
+.wrapper {
+    &--hero {
+        @include full-width($linear-gradient);
+    }
+    &--concerts {
+        @include full-width($color-secondary);
+    }
+}
+
 .hero {
     display: flex;
-    background-image: url('./../assets/images/hero-shows.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./../assets/images/hero-shows.jpg');
     @include cover-background;
     @include box (100%,
     24vh);
@@ -33,17 +42,40 @@
 }
 
 .concerts {
-    // padding: 2rem;
-    display: flex;
+    @include desktop {
+        @include wrap($max-width,
+        $margin-center);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
     &__title {
+        padding: 1rem 0 0 1rem;
+        font-size: 2rem;
         @include tablet {
-            padding: 0 1rem;
+            padding: 2.6rem 0 0 2rem;
+        }
+        @include desktop {
+            display: none;
+        }
+        &--desktop {
+            display: none;
+            @include desktop {
+                display: flex;
+                font-size: 3rem;
+                padding: 1rem;
+            }
         }
     }
     &__list {
-        padding: 1rem;
+        padding: 0 1rem;
         @include tablet {
-            padding: 2rem;
+            padding: 0 1rem;
+        }
+        @include desktop {
+            width: 69%;
+            padding: 3rem 1rem 3rem 3rem;
         }
     }
     &__cards {
@@ -76,22 +108,30 @@
     &__label {
         color: grey;
         padding: 1rem 0 0 0;
+        text-transform: uppercase;
         @extend %font-regular;
         @include tablet {
             display: none;
         }
-        &--tablet {
+        &--tabletAndDesktop {
             display: none;
             @include tablet {
+                text-transform: uppercase;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                width: 63.5%;
+                width: 64.5%;
                 color: $color-tertiary-darker;
                 padding: 1.5rem 0 0 1rem;
                 font-weight: 600;
             }
+            @include desktop {
+                padding: 1.5rem 0 1rem 1rem;
+            }
         }
+    }
+    &__venue {
+        padding-left: .5rem;
     }
     &__button {
         @extend %font-demi;
@@ -106,5 +146,13 @@
             width: 100%;
             margin: 1rem;
         }
+        @include tablet {
+            width: 100%;
+            margin: 1rem 1.5rem 1rem 0;
+        }
     }
+}
+
+.selected {
+    background-color: red;
 }
