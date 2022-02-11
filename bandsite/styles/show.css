@@ -24,11 +24,11 @@ html {
   font-family: "Avenir Next", sans-serif;
 }
 
-.concerts__label, .navbar__item--desactive {
+.shows__label, .navbar__item--desactive {
   font-weight: 400;
 }
 
-.hero__text, .concerts__button, .navbar__item--active, .navbar__item:hover, .navbar__item:focus, .footer__subtitle, .footer__position, .footer__title {
+.hero__text, .shows__button, .navbar__item--active, .navbar__item:hover, .navbar__item:focus, .footer__subtitle, .footer__position, .footer__title {
   font-weight: 600;
 }
 
@@ -404,7 +404,7 @@ select {
   width: 100%;
   background: linear-gradient(#a52e7b, #501050);
 }
-.wrapper--concerts {
+.wrapper--shows {
   width: 100%;
   background: #FFFFFF;
 }
@@ -451,7 +451,7 @@ select {
 }
 
 @media screen and (min-width: 1280px) {
-  .concerts {
+  .shows {
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
@@ -460,45 +460,45 @@ select {
     width: 100%;
   }
 }
-.concerts__title {
+.shows__title {
   padding: 1rem 0 0 1rem;
   font-size: 2rem;
 }
 @media screen and (min-width: 768px) {
-  .concerts__title {
+  .shows__title {
     padding: 2.6rem 0 0 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .concerts__title {
+  .shows__title {
     display: none;
   }
 }
-.concerts__title--desktop {
+.shows__title--desktop {
   display: none;
 }
 @media screen and (min-width: 1280px) {
-  .concerts__title--desktop {
+  .shows__title--desktop {
     display: flex;
     font-size: 3rem;
     padding: 1rem;
   }
 }
-.concerts__list {
+.shows__list {
   padding: 0 1rem;
 }
 @media screen and (min-width: 768px) {
-  .concerts__list {
+  .shows__list {
     padding: 0 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .concerts__list {
+  .shows__list {
     width: 69%;
     padding: 0.7rem 1rem 2rem 3rem;
   }
 }
-.concerts__cards {
+.shows__cards {
   display: flex;
   flex-direction: column;
   padding: 0 0 1rem 0;
@@ -506,38 +506,38 @@ select {
   border-bottom: #a1a1a1 solid 0.0625rem;
 }
 @media screen and (min-width: 768px) {
-  .concerts__cards {
+  .shows__cards {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0.5rem 1rem;
   }
-  .concerts__cards li {
+  .shows__cards li {
     padding: 1.5rem 0 0 0;
   }
 }
 @media screen and (min-width: 768px) {
-  .concerts__info--date, .concerts__info--venue, .concerts__info--location {
+  .shows__info--date, .shows__info--venue, .shows__info--location {
     display: grid;
     width: 8.8rem;
     grid-gap: 0.1rem;
   }
 }
-.concerts__label {
+.shows__label {
   color: grey;
   padding: 1rem 0 0 0;
   text-transform: uppercase;
 }
 @media screen and (min-width: 768px) {
-  .concerts__label {
+  .shows__label {
     display: none;
   }
 }
-.concerts__label--tabletAndDesktop {
+.shows__label--tabletAndDesktop {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .concerts__label--tabletAndDesktop {
+  .shows__label--tabletAndDesktop {
     text-transform: uppercase;
     display: flex;
     flex-direction: row;
@@ -549,14 +549,14 @@ select {
   }
 }
 @media screen and (min-width: 1280px) {
-  .concerts__label--tabletAndDesktop {
+  .shows__label--tabletAndDesktop {
     padding: 1.5rem 0 1rem 1rem;
   }
 }
-.concerts__venue {
+.shows__venue {
   padding-left: 0.5rem;
 }
-.concerts__button {
+.shows__button {
   width: 100%;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -566,13 +566,13 @@ select {
   margin: 1rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
-  .concerts__button {
+  .shows__button {
     width: 100%;
     margin: 1rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .concerts__button {
+  .shows__button {
     width: 100%;
     margin: 1rem 1.5rem 1rem 0;
   }

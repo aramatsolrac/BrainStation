@@ -3,7 +3,7 @@
     &--hero {
         @include full-width($linear-gradient);
     }
-    &--concerts {
+    &--shows {
         @include full-width($color-secondary);
     }
 }
@@ -41,7 +41,7 @@
     }
 }
 
-.concerts {
+.shows {
     @include desktop {
         @include wrap($max-width,
         $margin-center);
