@@ -17,7 +17,7 @@
 
             <div class="navbar__logo">
                 <h1 class="navbar__title">
-                    <a class="navbar__link" href="./../index.html"><img class="navbar__img" src="./../assets/logo/Logo-bandsite.svg"" alt="bandsite logo"></a>
+                    <a class="navbar__link" href="./../index.html"><img class="navbar__img" src="./../assets/logo/Logo-bandsite.svg" alt="bandsite logo"></a>
                 </h1>
             </div>
 
@@ -39,7 +39,7 @@
                 <h2 class="hero__text">Queen of Yellow x For the Stings</h2>
             </div>
             <div class="hero__music">
-                <iframe class="hero__iframe" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/735584785&color=%23762168&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                <iframe class="hero__iframe" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/735584785&color=%23762168&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
             </div>
         </section>
     </section>
@@ -55,11 +55,13 @@
                     <h2 class="shows__title--desktop">Shows</h2>
                 </div>
                 <ul id="shows-list" class="shows__list">
-                    <ul class="shows__label--tabletAndDesktop">
-                        <li>Date</li>
-                        <li class="shows__venue">Venue</li>
-                        <li class="shows__location">Location</li>
-                    </ul>
+                    <li>
+                        <ul class="shows__label--tabletAndDesktop">
+                            <li>Date</li>
+                            <li class="shows__venue">Venue</li>
+                            <li class="shows__location">Location</li>
+                        </ul>
+                    </li>
                     <!-- populate shows section via JS -->
                 </ul>
             </section>
@@ -76,14 +78,14 @@
                                 <h2 class="footer__title">Get in Touch</h2>
                             </div>
                             <div class="footer__links">
-                                <a class="footer__link" href="https://instagram.com " target="_blank"><img class="footer__icon" src="./../assets/icons/svg/Icon-instagram.svg" alt="icon-instagram "></a>
-                                <a class="footer__link" href="https://facebook.com " target="_blank"><img class="footer__icon" src="./../assets/icons/svg/Icon-facebook.svg" alt="icon-facebook "></a>
-                                <a class="footer__link" href="https://twitter.com " target="_blank"><img class="footer__icon" src="./../assets/icons/svg/Icon-twitter.svg" alt="icon-twitter "></a>
+                                <a class="footer__link" href="https://instagram.com " target="_blank"><img class="footer__icon" src="./../assets/icons/svg/Icon-instagram.svg" alt="icon-instagram"></a>
+                                <a class="footer__link" href="https://facebook.com " target="_blank"><img class="footer__icon" src="./../assets/icons/svg/Icon-facebook.svg" alt="icon-facebook"></a>
+                                <a class="footer__link" href="https://twitter.com " target="_blank"><img class="footer__icon" src="./../assets/icons/svg/Icon-twitter.svg" alt="icon-twitter"></a>
                             </div>
                         </div>
                         <!-- logo tablet -->
                         <div class="footer__logo--tablet">
-                            <a class="footer__link--tablet" href="#home"><img src="./../assets/logo/Logo-bandsite.svg " alt="bandsite logo"></a>
+                            <a class="footer__link--tablet" href="#home"><img src="./../assets/logo/Logo-bandsite.svg" alt="bandsite logo"></a>
                         </div>
                     </section>
 
@@ -99,13 +101,13 @@
                                 <p class="footer__address">New York, NY 10012, USA</p>
                             </div>
                             <div>
-                                <p><a class="footer__email" href="mailto:info@thebeesknees.com " target="_blank">info@thebeesknees.com</a></p>
+                                <p><a class="footer__email" href="mailto:info@thebeesknees.com" target="_blank">info@thebeesknees.com</a></p>
                             </div>
                         </div>
 
                         <div class="footer__info">
                             <div>
-                                <h4 class="footer__subtitle">Pearl Gregg </h4>
+                                <h4 class="footer__subtitle">Pearl Gregg</h4>
                                 <p class="footer__position">Limitless Artist Group</p>
                             </div>
                             <div>
@@ -113,7 +115,7 @@
                                 <p class="footer__address">US / South America / Japan</p>
                             </div>
                             <div>
-                                <p><a class="footer__email" href="mailto:pearl.gregg@limitlessag.com " target="_blank">pearl.gregg@limitlessag.com</a></p>
+                                <p><a class="footer__email" href="mailto:pearl.gregg@limitlessag.com" target="_blank">pearl.gregg@limitlessag.com</a></p>
                             </div>
                         </div>
 
@@ -147,6 +149,7 @@
         </footer>
 
     </main>
+    <script src="./../scripts/helper.js"></script>
     <script src="./../scripts/shows/showsData.js"></script>
     <script src="./../scripts/shows/showsPage.js"></script>
 </body>
