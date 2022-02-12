@@ -15,15 +15,15 @@
         @include wrap ($max-width, $margin-center);
     }
     &__img {
-        @include box ($width, 2.6vh);
+        @include box ($width, 1.9vh);
         margin: 1.5rem 0 0 0;
         @include tablet {
-            @include box ($width, 2vh);
-            margin: 0 1.4rem;
+            @include box ($width, 1.6vh);
+            margin: 2rem 1.4rem;
         }
         @include desktop {
-            @include box ($width, 1.8vh);
-            margin: 0 4.5rem;
+            @include box ($width, 1.6vh);
+            margin: 2rem 4.5rem;
         }
     }
     &__pages {
@@ -49,25 +49,36 @@
         font-size: 1rem;
         @include border-bottom($color-primary);
         @include tablet {
-            padding: 0 0 1rem 0;
+            padding: .5rem 0 1.3rem 0;
             margin: 0 1rem;
             width: 5.5rem;
         }
         @include desktop {
             margin: 0 .4rem;
         }
-        &--active,
+        &--show {
+            @include tablet {
+                width: 4rem;
+            }
+        }
+        &--active {
+            @extend %font-demi;
+            @include border-bottom($color-secondary);
+        }
         &:hover,
         &:focus {
             @include border-bottom($color-secondary);
-            @extend %font-demi;
-        }
-        &--desactive {
-            color: $color-tertiary;
-            @extend %font-regular;
         }
     }
     &__link {
-        color: $color-secondary;
+        color: $color-tertiary-dark;
+        &--desactive {
+            color: $color-tertiary-dark;
+            @extend %font-regular;
+            &:hover,
+            &:focus {
+                color: $color-secondary;
+            }
+        }
     }
 }
