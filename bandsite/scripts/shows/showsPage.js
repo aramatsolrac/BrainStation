@@ -1,15 +1,8 @@
 'use strict';
 
-// utility to build DOM elements with classes and text content
-function createElement(element, className = null, text = null) {
-    const newElement = document.createElement(element);
-    if (text) newElement.textContent = text;
-    if (className) newElement.classList.add(className);
-    return newElement;
-}
-
 const showsList = document.getElementById("shows-list");
 
+// display shows list
 shows.forEach((item) => {
     const labelsShows = Object.keys(item);
 
@@ -20,7 +13,7 @@ shows.forEach((item) => {
     const showsLocationUl = createElement("ul", "shows__cards--sub-list");
     const showsButtonUl = createElement("ul", "shows__cards--sub-list");
 
-    // create div and append them to a li
+    // create li and append them to a ul
     showsDateUl.appendChild(createElement("li", "shows__label", labelsShows[0]));
     showsDateUl.appendChild(createElement("li", "shows__info--date", item.date));
     showsVenueUl.appendChild(createElement("li", "shows__label", labelsShows[1]));
