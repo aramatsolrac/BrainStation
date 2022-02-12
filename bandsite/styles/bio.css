@@ -28,11 +28,11 @@ html {
   font-family: "Avenir Next", sans-serif;
 }
 
-.navbar__item--desactive {
+.display-comments__text, .navbar__link--desactive {
   font-weight: 400;
 }
 
-.hero__text, .about__quotation, .about__autor, .about__subtitle, .comments__button, .navbar__item--active, .navbar__item:hover, .navbar__item:focus, .footer__subtitle, .footer__position, .about__title, .gallery__title, .comments__title, .footer__title {
+.hero__text, .about__quotation, .about__autor, .about__subtitle, .comments__button, .display-comments__name, .navbar__item--active, .footer__subtitle, .footer__position, .about__title, .gallery__title, .comments__title, .footer__title {
   font-weight: 600;
 }
 
@@ -337,21 +337,21 @@ select {
 }
 .navbar__img {
   width: 100%;
-  height: 2.6vh;
+  height: 1.9vh;
   margin: 1.5rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
   .navbar__img {
     width: 100%;
-    height: 2vh;
-    margin: 0 1.4rem;
+    height: 1.6vh;
+    margin: 2rem 1.4rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .navbar__img {
     width: 100%;
-    height: 1.8vh;
-    margin: 0 4.5rem;
+    height: 1.6vh;
+    margin: 2rem 4.5rem;
   }
 }
 .navbar__pages {
@@ -386,7 +386,7 @@ select {
 }
 @media screen and (min-width: 768px) {
   .navbar__item {
-    padding: 0 0 1rem 0;
+    padding: 0.5rem 0 1.3rem 0;
     margin: 0 1rem;
     width: 5.5rem;
   }
@@ -396,15 +396,28 @@ select {
     margin: 0 0.4rem;
   }
 }
-.navbar__item--active, .navbar__item:hover, .navbar__item:focus {
+@media screen and (min-width: 768px) {
+  .navbar__item--show {
+    width: 4rem;
+  }
+}
+.navbar__item--active {
   border-bottom-width: 0.3125rem;
   border-bottom-style: solid;
   border-bottom-color: #FFFFFF;
 }
-.navbar__item--desactive {
-  color: #E1E1E1;
+.navbar__item:hover, .navbar__item:focus {
+  border-bottom-width: 0.3125rem;
+  border-bottom-style: solid;
+  border-bottom-color: #FFFFFF;
 }
 .navbar__link {
+  color: #dedede;
+}
+.navbar__link--desactive {
+  color: #dedede;
+}
+.navbar__link--desactive:hover, .navbar__link--desactive:focus {
   color: #FFFFFF;
 }
 
@@ -428,12 +441,11 @@ select {
 .hero {
   display: flex;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/hero-bio.jpg");
-  filter: grayscale(30%);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 24vh;
+  height: 15vh;
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -443,7 +455,7 @@ select {
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    height: 65vh;
+    height: 55vh;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
@@ -670,7 +682,7 @@ select {
 }
 @media screen and (min-width: 768px) {
   .comments {
-    padding: 0 2rem;
+    padding: 1.5rem 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -681,24 +693,29 @@ select {
 .comments__title {
   padding: 1rem 0;
 }
+@media screen and (min-width: 768px) {
+  .comments__title {
+    font-size: 2rem;
+  }
+}
 @media screen and (min-width: 1280px) {
   .comments__title {
     font-size: 2.3rem;
   }
 }
-.comments__addComment {
+.comments__add-comment {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .comments__addComment {
+  .comments__add-comment {
     justify-content: center;
     padding: 0 3rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .comments__addComment {
+  .comments__add-comment {
     width: 60%;
     align-self: center;
   }
@@ -708,20 +725,41 @@ select {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-position: left;
-  height: 3.5vh;
-  width: 4vh;
+  width: 2.5rem;
+  height: 2.1rem;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
   border-radius: 50%;
-  border-radius: 50%;
-  margin: 1.5rem 0;
+  background-color: #dedede;
+  margin: 2rem 0;
 }
 @media screen and (min-width: 768px) {
   .comments__img {
-    width: 3.6vh;
+    width: 3rem;
+    height: 2.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 50%;
+    background-color: #dedede;
+  }
+}
+.comments__img--no-pic {
+  width: 2.5rem;
+  height: 2.1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  background-color: #dedede;
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .comments__img--no-pic {
+    width: 2.8rem;
+    height: 2.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 50%;
+    background-color: #dedede;
   }
 }
 .comments__form {
@@ -741,11 +779,11 @@ select {
   color: #a1a1a1;
 }
 .comments__name, .comments__text {
-  margin: 0.3rem 0 0.9rem 0;
-  padding: 0.5rem;
   width: 100%;
-  border-radius: 0.3rem;
-  border: #dedede solid 0.0625rem;
+  margin: 0.3rem 0 0.9rem 0;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #dedede;
   background-color: #fcfcfc;
 }
 .comments__name::-moz-placeholder, .comments__text::-moz-placeholder {
@@ -757,33 +795,45 @@ select {
 .comments__name::placeholder, .comments__text::placeholder {
   color: black;
 }
+.comments__name:active, .comments__text:active {
+  border: 0.0625rem solid black;
+}
 .comments__name:focus, .comments__text:focus {
-  outline: none;
+  outline: black;
+  border: 0.0625rem solid black;
+}
+.comments__name::spelling-error, .comments__text::spelling-error {
+  -webkit-text-decoration: wavy yellow;
+          text-decoration: wavy yellow;
 }
 .comments__btn {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .comments__btn {
+    display: flex;
+    align-items: center;
     justify-content: right;
   }
 }
 .comments__button {
   width: 100%;
+  padding: 0.5rem 2rem;
+  background-color: #323232;
   color: #FFFFFF;
   text-transform: uppercase;
-  background-color: #323232;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+.comments__button:hover {
+  background-color: black;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .comments__button {
-    width: 30%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .comments__button {
-    width: 35%;
+    width: 10rem;
   }
 }
 
@@ -799,8 +849,8 @@ select {
 }
 @media screen and (min-width: 1280px) {
   .display-comments {
-    width: 60%;
     align-self: center;
+    width: 60%;
     margin: 1rem;
   }
 }
@@ -812,12 +862,12 @@ select {
   flex-direction: row;
   align-items: left;
   justify-content: space-between;
-  border-bottom: #a1a1a1 solid 0.0625rem;
+  border-bottom: 0.0625rem solid #a1a1a1;
   padding: 1rem 0;
   width: 100%;
 }
 .display-comments__card:first-child {
-  border-top: #a1a1a1 solid 0.0625rem;
+  border-top: 0.0625rem solid #a1a1a1;
 }
 .display-comments__content {
   width: 100%;
@@ -825,11 +875,9 @@ select {
 }
 .display-comments__name-and-data {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 0 0 0.5rem 0;
-}
-.display-comments__name {
-  font-weight: bold;
 }
 .display-comments__date {
   color: #a1a1a1;
@@ -838,13 +886,7 @@ select {
   text-align: left;
 }
 
-.profile-pic {
-  height: 3.5vh;
-  width: 4vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  border-radius: 50%;
-  background-color: #dedede;
+.required {
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #D22D2d;
 }/*# sourceMappingURL=bio.css.map */
