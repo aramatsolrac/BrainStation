@@ -12,12 +12,15 @@
 
 ### The Project
 
-- Build a responsive website based on the provided mock ups and design specs.
+- Build a responsive website based on the provided mock ups and design specs, and make the site interactive using JavaScript.
 
 ### Features
 
 - Responsive design
-- Access biography and photo gallery on bio page;
+- Access biography
+- Access shows
+- Add new comments
+- Select row of each show
 
 ### Technologies
 
@@ -26,6 +29,7 @@
 - CSS
 - Sass
 - FlexBox
+- JavaScript
 
 ### Installing
 

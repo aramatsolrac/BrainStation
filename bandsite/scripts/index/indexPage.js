@@ -1,13 +1,5 @@
 'use strict';
 
-// utility to build DOM elements with classes and text content
-function createElement(element, className = null, text = null) {
-    const newElement = document.createElement(element);
-    if (text) newElement.textContent = text;
-    if (className) newElement.classList.add(className);
-    return newElement;
-}
-
 const commentsSection = document.querySelector(".comments");
 const newSection = createElement("section", "display-comments"); // add section
 commentsSection.appendChild(newSection); // append section to main
@@ -18,7 +10,7 @@ newSection.appendChild(newList) // append list to section
 
 const commentsList = document.getElementById("comments-list");
 
-// Display comments
+// display comments
 function displayComment(comment) {
     // // create div
     const commentDiv = createElement("div", "display-comments__card");
@@ -39,7 +31,7 @@ function displayComment(comment) {
     commentDiv.appendChild(createElement("div", "comments__img--no-pic"));
     commentDiv.appendChild(commentCardDiv);
 
-    // add outer div to the main div
+    // append outer div to the main div
     commentsList.appendChild(commentDiv);
 };
 
@@ -54,16 +46,15 @@ function cleanAndAddComments() {
 cleanAndAddComments();
 
 
-// Generate today's date
+// generate today's date
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
 let mm = String(today.getMonth() + 1).padStart(2, '0');
 let yyyy = today.getFullYear();
 today = mm + '/' + dd + '/' + yyyy;
 
-// Add new comment
+// add validation and add new comment
 const form = document.getElementById('form');
-
 const nameInput = document.querySelector(".comments__name");
 const commentInput = document.querySelector(".comments__text");
 
@@ -73,12 +64,12 @@ form.addEventListener('submit', (event) => {
     const comment = event.target.user_comment.value;
 
     if (userName === "" && comment === "") {
-        nameInput.classList.add("required");
-        commentInput.classList.add("required");
+        nameInput.classList.add("comments__required");
+        commentInput.classList.add("comments__required");
     } else if (userName === "") {
-        nameInput.classList.add("required");
+        nameInput.classList.add("comments__required");
     } else if (comment === "") {
-        commentInput.classList.add("required");
+        commentInput.classList.add("comments__required");
     } else {
         commentsArr.unshift({
             name: userName,
@@ -92,11 +83,10 @@ form.addEventListener('submit', (event) => {
     }
 });
 
-// clean validation when has a value
+// clean validation when input has a value
 function cleanValidation(event) {
-    console.log(event.target.value)
     if (event.target.value) {
-        event.target.classList.remove("required");
+        event.target.classList.remove("comments__required");
     }
 }
 

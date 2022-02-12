@@ -1,4 +1,5 @@
 @use './partials/main' as *;
+// wrappers for larger displays
 .wrapper {
     &--hero {
         @include full-width($linear-gradient--background);
@@ -14,6 +15,7 @@
     }
 }
 
+// hero section
 .hero {
     display: flex;
     background-image: $linear-gradient--overlay, url('../assets/images/hero-bio.jpg');
@@ -26,7 +28,7 @@
         padding: 2rem;
     }
     @include desktop {
-        height: 55vh;
+        height: 50vh;
         object-fit: cover;
         object-position: center;
         @include wrap($max-width,
@@ -42,11 +44,12 @@
     &__text {
         @extend %font-demi;
         @include tablet {
-            font-size: 3.3rem;
+            font-size: 3.75rem;
         }
     }
 }
 
+// about section
 .about {
     @include flex-direction (column);
     @extend %wrapper-mobile;
@@ -154,6 +157,7 @@
     }
 }
 
+// gallery section
 .gallery {
     background-color: $color-secondary-dark;
     padding: .5rem 1rem;
@@ -206,6 +210,7 @@
     }
 }
 
+// comments section
 .comments {
     @include flex (column,
     flex-start,
@@ -244,20 +249,20 @@
     &__img {
         background-image: url('../assets/images/Mohan-muruge.jpg');
         @include cover-background;
-        @include image-profile(2.5rem,
-        2.1rem);
+        @include image-profile(3rem,
+        2.5rem);
         margin: 2rem 0;
         @include tablet {
             @include image-profile(3rem,
-            2.5rem);
+            2.8rem);
         }
         &--no-pic {
-            @include image-profile(2.5rem,
-            2.1rem);
+            @include image-profile(3rem,
+            2.5rem);
             display: flex;
             @include tablet {
-                @include image-profile(2.8rem,
-                2.5rem);
+                @include image-profile(3rem,
+                2.8rem);
             }
         }
     }
@@ -276,6 +281,7 @@
         text-transform: uppercase;
         color: $color-tertiary-darker;
         @extend %font-size-small;
+        @extend %font-demi;
     }
     &__name,
     &__text {
@@ -301,9 +307,12 @@
             solid,
             $color-primary-darker);
         }
-        &::spelling-error {
-            text-decoration: wavy yellow;
-        }
+    }
+    &__required {
+        border-radius: 0.25rem;
+        @include border-all(0.0625rem,
+        solid,
+        $color-validation);
     }
     &__btn {
         @include flex-default(center,
@@ -326,6 +335,7 @@
     }
 }
 
+// display comments section
 .display-comments {
     margin: 0;
     line-height: 1.3em;
@@ -379,11 +389,4 @@
         @extend %font-size-small;
         text-align: left;
     }
-}
-
-.required {
-    border-radius: 0.25rem;
-    @include border-all(0.0625rem,
-    solid,
-    $color-validation);
 }
