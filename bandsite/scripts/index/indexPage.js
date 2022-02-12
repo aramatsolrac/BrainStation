@@ -36,7 +36,7 @@ function displayComment(comment) {
     commentCardDiv.appendChild(textDiv);
 
     // append card div to a outer div
-    commentDiv.appendChild(createElement("img", "profile-pic"));
+    commentDiv.appendChild(createElement("div", "comments__img--no-pic"));
     commentDiv.appendChild(commentCardDiv);
 
     // add outer div to the main div
@@ -64,19 +64,41 @@ today = mm + '/' + dd + '/' + yyyy;
 // Add new comment
 const form = document.getElementById('form');
 
+const nameInput = document.querySelector(".comments__name");
+const commentInput = document.querySelector(".comments__text");
+
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-
     const userName = event.target.user_name.value;
     const comment = event.target.user_comment.value;
 
-    commentsArr.unshift({
-        name: userName,
-        timestamp: today,
-        commentText: comment,
-    })
+    if (userName === "" && comment === "") {
+        nameInput.classList.add("required");
+        commentInput.classList.add("required");
+    } else if (userName === "") {
+        nameInput.classList.add("required");
+    } else if (comment === "") {
+        commentInput.classList.add("required");
+    } else {
+        commentsArr.unshift({
+            name: userName,
+            timestamp: today,
+            commentText: comment,
+        })
 
-    event.target.user_name.value = "";
-    event.target.user_comment.value = "";
-    cleanAndAddComments();
+        event.target.user_name.value = "";
+        event.target.user_comment.value = "";
+        cleanAndAddComments();
+    }
 });
+
+// clean validation when has a value
+function cleanValidation(event) {
+    console.log(event.target.value)
+    if (event.target.value) {
+        event.target.classList.remove("required");
+    }
+}
+
+nameInput.oninput = cleanValidation;
+commentInput.oninput = cleanValidation;
