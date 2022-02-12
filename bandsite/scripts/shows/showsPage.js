@@ -8,42 +8,40 @@ function createElement(element, className = null, text = null) {
     return newElement;
 }
 
-const concertsList = document.getElementById("concerts-list");
+const showsList = document.getElementById("shows-list");
 
-concerts.forEach((item) => {
-    const labelsConcerts = Object.keys(item);
+shows.forEach((item) => {
+    const labelsShows = Object.keys(item);
 
-    // create div
-    const concertCardDiv = createElement("div", "concerts__cards");
-    const concertDateDiv = createElement("div");
-    const concertVenueDiv = createElement("div");
-    const concertLocationDiv = createElement("div");
-    const concertButtonDiv = createElement("div");
+    // create li
+    const showsCardLi = createElement("li", "shows__cards");
+    const showsDateUl = createElement("ul", "shows__cards--sub-list");
+    const showsVenueUl = createElement("ul", "shows__cards--sub-list");
+    const showsLocationUl = createElement("ul", "shows__cards--sub-list");
+    const showsButtonUl = createElement("ul", "shows__cards--sub-list");
 
-    // create li and append them to a div
-    concertDateDiv.appendChild(createElement("li", "concerts__label", labelsConcerts[0]));
-    concertDateDiv.appendChild(createElement("li", "concerts__info--date", item.date));
-    concertVenueDiv.appendChild(createElement("li", "concerts__label", labelsConcerts[1]));
-    concertVenueDiv.appendChild(createElement("li", "concerts__info--venue", item.venue));
-    concertLocationDiv.appendChild(createElement("li", "concerts__label", labelsConcerts[2]));
-    concertLocationDiv.appendChild(createElement("li", "concerts__info--location", item.location));
-    concertButtonDiv.appendChild(createElement("button", "concerts__button", item.button));
+    // create div and append them to a li
+    showsDateUl.appendChild(createElement("li", "shows__label", labelsShows[0]));
+    showsDateUl.appendChild(createElement("li", "shows__info--date", item.date));
+    showsVenueUl.appendChild(createElement("li", "shows__label", labelsShows[1]));
+    showsVenueUl.appendChild(createElement("li", "shows__info--venue", item.venue));
+    showsLocationUl.appendChild(createElement("li", "shows__label", labelsShows[2]));
+    showsLocationUl.appendChild(createElement("li", "shows__info--location", item.location));
+    showsButtonUl.appendChild(createElement("button", "shows__button", item.button));
 
-    // append each div to a Card div
-    concertCardDiv.appendChild(concertDateDiv);
-    concertCardDiv.appendChild(concertVenueDiv);
-    concertCardDiv.appendChild(concertLocationDiv);
-    concertCardDiv.appendChild(concertButtonDiv);
+    // append each li to a Card div
+    showsCardLi.appendChild(showsDateUl);
+    showsCardLi.appendChild(showsVenueUl);
+    showsCardLi.appendChild(showsLocationUl);
+    showsCardLi.appendChild(showsButtonUl);
 
     // append all Cards to the list
-    concertsList.appendChild(concertCardDiv);
-});
+    showsList.appendChild(showsCardLi);
 
-
-// function highlight selected row
-concertsList.addEventListener("click", (event) => {
-    event.stopPropagation();
-    event.preventDefault();
-    event.target.classList.toggle("selected");
-    console.log(event.target)
+    // function highlight selected row
+    showsCardLi.addEventListener("click", (event) => {
+        event.stopPropagation();
+        event.preventDefault();
+        showsCardLi.classList.toggle("shows__cards--selected");
+    });
 });

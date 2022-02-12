@@ -1,7 +1,7 @@
 @use './partials/main' as *;
 .wrapper {
     &--hero {
-        @include full-width($linear-gradient);
+        @include full-width($linear-gradient--background);
     }
     &--about {
         @include full-width($color-secondary);
@@ -16,18 +16,17 @@
 
 .hero {
     display: flex;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/hero-bio.jpg');
-    filter: grayscale(30%);
+    background-image: $linear-gradient--overlay, url('../assets/images/hero-bio.jpg');
     @include cover-background;
     @include box (100%,
-    24vh);
+    15vh);
     @extend %wrapper-mobile;
     @include tablet {
         height: 47vh;
         padding: 2rem;
     }
     @include desktop {
-        height: 65vh;
+        height: 55vh;
         object-fit: cover;
         object-position: center;
         @include wrap($max-width,
@@ -215,7 +214,7 @@
     @include wrap($max-width,
     $margin-center);
     @include tablet {
-        padding: 0 2rem;
+        padding: 1.5rem 2rem;
     }
     @include desktop {
         padding: 0 7.5rem;
@@ -223,11 +222,14 @@
     &__title {
         @extend %title;
         padding: 1rem 0;
+        @include tablet {
+            font-size: 2rem;
+        }
         @include desktop {
             font-size: 2.3rem;
         }
     }
-    &__addComment {
+    &__add-comment {
         @include flex-direction(row);
         width: 100%;
         @include tablet {
@@ -242,16 +244,21 @@
     &__img {
         background-image: url('../assets/images/Mohan-muruge.jpg');
         @include cover-background;
-        background-position: left;
-        height: 3.5vh;
-        width: 4vh;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 50%;
-        border-radius: 50%;
-        margin: 1.5rem 0;
+        @include image-profile(2.5rem,
+        2.1rem);
+        margin: 2rem 0;
         @include tablet {
-            width: 3.6vh;
+            @include image-profile(3rem,
+            2.5rem);
+        }
+        &--no-pic {
+            @include image-profile(2.5rem,
+            2.1rem);
+            display: flex;
+            @include tablet {
+                @include image-profile(2.8rem,
+                2.5rem);
+            }
         }
     }
     &__form {
@@ -272,38 +279,49 @@
     }
     &__name,
     &__text {
-        margin: .3rem 0 .9rem 0;
-        padding: .5rem;
         width: 100%;
-        border-radius: .3rem;
-        border: $color-tertiary-dark solid 0.0625rem;
+        margin: .3rem 0 .9rem 0;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        @include border-all(0.0625rem,
+        solid,
+        $color-tertiary-dark);
         background-color: $color-secondary-dark;
         &::placeholder {
             color: $color-primary-darker;
         }
+        &:active {
+            @include border-all(0.0625rem,
+            solid,
+            $color-primary-darker);
+        }
         &:focus {
-            outline: none;
+            outline: $color-primary-darker;
+            @include border-all(0.0625rem,
+            solid,
+            $color-primary-darker);
+        }
+        &::spelling-error {
+            text-decoration: wavy yellow;
         }
     }
     &__btn {
-        display: flex;
+        @include flex-default(center,
+        center);
         @include tablet {
-            justify-content: right;
+            @include flex-default(center,
+            right);
         }
     }
     &__button {
-        @extend %font-demi;
-        width: 100%;
-        color: $color-secondary;
-        text-transform: uppercase;
-        background-color: $color-primary;
-        border-radius: .5rem;
-        padding: .5rem;
-        @include tablet {
-            width: 30%;
+        @include button(100%,
+        .5rem 2rem);
+        &:hover {
+            background-color: $color-primary-darker;
+            cursor: pointer;
         }
-        @include desktop {
-            width: 35%;
+        @include tablet {
+            width: 10rem;
         }
     }
 }
@@ -316,8 +334,8 @@
         padding: 0 3rem;
     }
     @include desktop {
-        width: 60%;
         align-self: center;
+        width: 60%;
         margin: 1rem;
     }
     &__list {
@@ -327,11 +345,17 @@
         @include flex (row,
         left,
         space-between);
-        border-bottom: $color-tertiary-darker solid 0.0625rem;
+        @include border-position(bottom,
+        0.0625rem,
+        solid,
+        $color-tertiary-darker);
         padding: 1rem 0;
         width: 100%;
         &:first-child {
-            border-top: $color-tertiary-darker solid 0.0625rem;
+            @include border-position(top,
+            0.0625rem,
+            solid,
+            $color-tertiary-darker);
         }
     }
     &__content {
@@ -339,28 +363,27 @@
         padding: 0 0 0 1rem;
     }
     &__name-and-data {
-        display: flex;
-        justify-content: space-between;
+        @include flex-default(center,
+        space-between);
         @extend %font-size-small;
         padding: 0 0 .5rem 0;
     }
     &__name {
-        font-weight: bold;
+        @extend %font-demi;
     }
     &__date {
         color: $color-tertiary-darker;
     }
     &__text {
+        @extend %font-regular;
         @extend %font-size-small;
         text-align: left;
     }
 }
 
-.profile-pic {
-    height: 3.5vh;
-    width: 4vh;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-    background-color: $color-tertiary-dark;
+.required {
+    border-radius: 0.25rem;
+    @include border-all(0.0625rem,
+    solid,
+    $color-validation);
 }
