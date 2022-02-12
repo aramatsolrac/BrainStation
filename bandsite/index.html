@@ -24,7 +24,7 @@
             <div class="navbar__pages">
                 <ul class="navbar__list">
                     <li class="navbar__item navbar__item--active"><a class="navbar__link" href="index.html">Biography</a></li>
-                    <li class="navbar__item navbar__item--desactive"><a class="navbar__link" href="./pages/shows.html">Shows</a></li>
+                    <li class="navbar__item 2"><a class="navbar__link--desactive" href="./pages/shows.html">Shows</a></li>
                 </ul>
             </div>
 
@@ -98,7 +98,7 @@
         <section class="wrapper--comments">
             <section class="comments">
                 <h1 class="comments__title">Join the Conversation</h1>
-                <div class="comments__addComment">
+                <div class="comments__add-comment">
                     <div class="comments__img"></div>
                     <div class="comments__form">
                         <form id="form" action="#" method="POST">
@@ -106,14 +106,14 @@
                                 <ul class="comments__list">
                                     <li>
                                         <label class="comments__label" for="name">Name</label>
-                                        <input class="comments__name" type="text" id="name" name="user_name" value="" placeholder="Enter your name" required>
+                                        <input class="comments__name" type="text" id="name" name="user_name" value="" placeholder="Enter your name">
                                     </li>
                                     <li>
                                         <label class="comments__label" for="comment">Comment</label>
-                                        <textarea class="comments__text" id="comment" name="user_comment" value="" rows="4" cols="30" placeholder="Add a new comment" required></textarea>
+                                        <textarea class="comments__text" id="comment" name="user_comment" value="" rows="4" cols="30" placeholder="Add a new comment" spellcheck="true"></textarea>
                                     </li>
                                     <li class="comments__btn">
-                                        <button id="addComment" class="comments__button" type="submit">Comment</button>
+                                        <button id="add-comment" class="comments__button" type="submit">Comment</button>
                                     </li>
                                 </ul>
                             </section>
