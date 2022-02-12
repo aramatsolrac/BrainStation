@@ -32,7 +32,7 @@ html {
   font-weight: 400;
 }
 
-.hero__text, .about__quotation, .about__autor, .about__subtitle, .comments__button, .display-comments__name, .navbar__item--active, .footer__subtitle, .footer__position, .about__title, .gallery__title, .comments__title, .footer__title {
+.hero__text, .about__quotation, .about__autor, .about__subtitle, .comments__label, .comments__button, .display-comments__name, .navbar__item--active, .footer__subtitle, .footer__position, .about__title, .gallery__title, .comments__title, .footer__title {
   font-weight: 600;
 }
 
@@ -455,7 +455,7 @@ select {
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    height: 55vh;
+    height: 50vh;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
@@ -475,7 +475,7 @@ select {
 }
 @media screen and (min-width: 768px) {
   .hero__text {
-    font-size: 3.3rem;
+    font-size: 3.75rem;
   }
 }
 
@@ -725,8 +725,8 @@ select {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 2.5rem;
-  height: 2.1rem;
+  width: 3rem;
+  height: 2.5rem;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -736,7 +736,7 @@ select {
 @media screen and (min-width: 768px) {
   .comments__img {
     width: 3rem;
-    height: 2.5rem;
+    height: 2.8rem;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 50%;
@@ -744,8 +744,8 @@ select {
   }
 }
 .comments__img--no-pic {
-  width: 2.5rem;
-  height: 2.1rem;
+  width: 3rem;
+  height: 2.5rem;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -754,8 +754,8 @@ select {
 }
 @media screen and (min-width: 768px) {
   .comments__img--no-pic {
-    width: 2.8rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 2.8rem;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 50%;
@@ -802,9 +802,9 @@ select {
   outline: black;
   border: 0.0625rem solid black;
 }
-.comments__name::spelling-error, .comments__text::spelling-error {
-  -webkit-text-decoration: wavy yellow;
-          text-decoration: wavy yellow;
+.comments__required {
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #D22D2d;
 }
 .comments__btn {
   display: flex;
@@ -884,9 +884,4 @@ select {
 }
 .display-comments__text {
   text-align: left;
-}
-
-.required {
-  border-radius: 0.25rem;
-  border: 0.0625rem solid #D22D2d;
 }/*# sourceMappingURL=bio.css.map */
