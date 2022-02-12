@@ -6,17 +6,47 @@
     background-position: center;
 }
 
+// image profile
+@mixin image-profile($width, $height) {
+    width: $width;
+    height: $height;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: $color-tertiary-dark;
+}
+
 // width and height
 @mixin box($width: $width, $height) {
     width: $width;
     height: $height;
 }
 
-// border bottom: hover, focus, and active
+// borders
+@mixin border-position($direction, $width, $style, $color) {
+    border-#{$direction}: $width $style $color;
+}
+
+@mixin border-all($width, $style, $color) {
+    border: $width $style $color;
+}
+
+// border bottom: hover, focus, and active navbar link
 @mixin border-bottom ($color) {
     border-bottom-width: 0.3125rem;
     border-bottom-style: solid;
     border-bottom-color: $color;
+}
+
+// button default
+@mixin button($width, $padding) {
+    @extend %font-demi;
+    width: $width;
+    padding: $padding;
+    background-color: $color-primary;
+    color: $color-secondary;
+    text-transform: uppercase;
+    border-radius: 0.25rem;
+    border: none;
 }
 
 // flexbox
@@ -27,7 +57,12 @@
     justify-content: $justify-content;
 }
 
-// flex direction
+@mixin flex-default($align-items, $justify-content) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
 @mixin flex-direction ($flex-direction) {
     display: flex;
     flex-direction: $flex-direction;
