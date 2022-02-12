@@ -71,7 +71,7 @@
         }
     }
     &__link {
-        color: $color-tertiary-dark;
+        color: $color-secondary;
         &--desactive {
             color: $color-tertiary-dark;
             @extend %font-regular;
