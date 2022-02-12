@@ -1,7 +1,7 @@
 @use './partials/main' as *;
 .wrapper {
     &--hero {
-        @include full-width($linear-gradient);
+        @include full-width($linear-gradient--background);
     }
     &--about {
         @include full-width($color-secondary);
@@ -16,7 +16,7 @@
 
 .hero {
     display: flex;
-    background-image: $linear-gradient-overlay, url('../assets/images/hero-bio.jpg');
+    background-image: $linear-gradient--overlay, url('../assets/images/hero-bio.jpg');
     @include cover-background;
     @include box (100%,
     15vh);
