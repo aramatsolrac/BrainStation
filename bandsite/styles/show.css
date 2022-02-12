@@ -24,11 +24,11 @@ html {
   font-family: "Avenir Next", sans-serif;
 }
 
-.shows__label, .navbar__link--desactive {
+.navbar__link--desactive {
   font-weight: 400;
 }
 
-.hero__text, .shows__info--date, .shows__button, .navbar__item--active, .footer__subtitle, .footer__position, .footer__title {
+.hero__album-name, .hero__text, .shows__title, .shows__info--date, .shows__label, .shows__button, .navbar__item--active, .footer__subtitle, .footer__position, .footer__title {
   font-weight: 600;
 }
 
@@ -446,11 +446,12 @@ select {
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    height: 55vh;
+    height: 50vh;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
+    -o-object-position: top;
+       object-position: top;
+    padding: 0 8rem;
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
@@ -460,9 +461,8 @@ select {
 }
 .hero__album-name {
   padding: 1rem 0;
-  font-weight: 600;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   .hero__album-name {
     font-size: 2rem;
   }
@@ -474,18 +474,12 @@ select {
 }
 @media screen and (min-width: 1280px) {
   .hero__title {
-    margin: 5rem 4rem 5rem 5rem;
+    padding: 1rem 5rem 1rem 0;
   }
 }
 @media screen and (min-width: 768px) {
   .hero__text {
-    font-size: 3.3rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero__text {
-    font-size: 4.5rem;
-    width: 90%;
+    font-size: 3.75rem;
   }
 }
 .hero__music {
@@ -494,23 +488,24 @@ select {
 }
 @media screen and (min-width: 768px) {
   .hero__music {
-    width: 60%;
+    width: 57%;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__music {
     width: 50%;
-    padding: 4rem 6rem 0 0;
+    margin: 5rem 0.6rem 0 2.8rem;
   }
 }
 .hero__iframe {
   width: 100%;
   height: 8vh;
   border-radius: 0.3rem;
+  border: none;
 }
 @media screen and (min-width: 768px) {
   .hero__iframe {
-    height: 11vh;
+    height: 11.5vh;
   }
 }
 
@@ -534,6 +529,7 @@ select {
 @media screen and (min-width: 768px) {
   .shows__title {
     padding: 2.6rem 0 0 2rem;
+    font-size: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -546,9 +542,10 @@ select {
 }
 @media screen and (min-width: 1280px) {
   .shows__title--desktop {
+    font-weight: 600;
     display: flex;
-    font-size: 3rem;
-    padding: 1rem;
+    font-size: 2.25rem;
+    padding: 1rem 1.5rem 1rem 0;
   }
 }
 .shows__list {
@@ -556,13 +553,13 @@ select {
 }
 @media screen and (min-width: 768px) {
   .shows__list {
-    padding: 0 1rem;
+    padding: 0 1rem 1rem 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows__list {
     width: 69%;
-    padding: 0.7rem 1rem 2rem 3rem;
+    padding: 0 0 1rem 5rem;
   }
 }
 .shows__cards {
@@ -576,11 +573,12 @@ select {
   background-color: #dedede;
   border-radius: 0.2rem;
 }
-.shows__cards ul {
+.shows__cards--sub-list {
   padding: 0;
 }
 .shows__cards:hover {
   background-color: #fcfcfc;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .shows__cards {
@@ -590,14 +588,14 @@ select {
     align-items: center;
     justify-content: space-between;
   }
-  .shows__cards ul {
+  .shows__cards--sub-list {
     display: flex;
     align-items: center;
     padding: 0 0 0 1.2rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .shows__cards ul {
+  .shows__cards--sub-list {
     display: flex;
     align-items: center;
     padding: 0 0 0 0.6rem;
