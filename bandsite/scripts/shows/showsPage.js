@@ -13,37 +13,35 @@ const showsList = document.getElementById("shows-list");
 shows.forEach((item) => {
     const labelsShows = Object.keys(item);
 
-    // create div
-    const showsCardDiv = createElement("div", "shows__cards");
-    const showsDateDiv = createElement("div");
-    const showsVenueDiv = createElement("div");
-    const showsLocationDiv = createElement("div");
-    const showsButtonDiv = createElement("div");
+    // create li
+    const showsCardLi = createElement("li", "shows__cards");
+    const showsDateUl = createElement("ul", "shows__cards--sub-list");
+    const showsVenueUl = createElement("ul", "shows__cards--sub-list");
+    const showsLocationUl = createElement("ul", "shows__cards--sub-list");
+    const showsButtonUl = createElement("ul", "shows__cards--sub-list");
 
-    // create li and append them to a div
-    showsDateDiv.appendChild(createElement("li", "shows__label", labelsShows[0]));
-    showsDateDiv.appendChild(createElement("li", "shows__info--date", item.date));
-    showsVenueDiv.appendChild(createElement("li", "shows__label", labelsShows[1]));
-    showsVenueDiv.appendChild(createElement("li", "shows__info--venue", item.venue));
-    showsLocationDiv.appendChild(createElement("li", "shows__label", labelsShows[2]));
-    showsLocationDiv.appendChild(createElement("li", "shows__info--location", item.location));
-    showsButtonDiv.appendChild(createElement("button", "shows__button", item.button));
+    // create div and append them to a li
+    showsDateUl.appendChild(createElement("li", "shows__label", labelsShows[0]));
+    showsDateUl.appendChild(createElement("li", "shows__info--date", item.date));
+    showsVenueUl.appendChild(createElement("li", "shows__label", labelsShows[1]));
+    showsVenueUl.appendChild(createElement("li", "shows__info--venue", item.venue));
+    showsLocationUl.appendChild(createElement("li", "shows__label", labelsShows[2]));
+    showsLocationUl.appendChild(createElement("li", "shows__info--location", item.location));
+    showsButtonUl.appendChild(createElement("button", "shows__button", item.button));
 
-    // append each div to a Card div
-    showsCardDiv.appendChild(showsDateDiv);
-    showsCardDiv.appendChild(showsVenueDiv);
-    showsCardDiv.appendChild(showsLocationDiv);
-    showsCardDiv.appendChild(showsButtonDiv);
+    // append each li to a Card div
+    showsCardLi.appendChild(showsDateUl);
+    showsCardLi.appendChild(showsVenueUl);
+    showsCardLi.appendChild(showsLocationUl);
+    showsCardLi.appendChild(showsButtonUl);
 
     // append all Cards to the list
-    showsList.appendChild(showsCardDiv);
-});
+    showsList.appendChild(showsCardLi);
 
-
-// function highlight selected row
-showsList.addEventListener("click", (event) => {
-    event.stopPropagation();
-    event.preventDefault();
-    event.target.classList.toggle("selected");
-    console.log(event.target)
+    // function highlight selected row
+    showsCardLi.addEventListener("click", (event) => {
+        event.stopPropagation();
+        event.preventDefault();
+        showsCardLi.classList.toggle("shows__cards--selected");
+    });
 });
