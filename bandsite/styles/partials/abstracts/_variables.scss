@@ -2,7 +2,9 @@
 $color-primary: #323232;
 $color-secondary: #FFFFFF;
 $color-tertiary: #E1E1E1;
-$linear-gradient: linear-gradient(rgb(165, 46, 123), rgb(80, 16, 80));
+$color-validation: #D22D2d;
+$linear-gradient--background: linear-gradient(rgb(165, 46, 123), rgb(80, 16, 80));
+$linear-gradient--overlay: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 // colours dark;
 $color-primary-dark: darken($color-primary, 1%);
 $color-secondary-dark: darken($color-secondary, 1%);
