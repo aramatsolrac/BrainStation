@@ -36,15 +36,10 @@ function displayComment(item) {
     const commentCardDiv = createElement("div", "display-comments__content");
     const nameAndDataDiv = createElement("div", "display-comments__name-and-data");
     const textDiv = createElement("div");
-    const convertDate = new Date(item.timestamp).toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-    });
 
     // create p and append them to a div
     nameAndDataDiv.appendChild(createElement("p", "display-comments__name", item.name));
-    nameAndDataDiv.appendChild(createElement("p", "display-comments__date", convertDate));
+    nameAndDataDiv.appendChild(createElement("p", "display-comments__date", formatDate(item.timestamp, { month: '2-digit' })));
     textDiv.appendChild(createElement("p", "display-comments__text", item.comment));
 
     // append name, data, and comment text to a Card div
@@ -57,7 +52,6 @@ function displayComment(item) {
 
     // prepend outer div to the main div
     commentsList.prepend(commentDiv);
-    // });
 };
 
 // generate today's date
@@ -97,7 +91,6 @@ form.addEventListener('submit', (event) => {
 
         axios.post(dataURL, data, { headers }).then(response => {
             const comment = response.data;
-            console.log(response)
             displayComment(comment);
         });
         event.target.user_name.value = "";
