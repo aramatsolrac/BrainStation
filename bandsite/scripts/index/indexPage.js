@@ -55,8 +55,8 @@ function displayComment(item) {
     commentDiv.appendChild(createElement("div", "comments__img--no-pic"));
     commentDiv.appendChild(commentCardDiv);
 
-    // append outer div to the main div
-    commentsList.appendChild(commentDiv);
+    // prepend outer div to the main div
+    commentsList.prepend(commentDiv);
     // });
 };
 
@@ -85,15 +85,23 @@ form.addEventListener('submit', (event) => {
     } else if (comment === "") {
         commentInput.classList.add("comments__required");
     } else {
-        commentsArr.unshift({
-            name: userName,
-            timestamp: today,
-            commentText: comment,
-        })
 
+        const data = {
+            name: userName,
+            comment: comment,
+        }
+
+        const headers = {
+            'Content-Type': 'application/json'
+        }
+
+        axios.post(dataURL, data, { headers }).then(response => {
+            const comment = response.data;
+            console.log(response)
+            displayComment(comment);
+        });
         event.target.user_name.value = "";
         event.target.user_comment.value = "";
-        cleanAndAddComments();
     }
 });
 
