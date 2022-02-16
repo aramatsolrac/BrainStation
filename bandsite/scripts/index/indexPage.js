@@ -1,5 +1,7 @@
 'use strict';
 
+const dataURL = "https://project-1-api.herokuapp.com/comments/?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
+
 const commentsSection = document.querySelector(".comments");
 const newSection = createElement("section", "display-comments"); // add section
 commentsSection.appendChild(newSection); // append section to main
@@ -10,18 +12,34 @@ newSection.appendChild(newList) // append list to section
 
 const commentsList = document.getElementById("comments-list");
 
+// fetch data
+axios.get(dataURL)
+    .then(response => {
+        const commentsArr = response.data;
+        cleanAndAddComments(commentsArr);
+    });
+
+// clean and add comments
+function cleanAndAddComments(commentsArr) {
+    commentsList.textContent = "";
+    for (let i = 0; i < commentsArr.length; i++) {
+        displayComment(commentsArr[i]);
+    }
+};
+
+
 // display comments
-function displayComment(comment) {
-    // // create div
+function displayComment(item) {
+    // create div
     const commentDiv = createElement("div", "display-comments__card");
     const commentCardDiv = createElement("div", "display-comments__content");
     const nameAndDataDiv = createElement("div", "display-comments__name-and-data");
     const textDiv = createElement("div");
 
     // create p and append them to a div
-    nameAndDataDiv.appendChild(createElement("p", "display-comments__name", comment.name));
-    nameAndDataDiv.appendChild(createElement("p", "display-comments__date", comment.timestamp));
-    textDiv.appendChild(createElement("p", "display-comments__text", comment.commentText));
+    nameAndDataDiv.appendChild(createElement("p", "display-comments__name", item.name));
+    nameAndDataDiv.appendChild(createElement("p", "display-comments__date", item.timestamp));
+    textDiv.appendChild(createElement("p", "display-comments__text", item.comment));
 
     // append name, data, and comment text to a Card div
     commentCardDiv.appendChild(nameAndDataDiv);
@@ -33,17 +51,10 @@ function displayComment(comment) {
 
     // append outer div to the main div
     commentsList.appendChild(commentDiv);
+    // });
 };
 
-// clean and add comments
-function cleanAndAddComments() {
-    commentsList.textContent = "";
-    for (let i = 0; i < commentsArr.length; i++) {
-        displayComment(commentsArr[i]);
-    }
-};
 
-cleanAndAddComments();
 
 
 // generate today's date
