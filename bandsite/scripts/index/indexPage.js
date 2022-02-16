@@ -16,6 +16,7 @@ const commentsList = document.getElementById("comments-list");
 axios.get(dataURL)
     .then(response => {
         const commentsArr = response.data;
+        console.log(commentsArr)
         cleanAndAddComments(commentsArr);
     });
 
@@ -35,10 +36,15 @@ function displayComment(item) {
     const commentCardDiv = createElement("div", "display-comments__content");
     const nameAndDataDiv = createElement("div", "display-comments__name-and-data");
     const textDiv = createElement("div");
+    const convertDate = new Date(item.timestamp).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+    });
 
     // create p and append them to a div
     nameAndDataDiv.appendChild(createElement("p", "display-comments__name", item.name));
-    nameAndDataDiv.appendChild(createElement("p", "display-comments__date", item.timestamp));
+    nameAndDataDiv.appendChild(createElement("p", "display-comments__date", convertDate));
     textDiv.appendChild(createElement("p", "display-comments__text", item.comment));
 
     // append name, data, and comment text to a Card div
@@ -53,9 +59,6 @@ function displayComment(item) {
     commentsList.appendChild(commentDiv);
     // });
 };
-
-
-
 
 // generate today's date
 let today = new Date();
