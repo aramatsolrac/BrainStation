@@ -15,7 +15,9 @@ const commentsList = document.getElementById("comments-list");
 // fetch data
 axios.get(dataURL)
     .then(response => {
-        const commentsArr = response.data;
+        const commentsArr = response.data.sort((a, b) => {
+            return a.timestamp - b.timestamp;
+        });
         console.log(commentsArr)
         cleanAndAddComments(commentsArr);
     });
