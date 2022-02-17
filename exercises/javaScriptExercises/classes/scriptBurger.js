@@ -8,9 +8,9 @@ class Burger {
 
     warning() {
         if (this.containsGluten) {
-            console.log(`contains gluten.`)
+            console.log(`It contains gluten.`)
         } else {
-            console.log(`is gluten free.`)
+            console.log(`It is gluten free.`)
         }
     }
 
@@ -36,9 +36,9 @@ class BurgerWithSide extends Burger {
 
     friesWithThat() {
         if (this.side === "fries") {
-            console.log(` with fries.`)
+            console.log(`It has fries.`)
         } else {
-            console.log(` without fries.`)
+            console.log(`It does not have fries.`)
         }
     }
 }
