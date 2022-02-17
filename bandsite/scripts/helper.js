@@ -9,7 +9,7 @@ function createElement(element, className = null, text = null) {
 }
 
 // function to convert timestamp to date format
-const defaultDateOptions = { year: 'numeric', month: 'short', day: '2-digit' };
+const defaultDateOptions = { year: 'numeric', month: 'short', day: '2-digit', timeZone: 'UTC' };
 
 function formatDate(date, newOptions = {}) {
     const options = {
