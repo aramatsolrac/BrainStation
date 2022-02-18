@@ -3,6 +3,8 @@
 .wrapper {
     &--hero {
         @include full-width($linear-gradient--background);
+        background-image: $linear-gradient--overlay, url('../assets/images/hero-bio.jpg');
+        @include cover-background;
     }
     &--about {
         @include full-width($color-secondary);
@@ -18,8 +20,6 @@
 // hero section
 .hero {
     display: flex;
-    background-image: $linear-gradient--overlay, url('../assets/images/hero-bio.jpg');
-    @include cover-background;
     @include box (100%,
     15vh);
     @extend %wrapper-mobile;
