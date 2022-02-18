@@ -3,6 +3,8 @@
 .wrapper {
     &--hero {
         @include full-width($linear-gradient--background);
+        @include cover-background;
+        background-image: $linear-gradient--overlay, url('./../assets/images/hero-shows.jpg');
     }
     &--shows {
         @include full-width($color-secondary);
@@ -11,11 +13,9 @@
 
 // hero section
 .hero {
-    background-image: $linear-gradient--overlay, url('./../assets/images/hero-shows.jpg');
     @include flex (column,
     left,
     space-evenly);
-    @include cover-background;
     @include box (100%,
     24vh);
     @extend %wrapper-mobile;
@@ -67,11 +67,11 @@
     }
     &__iframe {
         width: 100%;
-        height: 8vh;
+        max-height: 6.5vh;
         border-radius: .3rem;
         border: none;
         @include tablet {
-            height: 11.5vh;
+            max-height: 9.2vh;
         }
     }
 }
