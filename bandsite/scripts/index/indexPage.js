@@ -70,8 +70,8 @@ const commentInput = document.querySelector(".comments__text");
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    const userName = event.target.user_name.value;
-    const comment = event.target.user_comment.value;
+    const userName = event.target.user_name.value.trim();
+    const comment = event.target.user_comment.value.trim();
 
     if (userName === "" && comment === "") {
         nameInput.classList.add("comments__required");
