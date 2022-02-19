@@ -1,0 +1,11 @@
+.activity-list {
+  background: #dddddd;
+  padding: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.activity-list > * {
+  flex: 0 0 100%;
+}

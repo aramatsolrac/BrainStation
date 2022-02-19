@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  min-height: 3.125rem;
+  padding: 2rem 0;
+  background: #dddddd;
+  border-bottom: solid 2px;
+  z-index: 10;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    &--left {
+      padding-left: 1.25rem;
+      align-self: left;
+    }
+
+    &--right {
+      padding-right: 1.25rem;
+      align-self: right;
+    }
+  }
+}
