@@ -33,18 +33,18 @@
 
     <!-- hero -->
     <section class="wrapper--hero">
-        <section class="hero">
+        <div class="hero">
             <div class="hero__title">
                 <h2 class="hero__text">The Bees Knees</h2>
             </div>
-        </section>
+        </div>
     </section>
 
     <main id="main">
 
         <!-- about -->
         <section class="wrapper--about">
-            <section class="about">
+            <div class="about">
                 <div>
                     <h2 class="about__title">About the Musicians</h2>
                 </div>
@@ -73,12 +73,12 @@
                     </article>
 
                 </div>
-            </section>
+            </div>
         </section>
 
         <!-- gallery -->
         <section class="wrapper--gallery">
-            <section class="gallery">
+            <div class="gallery">
                 <h2 class="gallery__title">Photo Gallery</h2>
                 <div class="gallery__images-list">
                     <div class="gallery__img"><img src="./assets/images/Photo-gallery-1.jpg" alt="party"></div>
@@ -91,18 +91,18 @@
                     <div class="gallery__img"><img src="./assets/images/Photo-gallery-8.jpg" alt="dj mixing music"></div>
                     <div class="gallery__img"><img src="./assets/images/Photo-gallery-9.jpg" alt="party"></div>
                 </div>
-            </section>
+            </div>
         </section>
 
         <!-- join conversation -->
         <section class="wrapper--comments">
-            <section class="comments">
+            <div class="comments">
                 <h1 class="comments__title">Join the Conversation</h1>
                 <div class="comments__add-comment">
                     <div class="comments__img"></div>
                     <div class="comments__form">
                         <form id="form" action="#" method="POST">
-                            <section>
+                            <div>
                                 <ul class="comments__list">
                                     <li>
                                         <label class="comments__label" for="name">Name</label>
@@ -116,20 +116,20 @@
                                         <button id="add-comment" class="comments__button" type="submit">Comment</button>
                                     </li>
                                 </ul>
-                            </section>
+                            </div>
                         </form>
                     </div>
                 </div>
-            </section>
+            </div>
             <!-- populate display comments section via JS -->
         </section>
 
         <!-- footer -->
         <footer class="wrapper--footer">
             <section class="footer">
-                <section class="footer__content">
+                <div class="footer__content">
                     <!-- social medias -->
-                    <section class="footer__social">
+                    <div class="footer__social">
                         <div class="footer__medias">
                             <div>
                                 <h2 class="footer__title">Get in Touch</h2>
@@ -144,9 +144,9 @@
                         <div class="footer__logo--tablet">
                             <a class="footer__link--tablet" href="#home"><img src="./assets/logo/Logo-bandsite.svg " alt="bandsite logo"></a>
                         </div>
-                    </section>
+                    </div>
 
-                    <section class="footer__contacts">
+                    <div class="footer__contacts">
                         <!-- contacts -->
                         <div class="footer__info">
                             <div>
@@ -189,25 +189,25 @@
                                 <p><a class="footer__email" href="mailto:cwhyte@archentertainment.com" target="_blank">cwhyte@archentertainment.com</a></p>
                             </div>
                         </div>
-                    </section>
+                    </div>
 
                     <!-- logo mobile -->
-                    <section class="footer__logo footer__logo--mobile">
+                    <div class="footer__logo footer__logo--mobile">
                         <a class="footer__link--mobile" href="#home"><img src="./assets/logo/Logo-bandsite.svg" alt="bandsite logo"></a>
                         <p class="footer__copy">Copyright The Bees Knees © 2021 All Rights Reserved</p>
-                    </section>
-                </section>
+                    </div>
+                </div>
 
                 <!-- logo desktop -->
-                <section class="footer__logo footer__logo--desktop">
+                <div class="footer__logo footer__logo--desktop">
                     <a class="footer__link--desktop" href="#home"><img src="./assets/logo/Logo-bandsite.svg" alt="bandsite logo"></a>
-                </section>
+                </div>
             </section>
         </footer>
 
     </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./scripts/helper.js"></script>
-    <script src="./scripts/index/indexData.js"></script>
     <script src="./scripts/index/indexPage.js"></script>
 </body>
 

@@ -7,3 +7,15 @@ function createElement(element, className = null, text = null) {
     if (className) newElement.classList.add(className);
     return newElement;
 }
+
+// function to convert timestamp to date format
+const defaultDateOptions = { year: 'numeric', month: 'short', day: '2-digit', timeZone: 'UTC' };
+
+function formatDate(date, newOptions = {}) {
+    const options = {
+        ...defaultDateOptions,
+        ...newOptions,
+    };
+
+    return new Date(Number(date)).toLocaleDateString("en-US", options).replace(',', '');
+};

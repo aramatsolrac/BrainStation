@@ -424,6 +424,10 @@ select {
 .wrapper--hero {
   width: 100%;
   background: linear-gradient(#a52e7b, #501050);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .wrapper--about {
   width: 100%;
@@ -440,10 +444,6 @@ select {
 
 .hero {
   display: flex;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/hero-bio.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   width: 100%;
   height: 15vh;
 }
