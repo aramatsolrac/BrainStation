@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BrainStation/exercises/react/intro-to-react-lab/static/css/main.2db15f78.css",
+    "main.js": "/BrainStation/exercises/react/intro-to-react-lab/static/js/main.a25b8a61.js",
+    "static/js/787.060d8e96.chunk.js": "/BrainStation/exercises/react/intro-to-react-lab/static/js/787.060d8e96.chunk.js",
+    "index.html": "/BrainStation/exercises/react/intro-to-react-lab/index.html",
+    "main.2db15f78.css.map": "/BrainStation/exercises/react/intro-to-react-lab/static/css/main.2db15f78.css.map",
+    "main.a25b8a61.js.map": "/BrainStation/exercises/react/intro-to-react-lab/static/js/main.a25b8a61.js.map",
+    "787.060d8e96.chunk.js.map": "/BrainStation/exercises/react/intro-to-react-lab/static/js/787.060d8e96.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2db15f78.css",
+    "static/js/main.a25b8a61.js"
+  ]
+}
