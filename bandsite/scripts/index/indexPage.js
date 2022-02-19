@@ -14,13 +14,17 @@ newSection.appendChild(newList); // append list to section
 const commentsList = document.getElementById("comments-list");
 
 // fetch data
-axios.get(dataURL).then((response) => {
-  const commentsArr = response.data.sort((a, b) => {
-    return a.timestamp - b.timestamp;
+const fetchData = () => {
+  axios.get(dataURL).then((response) => {
+    const commentsArr = response.data.sort((a, b) => {
+      return a.timestamp - b.timestamp;
+    });
+    console.log(commentsArr);
+    cleanAndAddComments(commentsArr);
   });
-  console.log(commentsArr);
-  cleanAndAddComments(commentsArr);
-});
+};
+
+fetchData();
 
 // clean and add comments
 function cleanAndAddComments(commentsArr) {
@@ -41,6 +45,22 @@ function displayComment(item) {
     "display-comments__name-and-data"
   );
   const textDiv = createElement("div");
+  const buttonDelete = createElement(
+    "button",
+    "display-comments__button",
+    "Delete"
+  );
+  const buttonLike = createElement(
+    "button",
+    "display-comments__button-like",
+    "Like"
+  );
+  const counterLike = createElement(
+    "span",
+    "display-comments__like",
+    item.likes
+  );
+  buttonLike.appendChild(counterLike);
 
   // create p and append them to a div
   nameAndDataDiv.appendChild(
@@ -60,6 +80,8 @@ function displayComment(item) {
   // append name, data, and comment text to a Card div
   commentCardDiv.appendChild(nameAndDataDiv);
   commentCardDiv.appendChild(textDiv);
+  commentCardDiv.appendChild(buttonDelete);
+  commentCardDiv.appendChild(buttonLike);
 
   // append card div to a outer div
   commentDiv.appendChild(createElement("div", "comments__img--no-pic"));
@@ -67,6 +89,46 @@ function displayComment(item) {
 
   // prepend outer div to the main div
   commentsList.prepend(commentDiv);
+
+  // delete function
+  buttonDelete.addEventListener("click", deleteComment);
+  function deleteComment() {
+    axios
+      .delete(
+        `https://project-1-api.herokuapp.com/comments/${item.id}?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4`
+      )
+      .then(() => {
+        fetchData();
+      });
+  }
+
+  // like function
+  const likeButton = document.querySelectorAll(
+    ".display-comments__button-like"
+  );
+  let hasLike = false;
+  axios
+    .put(
+      `https://project-1-api.herokuapp.com/comments/${item.id}/like?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4`
+    )
+    .then((response) => {
+      // console.log(response.data.likes);
+      likeButton.forEach((elem) => {
+        elem.onclick = () => {
+          const counter = elem.querySelector("span");
+          const likesAmount = response.data.likes;
+          console.log(likesAmount);
+
+          if (hasLike) {
+            counter.innerText = likesAmount - 1;
+            hasLike = false;
+          } else {
+            counter.innerText = likesAmount + 1;
+            hasLike = true;
+          }
+        };
+      });
+    });
 }
 
 // generate today's date
