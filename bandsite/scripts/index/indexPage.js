@@ -46,7 +46,7 @@ function displayComment(item) {
     buttonLike.innerHTML = `<i class="fas fa-heart display-comments__like--icon" aria-hidden="true"></i>`;
     const counterLike = createElement("span", "display-comments__like--counter", item.likes);
     const buttonDelete = createElement("button", "display-comments__delete");
-    buttonDelete.innerHTML = `<i class="fas fa-trash" display-comments__like--icon" aria-hidden="true"></i>`;
+    buttonDelete.innerHTML = `<i class="fas fa-trash" aria-hidden="true"></i>`;
 
     // append like button and like counter to Like Div
     likeDiv.appendChild(buttonLike);
