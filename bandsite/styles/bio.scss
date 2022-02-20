@@ -1,9 +1,9 @@
-@use './partials/main' as *;
+@use "./partials/main" as *;
 // wrappers for larger displays
 .wrapper {
     &--hero {
         @include full-width($linear-gradient--background);
-        background-image: $linear-gradient--overlay, url('../assets/images/hero-bio.jpg');
+        background-image: $linear-gradient--overlay, url("../assets/images/hero-bio.jpg");
         @include cover-background;
     }
     &--about {
@@ -20,7 +20,7 @@
 // hero section
 .hero {
     display: flex;
-    @include box (100%,
+    @include box(100%,
     15vh);
     @extend %wrapper-mobile;
     @include tablet {
@@ -51,7 +51,7 @@
 
 // about section
 .about {
-    @include flex-direction (column);
+    @include flex-direction(column);
     @extend %wrapper-mobile;
     @include tablet {
         padding: 2rem;
@@ -74,13 +74,13 @@
             font-size: 2rem;
         }
         @include desktop {
-            margin: .5rem 5rem 0 5rem;
+            margin: 0.5rem 5rem 0 5rem;
             font-size: 2.5rem;
         }
     }
     &__img {
-        padding: .3rem 0;
-        @include box (100%,
+        padding: 0.3rem 0;
+        @include box(100%,
         10.6rem);
         object-fit: cover;
         object-position: bottom;
@@ -102,7 +102,7 @@
         }
     }
     &__quotation {
-        font-size: .9rem;
+        font-size: 0.9rem;
         text-align: left;
         @extend %font-demi;
         @include tablet {
@@ -114,11 +114,11 @@
         }
     }
     &__autor {
-        font-size: .9rem;
+        font-size: 0.9rem;
         @extend %font-demi;
         @extend %content-mobile;
         @include tablet {
-            padding: .7rem 0;
+            padding: 0.7rem 0;
             font-size: 1rem;
         }
     }
@@ -142,7 +142,7 @@
         }
     }
     &__paragraph {
-        font-size: .8rem;
+        font-size: 0.8rem;
         @extend %content-mobile;
         @include tablet {
             padding: 1rem 2rem 0 0;
@@ -150,7 +150,7 @@
         @include desktop {
             width: 100%;
             margin: 0;
-            font-size: .9rem;
+            font-size: 0.9rem;
             padding-right: 1rem;
             text-align: left;
         }
@@ -160,7 +160,7 @@
 // gallery section
 .gallery {
     background-color: $color-secondary-dark;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     @include tablet {
         padding: 1.5rem 1rem;
     }
@@ -173,12 +173,12 @@
         padding: 1rem 0 0 0;
         @extend %title;
         @include tablet {
-            padding: 1.5rem 0 .5rem 1rem;
+            padding: 1.5rem 0 0.5rem 1rem;
             font-size: 2rem;
         }
         @include desktop {
             font-size: 2.5rem;
-            padding: 1.5rem 0 .5rem .7rem;
+            padding: 1.5rem 0 0.5rem 0.7rem;
         }
     }
     &__images-list {
@@ -193,26 +193,26 @@
         }
     }
     &__img {
-        padding: .5rem 0;
+        padding: 0.5rem 0;
         filter: grayscale(100%);
         &:hover {
             filter: grayscale(0%);
-            transition: all ease-in-out .2s;
+            transition: all ease-in-out 0.2s;
         }
         @include tablet {
             width: 15rem;
-            padding: .5rem;
+            padding: 0.5rem;
         }
         @include desktop {
             width: 21.5rem;
-            padding: .7rem 1.1rem .7rem 0;
+            padding: 0.7rem 1.1rem 0.7rem 0;
         }
     }
 }
 
 // comments section
 .comments {
-    @include flex (column,
+    @include flex(column,
     flex-start,
     center);
     padding: 0 1rem;
@@ -247,7 +247,7 @@
         }
     }
     &__img {
-        background-image: url('../assets/images/Mohan-muruge.jpg');
+        background-image: url("../assets/images/Mohan-muruge.jpg");
         @include cover-background;
         @include image-profile(3rem,
         2.5rem);
@@ -269,7 +269,7 @@
     &__form {
         display: flex;
         width: 100%;
-        @include flex (column,
+        @include flex(column,
         left,
         space-between);
     }
@@ -286,7 +286,7 @@
     &__name,
     &__text {
         width: 100%;
-        margin: .3rem 0 .9rem 0;
+        margin: 0.3rem 0 0.9rem 0;
         padding: 1rem;
         border-radius: 0.25rem;
         @include border-all(0.0625rem,
@@ -324,7 +324,7 @@
     }
     &__button {
         @include button(100%,
-        .5rem 2rem);
+        0.5rem 2rem);
         &:hover {
             background-color: $color-primary-darker;
             cursor: pointer;
@@ -352,7 +352,7 @@
         padding: 0;
     }
     &__card {
-        @include flex (row,
+        @include flex(row,
         left,
         space-between);
         @include border-position(bottom,
@@ -376,7 +376,7 @@
         @include flex-default(center,
         space-between);
         @extend %font-size-small;
-        padding: 0 0 .5rem 0;
+        padding: 0 0 0.5rem 0;
     }
     &__name {
         @extend %font-demi;
@@ -388,5 +388,46 @@
         @extend %font-regular;
         @extend %font-size-small;
         text-align: left;
+    }
+    &__buttons {
+        @include flex(row,
+        center,
+        space-between);
+        padding: 0.8rem 0 0 0;
+    }
+    &__delete {
+        padding: 0.4rem 0.6rem;
+        border: none;
+        background-color: $color-secondary;
+        color: $color-tertiary-darker;
+        cursor: pointer;
+        &:hover {
+            color: $color-validation
+        }
+    }
+    &__like {
+        @include flex(row,
+        center,
+        space-between);
+        &--btn {
+            padding: .3rem;
+            border: none;
+            background-color: $color-secondary;
+        }
+        &--icon {
+            color: $color-tertiary-darker;
+            cursor: pointer;
+            &:hover {
+                color: $color-validation;
+                transform: scale(1.4);
+            }
+        }
+        &--counter {
+            padding: 0 0.5rem;
+            font-size: .9rem;
+        }
+    }
+    &__liked {
+        color: $color-validation;
     }
 }
