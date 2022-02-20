@@ -45,22 +45,22 @@ function displayComment(item) {
     "display-comments__name-and-data"
   );
   const textDiv = createElement("div");
+  const buttonsDiv = createElement("div", "display-comments__buttons");
+  const likeDiv = createElement("div", "display-comments__like");
   const buttonDelete = createElement(
     "button",
-    "display-comments__button",
+    "display-comments__delete",
     "Delete"
   );
-  const buttonLike = createElement(
-    "button",
-    "display-comments__button-like",
-    "Like"
-  );
+  const buttonLike = createElement("button", "display-comments__like--btn");
   const counterLike = createElement(
     "span",
-    "display-comments__like",
+    "display-comments__like--counter",
     item.likes
   );
-  buttonLike.appendChild(counterLike);
+
+  likeDiv.appendChild(buttonLike);
+  likeDiv.appendChild(counterLike);
 
   // create p and append them to a div
   nameAndDataDiv.appendChild(
@@ -76,12 +76,13 @@ function displayComment(item) {
   textDiv.appendChild(
     createElement("p", "display-comments__text", item.comment)
   );
+  buttonsDiv.appendChild(likeDiv);
+  buttonsDiv.appendChild(buttonDelete);
 
   // append name, data, and comment text to a Card div
   commentCardDiv.appendChild(nameAndDataDiv);
   commentCardDiv.appendChild(textDiv);
-  commentCardDiv.appendChild(buttonDelete);
-  commentCardDiv.appendChild(buttonLike);
+  commentCardDiv.appendChild(buttonsDiv);
 
   // append card div to a outer div
   commentDiv.appendChild(createElement("div", "comments__img--no-pic"));
@@ -103,34 +104,19 @@ function displayComment(item) {
   }
 
   // like function
-  const likeButton = document.querySelectorAll(
-    ".display-comments__button-like"
-  );
-  let hasLike = false;
-  axios
-    .put(
-      `https://project-1-api.herokuapp.com/comments/${item.id}/like?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4`
-    )
-    .then((response) => {
-      // console.log(response.data.likes);
-      likeButton.forEach((elem) => {
-        elem.onclick = () => {
-          const counter = elem.querySelector("span");
-          const likesAmount = response.data.likes;
-          console.log(likesAmount);
-
-          if (hasLike) {
-            counter.innerText = likesAmount - 1;
-            hasLike = false;
-          } else {
-            counter.innerText = likesAmount + 1;
-            hasLike = true;
-          }
-        };
+  buttonLike.addEventListener("click", likeComment);
+  function likeComment() {
+    axios
+      .put(
+        `https://project-1-api.herokuapp.com/comments/${item.id}/like?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4`
+      )
+      .then((response) => {
+        counterLike.textContent = response.data.likes;
+        buttonLike.style.color = "#F65151";
+        console.log(response.data.likes);
       });
-    });
+  }
 }
-
 // generate today's date
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, "0");
