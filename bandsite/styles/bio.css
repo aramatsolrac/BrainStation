@@ -884,4 +884,35 @@ select {
 }
 .display-comments__text {
   text-align: left;
+}
+.display-comments__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0 0 0;
+}
+.display-comments__delete {
+  padding: 0.4rem 0.9rem;
+  border: none;
+  background-color: #9b0c0c;
+  color: white;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+.display-comments__like {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.display-comments__like--btn {
+  background: url("./../assets/icons/svg/icon-heart.svg") no-repeat center center;
+  padding: 1rem;
+  border: 1px solid grey;
+  background-color: whitesmoke;
+  border-radius: 0.3rem;
+}
+.display-comments__like--counter {
+  padding: 0 0.5rem;
 }/*# sourceMappingURL=bio.css.map */
