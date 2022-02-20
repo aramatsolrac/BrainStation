@@ -893,12 +893,13 @@ select {
   padding: 0.8rem 0 0 0;
 }
 .display-comments__delete {
-  padding: 0.4rem 0.9rem;
+  padding: 0.4rem 0.6rem;
   border: none;
   background-color: #9b0c0c;
   color: white;
   text-align: center;
   border-radius: 0.3rem;
+  cursor: pointer;
 }
 .display-comments__like {
   display: flex;
@@ -907,12 +908,22 @@ select {
   align-items: center;
 }
 .display-comments__like--btn {
-  background: url("./../assets/icons/svg/icon-heart.svg") no-repeat center center;
-  padding: 1rem;
-  border: 1px solid grey;
-  background-color: whitesmoke;
-  border-radius: 0.3rem;
+  padding: 0.3rem;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+.display-comments__like--icon {
+  color: grey;
+  cursor: pointer;
+}
+.display-comments__like--icon:hover {
+  color: red;
 }
 .display-comments__like--counter {
   padding: 0 0.5rem;
+  font-size: 0.9rem;
+}
+.display-comments__liked {
+  color: red;
 }/*# sourceMappingURL=bio.css.map */

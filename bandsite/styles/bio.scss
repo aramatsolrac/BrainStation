@@ -1,390 +1,434 @@
 @use "./partials/main" as *;
 // wrappers for larger displays
 .wrapper {
-  &--hero {
-    @include full-width($linear-gradient--background);
-    background-image: $linear-gradient--overlay,
-      url("../assets/images/hero-bio.jpg");
-    @include cover-background;
-  }
-  &--about {
-    @include full-width($color-secondary);
-  }
-  &--gallery {
-    @include full-width($color-secondary-dark);
-  }
-  &--comments {
-    @include full-width($color-secondary);
-  }
+    &--hero {
+        @include full-width($linear-gradient--background);
+        background-image: $linear-gradient--overlay, url("../assets/images/hero-bio.jpg");
+        @include cover-background;
+    }
+    &--about {
+        @include full-width($color-secondary);
+    }
+    &--gallery {
+        @include full-width($color-secondary-dark);
+    }
+    &--comments {
+        @include full-width($color-secondary);
+    }
 }
 
 // hero section
 .hero {
-  display: flex;
-  @include box(100%, 15vh);
-  @extend %wrapper-mobile;
-  @include tablet {
-    height: 47vh;
-    padding: 2rem;
-  }
-  @include desktop {
-    height: 50vh;
-    object-fit: cover;
-    object-position: center;
-    @include wrap($max-width, $margin-center);
-  }
-  &__title {
-    align-self: center;
-    color: $color-secondary;
-    @include desktop {
-      margin: 5rem;
-    }
-  }
-  &__text {
-    @extend %font-demi;
+    display: flex;
+    @include box(100%,
+    15vh);
+    @extend %wrapper-mobile;
     @include tablet {
-      font-size: 3.75rem;
+        height: 47vh;
+        padding: 2rem;
     }
-  }
+    @include desktop {
+        height: 50vh;
+        object-fit: cover;
+        object-position: center;
+        @include wrap($max-width,
+        $margin-center);
+    }
+    &__title {
+        align-self: center;
+        color: $color-secondary;
+        @include desktop {
+            margin: 5rem;
+        }
+    }
+    &__text {
+        @extend %font-demi;
+        @include tablet {
+            font-size: 3.75rem;
+        }
+    }
 }
 
 // about section
 .about {
-  @include flex-direction(column);
-  @extend %wrapper-mobile;
-  @include tablet {
-    padding: 2rem;
-  }
-  @include wrap($max-width, $margin-center);
-  &__content {
+    @include flex-direction(column);
+    @extend %wrapper-mobile;
     @include tablet {
-      padding: 0 3.5rem;
+        padding: 2rem;
     }
-    @include desktop {
-      margin: 0 7rem;
+    @include wrap($max-width,
+    $margin-center);
+    &__content {
+        @include tablet {
+            padding: 0 3.5rem;
+        }
+        @include desktop {
+            margin: 0 7rem;
+        }
     }
-  }
-  &__title {
-    @extend %content-mobile;
-    @extend %title;
-    padding: 0;
-    @include tablet {
-      font-size: 2rem;
+    &__title {
+        @extend %content-mobile;
+        @extend %title;
+        padding: 0;
+        @include tablet {
+            font-size: 2rem;
+        }
+        @include desktop {
+            margin: 0.5rem 5rem 0 5rem;
+            font-size: 2.5rem;
+        }
     }
-    @include desktop {
-      margin: 0.5rem 5rem 0 5rem;
-      font-size: 2.5rem;
+    &__img {
+        padding: 0.3rem 0;
+        @include box(100%,
+        10.6rem);
+        object-fit: cover;
+        object-position: bottom;
+        @include tablet {
+            height: 18.75rem;
+        }
+        @include desktop {
+            height: 28.125rem;
+            padding-right: 1rem;
+        }
     }
-  }
-  &__img {
-    padding: 0.3rem 0;
-    @include box(100%, 10.6rem);
-    object-fit: cover;
-    object-position: bottom;
-    @include tablet {
-      height: 18.75rem;
+    &__quote {
+        @extend %content-mobile;
+        @include tablet {
+            margin: 1rem 0 0 0;
+        }
+        @include desktop {
+            width: 76%;
+        }
     }
-    @include desktop {
-      height: 28.125rem;
-      padding-right: 1rem;
+    &__quotation {
+        font-size: 0.9rem;
+        text-align: left;
+        @extend %font-demi;
+        @include tablet {
+            font-size: 1.4rem;
+        }
+        @include desktop {
+            font-size: 1.4rem;
+            text-align: left;
+        }
     }
-  }
-  &__quote {
-    @extend %content-mobile;
-    @include tablet {
-      margin: 1rem 0 0 0;
+    &__autor {
+        font-size: 0.9rem;
+        @extend %font-demi;
+        @extend %content-mobile;
+        @include tablet {
+            padding: 0.7rem 0;
+            font-size: 1rem;
+        }
     }
-    @include desktop {
-      width: 76%;
+    &__bio {
+        @extend %content-mobile;
     }
-  }
-  &__quotation {
-    font-size: 0.9rem;
-    text-align: left;
-    @extend %font-demi;
-    @include tablet {
-      font-size: 1.4rem;
+    &__subtitle {
+        font-size: 1rem;
+        @extend %content-mobile;
+        @extend %font-demi;
+        @include tablet {
+            font-size: 1.3rem;
+        }
+        @include desktop {
+            font-size: 1.5rem;
+        }
     }
-    @include desktop {
-      font-size: 1.4rem;
-      text-align: left;
+    &__text {
+        @include tablet {
+            @include flex-direction(row);
+        }
     }
-  }
-  &__autor {
-    font-size: 0.9rem;
-    @extend %font-demi;
-    @extend %content-mobile;
-    @include tablet {
-      padding: 0.7rem 0;
-      font-size: 1rem;
+    &__paragraph {
+        font-size: 0.8rem;
+        @extend %content-mobile;
+        @include tablet {
+            padding: 1rem 2rem 0 0;
+        }
+        @include desktop {
+            width: 100%;
+            margin: 0;
+            font-size: 0.9rem;
+            padding-right: 1rem;
+            text-align: left;
+        }
     }
-  }
-  &__bio {
-    @extend %content-mobile;
-  }
-  &__subtitle {
-    font-size: 1rem;
-    @extend %content-mobile;
-    @extend %font-demi;
-    @include tablet {
-      font-size: 1.3rem;
-    }
-    @include desktop {
-      font-size: 1.5rem;
-    }
-  }
-  &__text {
-    @include tablet {
-      @include flex-direction(row);
-    }
-  }
-  &__paragraph {
-    font-size: 0.8rem;
-    @extend %content-mobile;
-    @include tablet {
-      padding: 1rem 2rem 0 0;
-    }
-    @include desktop {
-      width: 100%;
-      margin: 0;
-      font-size: 0.9rem;
-      padding-right: 1rem;
-      text-align: left;
-    }
-  }
 }
 
 // gallery section
 .gallery {
-  background-color: $color-secondary-dark;
-  padding: 0.5rem 1rem;
-  @include tablet {
-    padding: 1.5rem 1rem;
-  }
-  @include desktop {
-    padding: 3rem 7rem 2rem 7rem;
-    @include wrap($max-width, $margin-center);
-  }
-  &__title {
-    padding: 1rem 0 0 0;
-    @extend %title;
+    background-color: $color-secondary-dark;
+    padding: 0.5rem 1rem;
     @include tablet {
-      padding: 1.5rem 0 0.5rem 1rem;
-      font-size: 2rem;
+        padding: 1.5rem 1rem;
     }
     @include desktop {
-      font-size: 2.5rem;
-      padding: 1.5rem 0 0.5rem 0.7rem;
+        padding: 3rem 7rem 2rem 7rem;
+        @include wrap($max-width,
+        $margin-center);
     }
-  }
-  &__images-list {
-    @include tablet {
-      @include flex(row, center, center);
-      flex-wrap: wrap;
+    &__title {
+        padding: 1rem 0 0 0;
+        @extend %title;
+        @include tablet {
+            padding: 1.5rem 0 0.5rem 1rem;
+            font-size: 2rem;
+        }
+        @include desktop {
+            font-size: 2.5rem;
+            padding: 1.5rem 0 0.5rem 0.7rem;
+        }
     }
-    @include desktop {
-      padding: 0;
+    &__images-list {
+        @include tablet {
+            @include flex(row,
+            center,
+            center);
+            flex-wrap: wrap;
+        }
+        @include desktop {
+            padding: 0;
+        }
     }
-  }
-  &__img {
-    padding: 0.5rem 0;
-    filter: grayscale(100%);
-    &:hover {
-      filter: grayscale(0%);
-      transition: all ease-in-out 0.2s;
+    &__img {
+        padding: 0.5rem 0;
+        filter: grayscale(100%);
+        &:hover {
+            filter: grayscale(0%);
+            transition: all ease-in-out 0.2s;
+        }
+        @include tablet {
+            width: 15rem;
+            padding: 0.5rem;
+        }
+        @include desktop {
+            width: 21.5rem;
+            padding: 0.7rem 1.1rem 0.7rem 0;
+        }
     }
-    @include tablet {
-      width: 15rem;
-      padding: 0.5rem;
-    }
-    @include desktop {
-      width: 21.5rem;
-      padding: 0.7rem 1.1rem 0.7rem 0;
-    }
-  }
 }
 
 // comments section
 .comments {
-  @include flex(column, flex-start, center);
-  padding: 0 1rem;
-  @include wrap($max-width, $margin-center);
-  @include tablet {
-    padding: 1.5rem 2rem;
-  }
-  @include desktop {
-    padding: 0 7.5rem;
-  }
-  &__title {
-    @extend %title;
-    padding: 1rem 0;
+    @include flex(column,
+    flex-start,
+    center);
+    padding: 0 1rem;
+    @include wrap($max-width,
+    $margin-center);
     @include tablet {
-      font-size: 2rem;
+        padding: 1.5rem 2rem;
     }
     @include desktop {
-      font-size: 2.3rem;
+        padding: 0 7.5rem;
     }
-  }
-  &__add-comment {
-    @include flex-direction(row);
-    width: 100%;
-    @include tablet {
-      justify-content: center;
-      padding: 0 3rem;
+    &__title {
+        @extend %title;
+        padding: 1rem 0;
+        @include tablet {
+            font-size: 2rem;
+        }
+        @include desktop {
+            font-size: 2.3rem;
+        }
     }
-    @include desktop {
-      width: 60%;
-      align-self: center;
+    &__add-comment {
+        @include flex-direction(row);
+        width: 100%;
+        @include tablet {
+            justify-content: center;
+            padding: 0 3rem;
+        }
+        @include desktop {
+            width: 60%;
+            align-self: center;
+        }
     }
-  }
-  &__img {
-    background-image: url("../assets/images/Mohan-muruge.jpg");
-    @include cover-background;
-    @include image-profile(3rem, 2.5rem);
-    margin: 2rem 0;
-    @include tablet {
-      @include image-profile(3rem, 2.8rem);
+    &__img {
+        background-image: url("../assets/images/Mohan-muruge.jpg");
+        @include cover-background;
+        @include image-profile(3rem,
+        2.5rem);
+        margin: 2rem 0;
+        @include tablet {
+            @include image-profile(3rem,
+            2.8rem);
+        }
+        &--no-pic {
+            @include image-profile(3rem,
+            2.5rem);
+            display: flex;
+            @include tablet {
+                @include image-profile(3rem,
+                2.8rem);
+            }
+        }
     }
-    &--no-pic {
-      @include image-profile(3rem, 2.5rem);
-      display: flex;
-      @include tablet {
-        @include image-profile(3rem, 2.8rem);
-      }
+    &__form {
+        display: flex;
+        width: 100%;
+        @include flex(column,
+        left,
+        space-between);
     }
-  }
-  &__form {
-    display: flex;
-    width: 100%;
-    @include flex(column, left, space-between);
-  }
-  &__list {
-    margin: 0;
-    padding: 0 0 0 1rem;
-  }
-  &__label {
-    text-transform: uppercase;
-    color: $color-tertiary-darker;
-    @extend %font-size-small;
-    @extend %font-demi;
-  }
-  &__name,
-  &__text {
-    width: 100%;
-    margin: 0.3rem 0 0.9rem 0;
-    padding: 1rem;
-    border-radius: 0.25rem;
-    @include border-all(0.0625rem, solid, $color-tertiary-dark);
-    background-color: $color-secondary-dark;
-    &::placeholder {
-      color: $color-primary-darker;
+    &__list {
+        margin: 0;
+        padding: 0 0 0 1rem;
     }
-    &:active {
-      @include border-all(0.0625rem, solid, $color-primary-darker);
+    &__label {
+        text-transform: uppercase;
+        color: $color-tertiary-darker;
+        @extend %font-size-small;
+        @extend %font-demi;
     }
-    &:focus {
-      outline: $color-primary-darker;
-      @include border-all(0.0625rem, solid, $color-primary-darker);
+    &__name,
+    &__text {
+        width: 100%;
+        margin: 0.3rem 0 0.9rem 0;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        @include border-all(0.0625rem,
+        solid,
+        $color-tertiary-dark);
+        background-color: $color-secondary-dark;
+        &::placeholder {
+            color: $color-primary-darker;
+        }
+        &:active {
+            @include border-all(0.0625rem,
+            solid,
+            $color-primary-darker);
+        }
+        &:focus {
+            outline: $color-primary-darker;
+            @include border-all(0.0625rem,
+            solid,
+            $color-primary-darker);
+        }
     }
-  }
-  &__required {
-    border-radius: 0.25rem;
-    @include border-all(0.0625rem, solid, $color-validation);
-  }
-  &__btn {
-    @include flex-default(center, center);
-    @include tablet {
-      @include flex-default(center, right);
+    &__required {
+        border-radius: 0.25rem;
+        @include border-all(0.0625rem,
+        solid,
+        $color-validation);
     }
-  }
-  &__button {
-    @include button(100%, 0.5rem 2rem);
-    &:hover {
-      background-color: $color-primary-darker;
-      cursor: pointer;
+    &__btn {
+        @include flex-default(center,
+        center);
+        @include tablet {
+            @include flex-default(center,
+            right);
+        }
     }
-    @include tablet {
-      width: 10rem;
+    &__button {
+        @include button(100%,
+        0.5rem 2rem);
+        &:hover {
+            background-color: $color-primary-darker;
+            cursor: pointer;
+        }
+        @include tablet {
+            width: 10rem;
+        }
     }
-  }
 }
 
 // display comments section
 .display-comments {
-  margin: 0;
-  line-height: 1.3em;
-  @include tablet {
-    justify-content: center;
-    padding: 0 3rem;
-  }
-  @include desktop {
-    align-self: center;
-    width: 60%;
-    margin: 1rem;
-  }
-  &__list {
-    padding: 0;
-  }
-  &__card {
-    @include flex(row, left, space-between);
-    @include border-position(bottom, 0.0625rem, solid, $color-tertiary-darker);
-    padding: 1rem 0;
-    width: 100%;
-    &:first-child {
-      @include border-position(top, 0.0625rem, solid, $color-tertiary-darker);
+    margin: 0;
+    line-height: 1.3em;
+    @include tablet {
+        justify-content: center;
+        padding: 0 3rem;
     }
-  }
-  &__content {
-    width: 100%;
-    padding: 0 0 0 1rem;
-  }
-  &__name-and-data {
-    @include flex-default(center, space-between);
-    @extend %font-size-small;
-    padding: 0 0 0.5rem 0;
-  }
-  &__name {
-    @extend %font-demi;
-  }
-  &__date {
-    color: $color-tertiary-darker;
-  }
-  &__text {
-    @extend %font-regular;
-    @extend %font-size-small;
-    text-align: left;
-  }
-  &__buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.8rem 0 0 0;
-  }
-  &__delete {
-    padding: 0.4rem 0.9rem;
-    border: none;
-    background-color: rgb(155, 12, 12);
-    color: white;
-    text-align: center;
-    border-radius: 0.3rem;
-  }
-  &__like {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    &--btn {
-      background: url("./../assets/icons/svg/icon-heart.svg") no-repeat center
-        center;
-      padding: 1rem;
-      border: 1px solid grey;
-      background-color: whitesmoke;
-      border-radius: 0.3rem;
+    @include desktop {
+        align-self: center;
+        width: 60%;
+        margin: 1rem;
     }
-    &--counter {
-      padding: 0 0.5rem;
+    &__list {
+        padding: 0;
     }
-  }
+    &__card {
+        @include flex(row,
+        left,
+        space-between);
+        @include border-position(bottom,
+        0.0625rem,
+        solid,
+        $color-tertiary-darker);
+        padding: 1rem 0;
+        width: 100%;
+        &:first-child {
+            @include border-position(top,
+            0.0625rem,
+            solid,
+            $color-tertiary-darker);
+        }
+    }
+    &__content {
+        width: 100%;
+        padding: 0 0 0 1rem;
+    }
+    &__name-and-data {
+        @include flex-default(center,
+        space-between);
+        @extend %font-size-small;
+        padding: 0 0 0.5rem 0;
+    }
+    &__name {
+        @extend %font-demi;
+    }
+    &__date {
+        color: $color-tertiary-darker;
+    }
+    &__text {
+        @extend %font-regular;
+        @extend %font-size-small;
+        text-align: left;
+    }
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem 0 0 0;
+    }
+    &__delete {
+        padding: 0.4rem 0.6rem;
+        border: none;
+        background-color: rgb(155, 12, 12);
+        color: white;
+        text-align: center;
+        border-radius: 0.3rem;
+        cursor: pointer;
+    }
+    &__like {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        &--btn {
+            padding: .3rem;
+            border: none;
+            background-color: white;
+            cursor: pointer;
+        }
+        &--icon {
+            color: grey;
+            cursor: pointer;
+            &:hover {
+                color: red;
+            }
+        }
+        &--counter {
+            padding: 0 0.5rem;
+            font-size: .9rem;
+        }
+    }
+    &__liked {
+        color: red
+    }
 }
