@@ -18,7 +18,6 @@ const fetchData = () => {
         const commentsArr = response.data.sort((a, b) => {
             return a.timestamp - b.timestamp;
         });
-        console.log(commentsArr);
         cleanAndAddComments(commentsArr);
     });
 };
@@ -43,11 +42,13 @@ function displayComment(item) {
     const textDiv = createElement("div");
     const buttonsDiv = createElement("div", "display-comments__buttons");
     const likeDiv = createElement("div", "display-comments__like");
-    const buttonDelete = createElement("button", "display-comments__delete", "Delete");
     const buttonLike = createElement("button", "display-comments__like--btn");
     buttonLike.innerHTML = `<i class="fas fa-heart display-comments__like--icon" aria-hidden="true"></i>`;
     const counterLike = createElement("span", "display-comments__like--counter", item.likes);
+    const buttonDelete = createElement("button", "display-comments__delete");
+    buttonDelete.innerHTML = `<i class="fas fa-trash" display-comments__like--icon" aria-hidden="true"></i>`;
 
+    // append like button and like counter to Like Div
     likeDiv.appendChild(buttonLike);
     likeDiv.appendChild(counterLike);
 
@@ -58,7 +59,7 @@ function displayComment(item) {
     buttonsDiv.appendChild(likeDiv);
     buttonsDiv.appendChild(buttonDelete);
 
-    // append name, data, and comment text to a Card div
+    // append name, data, comment text, and buttons to a Card div
     commentCardDiv.appendChild(nameAndDataDiv);
     commentCardDiv.appendChild(textDiv);
     commentCardDiv.appendChild(buttonsDiv);
@@ -71,37 +72,12 @@ function displayComment(item) {
     commentsList.prepend(commentDiv);
 
     // delete function
-    buttonDelete.addEventListener("click", deleteComment);
-
-    function deleteComment() {
-        axios
-            .delete(
-                `https://project-1-api.herokuapp.com/comments/${item.id}?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4`
-            )
-            .then(() => {
-                fetchData();
-            });
-    }
+    buttonDelete.addEventListener("click", () => deleteComment(item.id));
 
     // like function
-    buttonLike.addEventListener("click", likeComment);
-
-    function likeComment() {
-        axios
-            .put(
-                `https://project-1-api.herokuapp.com/comments/${item.id}/like?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4`
-            )
-            .then((response) => {
-                counterLike.textContent = response.data.likes;
-                const likeIcon = document.querySelectorAll(".display-comments__like--icon");
-                likeIcon.forEach((icon) => {
-                    icon.addEventListener("click", (event) => {
-                        event.target.classList.add("display-comments__liked");
-                    });
-                })
-            });
-    }
+    buttonLike.addEventListener("click", () => likeComment(item.id, counterLike));
 }
+
 // generate today's date
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, "0");
@@ -152,3 +128,52 @@ function cleanValidation(event) {
 
 nameInput.oninput = cleanValidation;
 commentInput.oninput = cleanValidation;
+
+// like function
+function likeComment(id, counterLike) {
+    axios
+        .put(
+            `https://project-1-api.herokuapp.com/comments/${id}/like?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4`
+        )
+        .then((response) => {
+            counterLike.textContent = response.data.likes;
+            const likeIcon = document.querySelectorAll(".display-comments__like--icon");
+            likeIcon.forEach((icon) => {
+                icon.addEventListener("click", (event) => {
+                    event.target.classList.add("display-comments__liked");
+                });
+            })
+        });
+}
+
+// delete function
+function deleteComment(id) {
+    swal({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            buttons: [true, "Delete"],
+            dangerMode: true,
+        })
+        .then(willDelete => {
+            if (willDelete) {
+                axios
+                    .delete(
+                        `https://project-1-api.herokuapp.com/comments/${id}?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4`
+                    )
+                    .then(() => {
+                        swal({
+                            title: "Done!",
+                            text: "Comment is deleted!",
+                            icon: "success",
+                            timer: 2000,
+                            button: false
+                        })
+                    })
+                    .then(() => {
+                        fetchData();
+                    });
+
+            }
+        });
+}
