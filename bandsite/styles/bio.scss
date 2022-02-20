@@ -390,37 +390,36 @@
         text-align: left;
     }
     &__buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(row,
+        center,
+        space-between);
         padding: 0.8rem 0 0 0;
     }
     &__delete {
         padding: 0.4rem 0.6rem;
         border: none;
-        background-color: rgb(155, 12, 12);
-        color: white;
-        text-align: center;
-        border-radius: 0.3rem;
+        background-color: $color-secondary;
+        color: $color-tertiary-darker;
         cursor: pointer;
+        &:hover {
+            color: $color-validation
+        }
     }
     &__like {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(row,
+        center,
+        space-between);
         &--btn {
             padding: .3rem;
             border: none;
-            background-color: white;
-            cursor: pointer;
+            background-color: $color-secondary;
         }
         &--icon {
-            color: grey;
+            color: $color-tertiary-darker;
             cursor: pointer;
             &:hover {
-                color: red;
+                color: $color-validation;
+                transform: scale(1.4);
             }
         }
         &--counter {
@@ -429,6 +428,6 @@
         }
     }
     &__liked {
-        color: red
+        color: $color-validation;
     }
 }

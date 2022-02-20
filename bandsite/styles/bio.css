@@ -888,42 +888,43 @@ select {
 .display-comments__buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 0.8rem 0 0 0;
 }
 .display-comments__delete {
   padding: 0.4rem 0.6rem;
   border: none;
-  background-color: #9b0c0c;
-  color: white;
-  text-align: center;
-  border-radius: 0.3rem;
+  background-color: #FFFFFF;
+  color: #a1a1a1;
   cursor: pointer;
+}
+.display-comments__delete:hover {
+  color: #D22D2d;
 }
 .display-comments__like {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 .display-comments__like--btn {
   padding: 0.3rem;
   border: none;
-  background-color: white;
-  cursor: pointer;
+  background-color: #FFFFFF;
 }
 .display-comments__like--icon {
-  color: grey;
+  color: #a1a1a1;
   cursor: pointer;
 }
 .display-comments__like--icon:hover {
-  color: red;
+  color: #D22D2d;
+  transform: scale(1.4);
 }
 .display-comments__like--counter {
   padding: 0 0.5rem;
   font-size: 0.9rem;
 }
 .display-comments__liked {
-  color: red;
+  color: #D22D2d;
 }/*# sourceMappingURL=bio.css.map */
