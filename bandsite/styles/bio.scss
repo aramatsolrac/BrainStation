@@ -20,15 +20,15 @@
 // hero section
 .hero {
     display: flex;
-    @include box(100%,
-    15vh);
+    width: 100%;
+    min-height: 12rem;
     @extend %wrapper-mobile;
     @include tablet {
-        height: 47vh;
+        min-height: 28rem;
         padding: 2rem;
     }
     @include desktop {
-        height: 50vh;
+        min-height: 43rem;
         object-fit: cover;
         object-position: center;
         @include wrap($max-width,
