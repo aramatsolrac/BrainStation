@@ -28,7 +28,7 @@
         padding: 2rem;
     }
     @include desktop {
-        min-height: 43rem;
+        min-height: 45rem;
         object-fit: cover;
         object-position: center;
         @include wrap($max-width,
