@@ -455,7 +455,7 @@ select {
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    min-height: 43rem;
+    min-height: 45rem;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
