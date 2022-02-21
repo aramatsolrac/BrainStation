@@ -445,17 +445,17 @@ select {
 .hero {
   display: flex;
   width: 100%;
-  height: 15vh;
+  min-height: 12rem;
 }
 @media screen and (min-width: 768px) {
   .hero {
-    height: 47vh;
+    min-height: 28rem;
     padding: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    height: 50vh;
+    min-height: 43rem;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
