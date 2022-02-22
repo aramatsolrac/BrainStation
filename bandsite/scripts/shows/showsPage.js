@@ -1,14 +1,15 @@
-'use strict';
+"use strict";
 
 const showsList = document.getElementById("shows-list");
 
 const dataURL = "https://project-1-api.herokuapp.com/showdates/?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
 
 // display shows list
-axios.get(dataURL)
-    .then(response => {
+axios
+    .get(dataURL)
+    .then((response) => {
         const showsArr = response.data;
-        console.log(showsArr)
+        console.log(showsArr);
         showsArr.forEach((item) => {
             const labelsShows = Object.keys(item);
 
@@ -21,7 +22,7 @@ axios.get(dataURL)
 
             // create li and append them to a ul
             showsDateUl.appendChild(createElement("li", "shows__label", labelsShows[0]));
-            showsDateUl.appendChild(createElement("li", "shows__info--date", formatDate(item.date, { weekday: 'short' })));
+            showsDateUl.appendChild(createElement("li", "shows__info--date", formatDate(item.date, { weekday: "short" })));
             showsVenueUl.appendChild(createElement("li", "shows__label", labelsShows[1]));
             showsVenueUl.appendChild(createElement("li", "shows__info--venue", item.place));
             showsLocationUl.appendChild(createElement("li", "shows__label", labelsShows[2]));
@@ -44,4 +45,7 @@ axios.get(dataURL)
                 showsCardLi.classList.toggle("shows__cards--selected");
             });
         });
+    })
+    .catch(() => {
+        alert("Error trying to fetch the API.");
     });
