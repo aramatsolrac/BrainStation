@@ -19,6 +19,8 @@ const fetchData = () => {
             return a.timestamp - b.timestamp;
         });
         cleanAndAddComments(commentsArr);
+    }).catch(() => {
+        alert("Error trying to fetch the API.");
     });
 };
 
@@ -143,6 +145,9 @@ function likeComment(id, counterLike) {
                     event.target.classList.add("display-comments__liked");
                 });
             })
+        })
+        .catch(() => {
+            alert("Error trying to fetch the API.");
         });
 }
 
@@ -172,8 +177,11 @@ function deleteComment(id) {
                     })
                     .then(() => {
                         fetchData();
+                    })
+                    .catch(() => {
+                        alert("Error trying to fetch the API.");
                     });
 
             }
-        });
+        })
 }
