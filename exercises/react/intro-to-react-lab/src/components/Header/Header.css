@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 3.125rem;
+  background: #999999;
+  border-bottom: solid 1px;
+  z-index: 10;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+.header__links {
+  display: flex;
+  align-items: center;
+}
+.header__links--left {
+  padding-left: 1.25rem;
+  align-self: left;
+}
+.header__links--right {
+  padding-right: 1.25rem;
+  align-self: right;
+}/*# sourceMappingURL=Header.css.map */

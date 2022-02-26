@@ -1,0 +1,9 @@
+.hero {
+  height: 18.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eeeeee;
+  text-align: center;
+  border-bottom: solid 1px #666666;
+}/*# sourceMappingURL=Hero.css.map */

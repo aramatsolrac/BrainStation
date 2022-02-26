@@ -1,0 +1,11 @@
+.activity-list__item {
+  width: 18.75rem;
+  height: 9.375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  margin: 0.625rem 0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #999999;
+}/*# sourceMappingURL=ActivityListItem.css.map */

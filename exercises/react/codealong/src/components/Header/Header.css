@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  min-height: 3.125rem;
+  padding: 2rem 0;
+  background: #dddddd;
+  border-bottom: solid 2px;
+  z-index: 10;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+.header__links {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.header__links--left {
+  padding-left: 1.25rem;
+  align-self: left;
+}
+.header__links--right {
+  padding-right: 1.25rem;
+  align-self: right;
+}/*# sourceMappingURL=Header.css.map */

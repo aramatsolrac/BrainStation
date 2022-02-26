@@ -1,0 +1,28 @@
+.student {
+  width: 19.375rem;
+  height: 18.5rem;
+  margin: 0.625rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 3px 3px 3px #aaaaaa;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  border: 2px solid black;
+}
+.student__content {
+  flex: 0 0 100%;
+  justify-self: center;
+  text-align: center;
+}
+.student__image {
+  max-width: 100px;
+}
+.student__title {
+  flex: 0 0 100%;
+  text-align: center;
+  border-top: dotted 3px #555555;
+  padding-top: 1.9375rem;
+  font-size: 22px;
+}/*# sourceMappingURL=Student.css.map */

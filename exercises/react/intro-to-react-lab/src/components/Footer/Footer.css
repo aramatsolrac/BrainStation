@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background: #999999;
+  border-top: solid 1px #666666;
+  padding: 1.5625rem;
+}
+
+.footer--left {
+  align-self: right;
+}/*# sourceMappingURL=Footer.css.map */
