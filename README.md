@@ -24,3 +24,5 @@ This repository is a collection of the exercises and projects I have done on [Br
 
 - Linkedin - [Tamara Carlos](https://www.linkedin.com/in/tamaracarlos/)
 - Twitter - [@aramatsolrac](https://twitter.com/aramatsolrac)
+
+<hr>
